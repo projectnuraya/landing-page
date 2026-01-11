@@ -1,0 +1,60 @@
+import { Card } from './ui/Card'
+
+export function AboutSection() {
+  return (
+    <section id='about' className='py-24 md:py-32 bg-white dark:bg-dark-bg'>
+      <div className='container mx-auto px-6 md:px-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
+          {/* Left Column: Story */}
+          <div className='space-y-8'>
+            <h2 className='text-3xl md:text-4xl font-bold text-deep-navy dark:text-white'>
+              Mengapa Project Nuraya?
+            </h2>
+            <div className='space-y-6 text-lg text-warm-gray dark:text-gray-300 leading-relaxed'>
+              <p>
+                Nama "Nuraya" lahir dari perpaduan dua kata:{' '}
+                <span className='text-nuraya-gold font-semibold'>Nur</span> (cahaya) dan{' '}
+                <span className='text-sky-blue font-semibold'>Raya</span> (agung/luas).
+              </p>
+              <p>
+                Kami memulai projek ini dari sebuah pengamatan sederhana: teknologi sering kali
+                dibangun demi keuntungan semata, baru kemudian untuk manusia. Kami ingin membalikkan
+                keadaan tersebut.
+              </p>
+              <p>
+                Filosofi kami berakar pada keyakinan bahwa perangkat digital haruslah aksesibel,
+                inklusif, dan benar-benar bermanfaat. Kami tidak mengejar tren; kami mengejar
+                dampak. Baik itu platform pendidikan untuk pelosok daerah maupun sistem manajemen
+                sumber daya untuk masyarakat, tujuan kami tetap sama: memperbaiki kualitas hidup
+                melalui kode.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column: Principles/Stats */}
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 lg:pt-0'>
+            <Card className='p-6 border-l-4 border-l-nuraya-gold dark:border-l-nuraya-gold hover:-translate-y-2 transition-transform duration-300'>
+              <h3 className='text-4xl font-bold text-deep-navy dark:text-white mb-2'>100%</h3>
+              <p className='text-sm font-medium text-warm-gray dark:text-gray-400 uppercase tracking-wider'>
+                Berpusat pada Manusia
+              </p>
+              <p className='mt-4 text-sm text-gray-600 dark:text-gray-300'>
+                Setiap baris kode diletakkan dengan penuh empati terhadap setiap langkah pengguna.
+              </p>
+            </Card>
+
+            <Card className='p-6 border-l-4 border-l-sky-blue dark:border-l-sky-blue hover:-translate-y-2 transition-transform duration-300 sm:translate-y-8'>
+              <h3 className='text-4xl font-bold text-deep-navy dark:text-white mb-2'>0%</h3>
+              <p className='text-sm font-medium text-warm-gray dark:text-gray-400 uppercase tracking-wider'>
+                Gimmick
+              </p>
+              <p className='mt-4 text-sm text-gray-600 dark:text-gray-300'>
+                Kami hadir untuk menyelesaikan masalah nyata, bukan masalah yang diada-adakan.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
