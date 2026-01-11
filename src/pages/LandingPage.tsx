@@ -11,7 +11,9 @@ export function LandingPage() {
       {/* Navigation / Header */}
       <header className='fixed top-0 left-0 right-0 z-50 px-6 py-4 flex justify-between items-center bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-gray-100 dark:border-white/5'>
         <div className='font-bold text-xl tracking-tight text-deep-navy dark:text-white'>
-          NURAYA
+          <a href='#' aria-label='Project Nuraya Logo'>
+            NURAYA
+          </a>
         </div>
         <nav className='hidden md:flex space-x-8'>
           <a

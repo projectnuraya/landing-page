@@ -8,6 +8,13 @@ export function Hero() {
       behavior: 'smooth',
     })
   }
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about')
+    aboutSection?.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <section id='hero' className='relative min-h-screen flex items-center overflow-hidden pt-20'>
       {/* Background Elements */}
@@ -45,6 +52,7 @@ export function Hero() {
                 Jelajahi Misi Kami
               </Button>
               <Button
+                onClick={scrollToAbout}
                 variant='outline'
                 className='h-12 px-8 text-base border-deep-navy/10 text-deep-navy hover:bg-deep-navy/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5'>
                 Tentang Kami
