@@ -47,7 +47,7 @@ export function ValuesSection() {
       </div>
 
       <div className='container mx-auto px-6 md:px-12 relative z-10'>
-        <div className='mb-16 md:mb-24 max-w-2xl'>
+        <div className='mb-12 max-w-2xl'>
           <h2 className='text-3xl md:text-4xl font-bold text-white dark:text-deep-navy mb-6'>Core Values</h2>
           <p className='text-lg text-gray-300 dark:text-warm-gray'>
             Prinsip utama di balik setiap keputusan, baris kode, dan budaya yang kami bangun.
