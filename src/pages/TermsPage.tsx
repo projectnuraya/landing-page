@@ -112,8 +112,8 @@ export function TermsPage() {
           <div className='container mx-auto px-6 md:px-12 text-center'>
             <p className='text-lg mb-4'>
               Punya pertanyaan tentang ketentuan layanan? Hubungi kami di{' '}
-              <a href='mailto:legal@projectnuraya.id' className='text-nuraya-gold hover:underline'>
-                legal@projectnuraya.id
+              <a href='mailto:hello@projectnuraya.id' className='text-nuraya-gold hover:underline'>
+                hello@projectnuraya.id
               </a>
             </p>
             <Link

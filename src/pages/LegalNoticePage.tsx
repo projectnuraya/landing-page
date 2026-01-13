@@ -59,9 +59,9 @@ export function LegalNoticePage() {
                     <p className='text-warm-gray dark:text-gray-300'>
                       <strong>Email Legal:</strong>{' '}
                       <a
-                        href='mailto:legal@projectnuraya.id'
+                        href='mailto:hello@projectnuraya.id'
                         className='text-nuraya-gold hover:underline'>
-                        legal@projectnuraya.id
+                        hello@projectnuraya.id
                       </a>
                     </p>
                     <p className='text-warm-gray dark:text-gray-300'>
@@ -183,9 +183,9 @@ export function LegalNoticePage() {
                     <p className='text-warm-gray dark:text-gray-300'>
                       <strong>Email Legal:</strong>{' '}
                       <a
-                        href='mailto:legal@projectnuraya.id'
+                        href='mailto:hello@projectnuraya.id'
                         className='text-nuraya-gold hover:underline'>
-                        legal@projectnuraya.id
+                        hello@projectnuraya.id
                       </a>
                     </p>
                     <p className='text-warm-gray dark:text-gray-300 mt-2'>
@@ -235,9 +235,9 @@ export function LegalNoticePage() {
                     <p className='text-warm-gray dark:text-gray-300'>
                       <strong>Email Legal:</strong>{' '}
                       <a
-                        href='mailto:legal@projectnuraya.id'
+                        href='mailto:hello@projectnuraya.id'
                         className='text-nuraya-gold hover:underline'>
-                        legal@projectnuraya.id
+                        hello@projectnuraya.id
                       </a>
                     </p>
                     <p className='text-warm-gray dark:text-gray-300'>
@@ -272,8 +272,8 @@ export function LegalNoticePage() {
           <div className='container mx-auto px-6 md:px-12 text-center'>
             <p className='text-lg mb-4'>
               Punya pertanyaan hukum? Hubungi kami di{' '}
-              <a href='mailto:legal@projectnuraya.id' className='text-nuraya-gold hover:underline'>
-                legal@projectnuraya.id
+              <a href='mailto:hello@projectnuraya.id' className='text-nuraya-gold hover:underline'>
+                hello@projectnuraya.id
               </a>
             </p>
             <Link

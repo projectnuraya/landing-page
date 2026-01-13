@@ -71,9 +71,9 @@ export function PrivacyPage() {
                     Anda dapat mengakses, mengubah, atau menghapus data pribadi Anda kapan saja.
                     Hubungi kami di{' '}
                     <a
-                      href='mailto:privacy@projectnuraya.id'
+                      href='mailto:hello@projectnuraya.id'
                       className='text-nuraya-gold hover:underline'>
-                      privacy@projectnuraya.id
+                      hello@projectnuraya.id
                     </a>{' '}
                     untuk menggunakan hak-hak ini.
                   </p>
@@ -110,10 +110,8 @@ export function PrivacyPage() {
           <div className='container mx-auto px-6 md:px-12 text-center'>
             <p className='text-lg mb-4'>
               Punya pertanyaan tentang privasi Anda? Hubungi kami di{' '}
-              <a
-                href='mailto:privacy@projectnuraya.id'
-                className='text-nuraya-gold hover:underline'>
-                privacy@projectnuraya.id
+              <a href='mailto:hello@projectnuraya.id' className='text-nuraya-gold hover:underline'>
+                hello@projectnuraya.id
               </a>
             </p>
             <Link
