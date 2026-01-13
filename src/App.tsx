@@ -1,4 +1,18 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { LandingPage } from './pages/LandingPage'
+import { PrivacyPage } from './pages/PrivacyPage'
+import { TermsPage } from './pages/TermsPage'
+import { LegalNoticePage } from './pages/LegalNoticePage'
+
 export default function App() {
-  return <LandingPage />
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LandingPage />} />
+        <Route path='/privacy' element={<PrivacyPage />} />
+        <Route path='/terms' element={<TermsPage />} />
+        <Route path='/legal' element={<LegalNoticePage />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }

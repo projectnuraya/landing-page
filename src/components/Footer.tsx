@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { ArrowUp, Github, Instagram, Linkedin } from 'lucide-react'
 
 export function Footer() {
@@ -98,16 +99,24 @@ export function Footer() {
           </p>
 
           <div className='flex items-center gap-6 mt-4 md:mt-0'>
-            <a
-              href='#'
+            <Link
+              to='/privacy'
+              onClick={() => window.scrollTo(0, 0)}
               className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
               Privacy
-            </a>
-            <a
-              href='#'
+            </Link>
+            <Link
+              to='/terms'
+              onClick={() => window.scrollTo(0, 0)}
               className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
               Terms
-            </a>
+            </Link>
+            <Link
+              to='/legal'
+              onClick={() => window.scrollTo(0, 0)}
+              className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
+              Legal
+            </Link>
             <button
               onClick={scrollToTop}
               className='flex items-center gap-2 hover:text-nuraya-gold transition-colors'>
