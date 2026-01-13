@@ -76,7 +76,15 @@ export function Footer() {
         </div>
 
         <div className='flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-300 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400'>
-          <p>© {new Date().getFullYear()} PT Nuraya Digital Nusantara. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()}
+            <a
+              href='https://ptp.ahu.go.id/sertifikat?id=686e322971635ffa733f6966a9e546eb:2da925ddd9d2909e1ba364ee1d3dba84'
+              target='_blank'
+              className='hover:underline ml-1'>
+              PT Nuraya Digital Nusantara. All rights reserved.
+            </a>
+          </p>
 
           <div className='flex items-center gap-6 mt-4 md:mt-0'>
             <a href='#' className='hover:text-deep-navy dark:hover:text-white transition-colors'>
