@@ -18,27 +18,27 @@ export function LandingPage() {
         <nav className='hidden md:flex space-x-8'>
           <a
             href='#hero'
-            className='text-deep-navy hover:text-nuraya-gold dark:text-white dark:hover:text-nuraya-gold transition-colors'>
+            className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
             Home
           </a>
           <a
             href='#mission'
-            className='text-deep-navy hover:text-nuraya-gold dark:text-white dark:hover:text-nuraya-gold transition-colors'>
+            className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
             Mission
           </a>
           <a
             href='#about'
-            className='text-deep-navy hover:text-nuraya-gold dark:text-white dark:hover:text-nuraya-gold transition-colors'>
+            className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
             About
           </a>
           <a
             href='#values'
-            className='text-deep-navy hover:text-nuraya-gold dark:text-white dark:hover:text-nuraya-gold transition-colors'>
+            className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
             Values
           </a>
           <a
             href='#collaboration'
-            className='text-deep-navy hover:text-nuraya-gold dark:text-white dark:hover:text-nuraya-gold transition-colors'>
+            className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
             Collaboration
           </a>
         </nav>

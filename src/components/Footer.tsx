@@ -24,17 +24,23 @@ export function Footer() {
             <h3 className='text-sm font-semibold text-deep-navy dark:text-white mb-1'>Projects</h3>
             <ul>
               <li>
-                <a href='#' className='text-gray-500 dark:text-nuraya-gold-bright hover:underline'>
+                <a
+                  href='#'
+                  className='text-sm text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
                   Project Alpha
                 </a>
               </li>
               <li>
-                <a href='#' className='text-gray-500 dark:text-nuraya-gold-bright hover:underline'>
+                <a
+                  href='#'
+                  className='text-sm text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
                   Project Beta
                 </a>
               </li>
               <li>
-                <a href='#' className='text-gray-500 dark:text-nuraya-gold-bright hover:underline'>
+                <a
+                  href='#'
+                  className='text-sm text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
                   Project Gamma
                 </a>
               </li>
@@ -48,7 +54,7 @@ export function Footer() {
               </h3>
               <a
                 href='mailto:hello@projectnuraya.id'
-                className='text-sm text-gray-500 dark:text-nuraya-gold-bright hover:underline'>
+                className='text-sm text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
                 hello@projectnuraya.id
               </a>
             </div>
@@ -59,15 +65,19 @@ export function Footer() {
               <a
                 href='https://github.com/projectnuraya'
                 target='_blank'
-                className='text-gray-500 hover:text-nuraya-gold transition-colors'>
+                className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
                 <Github className='w-5 h-5' />
                 <span className='sr-only'>GitHub</span>
               </a>
-              <a href='#' className='text-gray-500 hover:text-nuraya-gold transition-colors'>
+              <a
+                href='#'
+                className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
                 <Linkedin className='w-5 h-5' />
                 <span className='sr-only'>LinkedIn</span>
               </a>
-              <a href='#' className='text-gray-500 hover:text-nuraya-gold transition-colors'>
+              <a
+                href='#'
+                className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
                 <Instagram className='w-5 h-5' />
                 <span className='sr-only'>Instagram</span>
               </a>
@@ -81,16 +91,21 @@ export function Footer() {
             <a
               href='https://ptp.ahu.go.id/sertifikat?id=686e322971635ffa733f6966a9e546eb:2da925ddd9d2909e1ba364ee1d3dba84'
               target='_blank'
-              className='hover:underline ml-1'>
-              PT Nuraya Digital Nusantara. All rights reserved.
-            </a>
+              className='hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors ml-1'>
+              PT Nuraya Digital Nusantara.
+            </a>{' '}
+            All rights reserved.
           </p>
 
           <div className='flex items-center gap-6 mt-4 md:mt-0'>
-            <a href='#' className='hover:text-deep-navy dark:hover:text-white transition-colors'>
+            <a
+              href='#'
+              className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
               Privacy
             </a>
-            <a href='#' className='hover:text-deep-navy dark:hover:text-white transition-colors'>
+            <a
+              href='#'
+              className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
               Terms
             </a>
             <button
