@@ -1,6 +1,6 @@
-import { Code2, Database, Globe, Lightbulb, Rocket, Users } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card'
+import { Bike, BookOpen, Database, FileText, Globe, Lightbulb, Wrench } from 'lucide-react'
 import { Button } from './ui/Button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card'
 
 const services = [
   {
@@ -37,28 +37,37 @@ const services = [
 
 const comingSoon = [
   {
-    icon: Users,
-    title: 'Community Hub',
+    icon: Bike,
+    title: 'Sistem Digital Sewa Sepeda',
     description:
-      'Platform manajemen komunitas yang memudahkan koordinasi, komunikasi, dan kolaborasi antar anggota. Didesain untuk komunitas yang ingin tumbuh bersama.',
+      'Sewa sepeda tanpa drama. Scan QR, bayar QRIS, selesai. Sistem otomatis hitung durasi dan denda keterlambatan. Pengelola tinggal pantau, nggak perlu catat manual pake kertas.',
     status: 'coming',
     color: 'text-purple-500',
     bg: 'bg-purple-500/10',
   },
   {
-    icon: Code2,
-    title: 'DevKit Open Source',
+    icon: Wrench,
+    title: 'Catat Servis',
     description:
-      'Kumpulan tools dan template open source untuk mempercepat development. Karena kami percaya berbagi ilmu itu investasi, bukan kerugian.',
+      'Buku servis digital yang nggak bakal hilang. Catat kilometer, komponen yang diganti, sampai atur reminder servis otomatis. Semua riwayat kendaraan Anda dalam satu aplikasi web yang mobile-friendly.',
     status: 'coming',
     color: 'text-orange-500',
     bg: 'bg-orange-500/10',
   },
   {
-    icon: Rocket,
-    title: 'Business Starter Pack',
+    icon: BookOpen,
+    title: 'Tilawah Tracker',
     description:
-      'Paket lengkap untuk UMKM yang baru memulai digitalisasi. Website, sistem kasir sederhana, dan manajemen inventori dalam satu tempat.',
+      'Koordinasi tilawah bersama tanpa ribet. Bagi juz mingguan, update status bacaan peserta, dan langsung generate rekap yang siap dibagikan ke grup WA. Minim lupa, lebih tertib.',
+    status: 'coming',
+    color: 'text-green-500',
+    bg: 'bg-green-500/10',
+  },
+  {
+    icon: FileText,
+    title: 'Sistem Administrasi Surat RT/RW',
+    description:
+      'Urus surat RT/RW dari rumah. Warga ajukan online, pengurus verifikasi digital, terbitkan surat lengkap dengan QR code. Nggak perlu datang berkali-kali atau nunggu pengurus nongkrong.',
     status: 'coming',
     color: 'text-rose-500',
     bg: 'bg-rose-500/10',
@@ -74,7 +83,7 @@ export function ProductSection() {
   }
 
   return (
-    <section id='products' className='py-24 md:py-32 bg-light-sand/50 dark:bg-dark-surface/50'>
+    <section id='products' className='py-24 md:py-32 bg-light-sand/90 dark:bg-dark-surface/90'>
       <div className='container mx-auto px-6 md:px-12'>
         {/* Section Header */}
         <div className='mb-16 max-w-3xl'>
@@ -140,7 +149,7 @@ export function ProductSection() {
             <div className='h-px flex-1 bg-gradient-to-l from-sky-blue/50 to-transparent dark:from-sky-blue/30' />
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8'>
             {comingSoon.map((product) => (
               <Card
                 key={product.title}
