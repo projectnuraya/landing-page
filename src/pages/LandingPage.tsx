@@ -4,6 +4,7 @@ import { Footer } from '../components/Footer'
 import { Hero } from '../components/Hero'
 import { MissionStatement } from '../components/MissionStatement'
 import { Navbar } from '../components/Navbar'
+import { ProductSection } from '../components/ProductSection'
 import { ValuesSection } from '../components/ValuesSection'
 
 export function LandingPage() {
@@ -17,6 +18,7 @@ export function LandingPage() {
         <AboutSection />
         <ValuesSection />
         {/* <ImpactAreas /> */}
+        <ProductSection />
         <CollaborationSection />
         {/* <Newsletter /> */}
       </main>
