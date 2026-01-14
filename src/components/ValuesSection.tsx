@@ -5,32 +5,44 @@ const values = [
   {
     icon: Lightbulb,
     title: 'Transparansi',
-    description:
-      'Transparansi, Kejelasan, dan Kejujuran. Segala yang kami lakukan berlandaskan kejujuran. Tanpa agenda tersembunyi; hanya kode yang bersih dan niat yang tulus.',
+    description: (
+      <>
+        <strong>Transparansi, Kejelasan, dan Kejujuran.</strong> Segala yang kami lakukan berlandaskan kejujuran. Tanpa agenda tersembunyi; hanya kode yang bersih dan niat yang tulus.
+      </>
+    ),
     color: 'text-nuraya-gold',
     bg: 'bg-nuraya-gold/10',
   },
   {
     icon: Zap,
     title: 'Aksi',
-    description:
-      'Eksekusi di Atas Wacana. Kami percaya pada nilai yang dihantarkan, bukan sekadar diperdebatkan. Ide itu murah; dampak nyata butuh pergerakan.',
+    description: (
+      <>
+        <strong>Eksekusi di Atas Wacana.</strong> Kami percaya pada nilai yang dihantarkan, bukan sekadar diperdebatkan. Ide itu murah; dampak nyata butuh pergerakan.
+      </>
+    ),
     color: 'text-sky-blue',
     bg: 'bg-sky-blue/10',
   },
   {
     icon: Heart,
     title: 'Empati',
-    description:
-      'Manusia yang Utama. Kami mendesain bagi mereka yang ada di pelosok desa, sebagaimana kami mendesain bagi mereka yang tumbuh dengan digital di perkotaan.',
+    description: (
+      <>
+        <strong>Manusia yang Utama.</strong> Kami mendesain bagi mereka yang ada di pelosok desa, sebagaimana kami mendesain bagi mereka yang tumbuh dengan digital di perkotaan.
+      </>
+    ),
     color: 'text-red-400',
     bg: 'bg-red-400/10',
   },
   {
     icon: Sprout,
     title: 'Pertumbuhan',
-    description:
-      'Tumbuh Bersama, Berkelanjutan. Kami bekerja secara iteratif dan adaptif dengan visi jangka panjang. Kami menciptakan sistem yang tidak statis, melainkan terus berkembang seiring luasnya pertumbuhan komunitas di dalamnya.',
+    description: (
+      <>
+        <strong>Tumbuh Bersama, Berkelanjutan.</strong> Kami bekerja secara iteratif dan adaptif dengan visi jangka panjang. Kami menciptakan sistem yang tidak statis, melainkan terus berkembang seiring luasnya pertumbuhan komunitas di dalamnya.
+      </>
+    ),
     color: 'text-green-500',
     bg: 'bg-green-500/10',
   },
