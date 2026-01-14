@@ -6,7 +6,7 @@ const values = [
     icon: Lightbulb,
     title: 'Transparansi',
     description:
-      'Transparansi, Kejelasan, dan Kejujuran. Segala yang kami lakukan berlandaskan kejujuran. Tanpa agenda tersembunyi; hanya kode yang bersih dan niat yang tulus.</b>',
+      'Transparansi, Kejelasan, dan Kejujuran. Segala yang kami lakukan berlandaskan kejujuran. Tanpa agenda tersembunyi; hanya kode yang bersih dan niat yang tulus.',
     color: 'text-nuraya-gold',
     bg: 'bg-nuraya-gold/10',
   },
@@ -39,17 +39,20 @@ export function ValuesSection() {
   return (
     <section
       id='values'
-      className='py-24 md:py-32 bg-deep-navy dark:bg-gray-100 text-white dark:text-deep-navy relative overflow-hidden'>
+      className='py-24 md:py-32 bg-gradient-to-br from-nuraya-gold/20 via-sky-blue/15 to-warm-gray/10 dark:from-gray-800 dark:via-gray-700/50 dark:to-gray-800/80 text-deep-navy dark:text-white relative overflow-hidden'>
       {/* Background Pattern */}
-      <div className='absolute inset-0 opacity-10 dark:opacity-[0.08]'>
-        <div className='absolute right-0 top-0 w-96 h-96 bg-nuraya-gold dark:bg-amber-500 rounded-full blur-[120px]' />
-        <div className='absolute left-0 bottom-0 w-96 h-96 bg-sky-blue dark:bg-blue-500 rounded-full blur-[120px]' />
+      <div className='absolute inset-0 opacity-40 dark:opacity-25'>
+        <div className='absolute right-0 top-0 w-96 h-96 bg-nuraya-gold rounded-full blur-[120px]' />
+        <div className='absolute left-0 bottom-0 w-96 h-96 bg-sky-blue rounded-full blur-[120px]' />
       </div>
+
+      {/* Border glow effect */}
+      <div className='absolute inset-0 border-y border-nuraya-gold/30 dark:border-nuraya-gold/20 pointer-events-none' />
 
       <div className='container mx-auto px-6 md:px-12 relative z-10'>
         <div className='mb-12 max-w-2xl'>
-          <h2 className='text-3xl md:text-4xl font-bold text-white dark:text-deep-navy mb-6'>Core Values</h2>
-          <p className='text-lg text-gray-300 dark:text-warm-gray'>
+          <h2 className='text-3xl md:text-4xl font-bold text-deep-navy dark:text-white mb-6'>Core Values</h2>
+          <p className='text-lg text-warm-gray dark:text-gray-300'>
             Prinsip utama di balik setiap keputusan, baris kode, dan budaya yang kami bangun.
           </p>
         </div>
@@ -60,7 +63,7 @@ export function ValuesSection() {
             <Card
               key={value.title}
               className={`
-                group hover:-translate-y-1 transition-all duration-300 bg-white/5 dark:bg-deep-navy/5 border border-white/10 dark:border-deep-navy/10 hover:bg-white/10 dark:hover:bg-deep-navy/10
+                group hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-gray-900 backdrop-blur-sm border border-black/10 dark:border-white/20 hover:shadow-xl hover:border-nuraya-gold/40 dark:hover:border-nuraya-gold/50
                 ${index === 0 ? 'lg:col-span-7' : ''}
                 ${index === 1 ? 'lg:col-span-5' : ''}
                 ${index === 2 ? 'lg:col-span-5' : ''}
@@ -71,10 +74,10 @@ export function ValuesSection() {
                   className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${value.bg} border ${value.color} transition-transform group-hover:scale-110 duration-300`}>
                   <value.icon className='w-6 h-6' />
                 </div>
-                <CardTitle className='text-xl md:text-2xl mb-2 text-white dark:text-deep-navy'>{value.title}</CardTitle>
+                <CardTitle className='text-xl md:text-2xl mb-2 text-deep-navy dark:text-white'>{value.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className='text-gray-400 dark:text-warm-gray leading-relaxed'>{value.description}</p>
+                <p className='text-warm-gray dark:text-gray-300 leading-relaxed'>{value.description}</p>
               </CardContent>
             </Card>
           ))}
