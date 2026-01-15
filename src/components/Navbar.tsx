@@ -1,4 +1,4 @@
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { DarkModeToggle } from './DarkModeToggle'
 
 export function Navbar() {
@@ -55,6 +55,12 @@ export function Navbar() {
           onClick={handleSectionClick('values')}
           className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
           Values
+        </a>
+        <a
+          href='#products'
+          onClick={handleSectionClick('products')}
+          className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
+          Products
         </a>
         <a
           href='#collaboration'
