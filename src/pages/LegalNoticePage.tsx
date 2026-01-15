@@ -1,9 +1,14 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
 import { Scale } from 'lucide-react'
 
 export function LegalNoticePage() {
+  useEffect(() => {
+    document.title = 'Pemberitahuan Hukum - Nuraya Digital Nusantara'
+  }, [])
+
   return (
     <div className='min-h-screen bg-soft-white dark:bg-dark-bg transition-colors duration-300'>
       <Navbar />
