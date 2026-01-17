@@ -31,7 +31,7 @@ export function Navbar() {
           NURAYA
         </Link>
       </div>
-      <nav className='hidden md:flex space-x-8'>
+      <nav className='hidden md:flex space-x-8 items-center'>
         <a
           href='#hero'
           onClick={handleSectionClick('hero')}
@@ -65,7 +65,7 @@ export function Navbar() {
         <a
           href='#collaboration'
           onClick={handleSectionClick('collaboration')}
-          className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
+          className='px-3 py-1 border-2 border-nuraya-gold text-nuraya-gold hover:bg-nuraya-gold hover:text-white dark:hover:bg-nuraya-gold dark:hover:text-white rounded-md transition-all flex items-center'>
           Collaboration
         </a>
       </nav>
