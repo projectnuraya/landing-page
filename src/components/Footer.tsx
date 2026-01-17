@@ -28,21 +28,28 @@ export function Footer() {
                 <a
                   href='#'
                   className='text-sm text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
-                  Project Alpha
+                  Sistem Digital Sewa Sepeda
                 </a>
               </li>
               <li>
                 <a
                   href='#'
                   className='text-sm text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
-                  Project Beta
+                  Catat Servis
                 </a>
               </li>
               <li>
                 <a
                   href='#'
                   className='text-sm text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
-                  Project Gamma
+                  Tilawah Tracker
+                </a>
+              </li>
+              <li>
+                <a
+                  href='#'
+                  className='text-sm text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
+                  Sistem Administrasi Surat RT/RW
                 </a>
               </li>
             </ul>
