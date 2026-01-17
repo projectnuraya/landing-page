@@ -36,37 +36,37 @@ export function Navbar() {
           href='#hero'
           onClick={handleSectionClick('hero')}
           className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
-          Home
+          Beranda
         </a>
         <a
           href='#mission'
           onClick={handleSectionClick('mission')}
           className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
-          Mission
+          Misi
         </a>
         <a
           href='#about'
           onClick={handleSectionClick('about')}
           className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
-          About
+          Tentang
         </a>
         <a
           href='#values'
           onClick={handleSectionClick('values')}
           className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
-          Values
+          Nilai-nilai
         </a>
         <a
           href='#products'
           onClick={handleSectionClick('products')}
           className='text-warm-gray dark:text-gray-500 hover:text-nuraya-gold dark:hover:text-nuraya-gold active:text-nuraya-gold dark:active:text-nuraya-gold transition-colors'>
-          Products
+          Produk
         </a>
         <a
           href='#collaboration'
           onClick={handleSectionClick('collaboration')}
           className='px-3 py-1 border-2 border-nuraya-gold text-nuraya-gold hover:bg-nuraya-gold hover:text-white dark:hover:bg-nuraya-gold dark:hover:text-white rounded-md transition-all flex items-center'>
-          Collaboration
+          Kolaborasi
         </a>
       </nav>
       <DarkModeToggle />
