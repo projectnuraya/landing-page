@@ -10,8 +10,8 @@ const services = [
       'Website dan aplikasi web yang dirancang khusus untuk kebutuhan bisnis Anda. Dari landing page hingga sistem manajemen internal, kami bangun dengan teknologi modern dan performa optimal.',
     target: 'UMKM, Komunitas, Organisasi',
     status: 'available',
-    color: 'text-sky-blue',
-    bg: 'bg-sky-blue/10',
+    color: 'text-nuraya-blue-400',
+    bg: 'bg-nuraya-blue-400/10',
   },
   {
     icon: Lightbulb,
@@ -20,8 +20,8 @@ const services = [
       'Bingung memilih teknologi yang tepat? Kami bantu Anda menavigasi dunia digital dengan arahan yang jelas dan strategi yang terukur. Tanpa jargon yang membingungkan.',
     target: 'Startup, Bisnis Berkembang',
     status: 'available',
-    color: 'text-nuraya-gold',
-    bg: 'bg-nuraya-gold/10',
+    color: 'text-nuraya-gold-400',
+    bg: 'bg-nuraya-gold-400/10',
   },
   {
     icon: Database,
@@ -100,11 +100,11 @@ export function ProductSection() {
         {/* Services Section */}
         <div className='mb-20'>
           <div className='flex items-center gap-3 mb-8'>
-            <div className='h-px flex-1 bg-gradient-to-r from-nuraya-gold/50 to-transparent dark:from-nuraya-gold/30' />
-            <span className='text-sm font-semibold text-nuraya-gold uppercase tracking-wider'>
+            <div className='h-px flex-1 bg-gradient-to-r from-nuraya-gold-400/50 to-transparent dark:from-nuraya-gold-400/30' />
+            <span className='text-sm font-semibold text-nuraya-gold-400 uppercase tracking-wider'>
               Layanan Tersedia
             </span>
-            <div className='h-px flex-1 bg-gradient-to-l from-nuraya-gold/50 to-transparent dark:from-nuraya-gold/30' />
+            <div className='h-px flex-1 bg-gradient-to-l from-nuraya-gold-400/50 to-transparent dark:from-nuraya-gold-400/30' />
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>

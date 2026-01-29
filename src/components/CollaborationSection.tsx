@@ -17,11 +17,11 @@ export function CollaborationSection() {
 
             <div className='space-y-4 mb-8'>
               <div className='flex items-center gap-3'>
-                <div className='w-2 h-2 rounded-full bg-nuraya-gold' />
+                <div className='w-2 h-2 rounded-full bg-nuraya-gold-400' />
                 <span className='text-deep-navy dark:text-gray-200'>Technical Partnership</span>
               </div>
               <div className='flex items-center gap-3'>
-                <div className='w-2 h-2 rounded-full bg-sky-blue' />
+                <div className='w-2 h-2 rounded-full bg-nuraya-blue-400' />
                 <span className='text-deep-navy dark:text-gray-200'>Kolaborasi Strategis</span>
               </div>
               <div className='flex items-center gap-3'>
@@ -33,9 +33,9 @@ export function CollaborationSection() {
 
           <div className='lg:w-1/2 w-full'>
             <div className='relative'>
-              <div className='absolute -inset-4 bg-sky-blue dark:bg-nuraya-gold opacity-20 blur-2xl rounded-full' />
+              <div className='absolute -inset-4 bg-nuraya-blue-400 dark:bg-nuraya-gold-400 opacity-20 blur-2xl rounded-full' />
               <div className='relative bg-white dark:bg-dark-surface p-8 md:p-10 rounded-2xl shadow-xl border border-black/5 dark:border-white/5'>
-                <h3 className='text-xl font-semibold mb-2 text-deep-navy dark:text-white'>
+                <h3 className='text-xl md:text-2xl font-semibold mb-2 text-deep-navy dark:text-white'>
                   Punya ide projek?
                 </h3>
                 <p className='text-warm-gray dark:text-gray-400 mb-6 text-sm'>

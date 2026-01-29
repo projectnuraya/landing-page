@@ -18,7 +18,7 @@ export function PrivacyPage() {
         <section className='py-16 md:py-24 bg-gradient-to-br from-deep-navy to-deep-navy/90 dark:from-dark-surface dark:to-dark-bg text-white'>
           <div className='container mx-auto px-6 md:px-12'>
             <div className='max-w-4xl mx-auto text-center'>
-              <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-nuraya-gold/20 text-nuraya-gold mb-6'>
+              <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-nuraya-gold-500/20 text-nuraya-gold-500 mb-6'>
                 <Shield className='w-8 h-8' />
               </div>
               <h1 className='text-4xl md:text-5xl font-bold mb-6'>Kebijakan Privasi</h1>
@@ -77,7 +77,7 @@ export function PrivacyPage() {
                     Hubungi kami di{' '}
                     <a
                       href='mailto:hello@projectnuraya.id'
-                      className='text-nuraya-gold hover:underline'>
+                      className='text-nuraya-gold-500 hover:underline'>
                       hello@projectnuraya.id
                     </a>{' '}
                     untuk menggunakan hak-hak ini.
@@ -95,7 +95,7 @@ export function PrivacyPage() {
                   </p>
                 </div>
 
-                <div className='bg-nuraya-gold/10 border-l-4 border-nuraya-gold p-6 rounded-r-lg mt-8'>
+                <div className='bg-nuraya-gold-500/10 border-l-4 border-nuraya-gold-500 p-6 rounded-r-lg mt-8'>
                   <p className='text-deep-navy dark:text-white font-semibold mb-2'>
                     Komitmen Kami terhadap Privasi Anda
                   </p>
@@ -115,7 +115,7 @@ export function PrivacyPage() {
           <div className='container mx-auto px-6 md:px-12 text-center'>
             <p className='text-lg mb-4'>
               Punya pertanyaan tentang privasi Anda? Hubungi kami di{' '}
-              <a href='mailto:hello@projectnuraya.id' className='text-nuraya-gold hover:underline'>
+              <a href='mailto:hello@projectnuraya.id' className='text-nuraya-gold-500 hover:underline'>
                 hello@projectnuraya.id
               </a>
             </p>

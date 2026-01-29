@@ -13,8 +13,8 @@ export function AboutSection() {
             <div className='space-y-6 text-lg text-warm-gray dark:text-gray-300 leading-relaxed'>
               <p>
                 Nama "Nuraya" lahir dari perpaduan dua kata:{' '}
-                <span className='text-nuraya-gold font-semibold'>Nur</span> (cahaya) dan{' '}
-                <span className='text-sky-blue font-semibold'>Raya</span> (agung/luas).
+                <span className='text-nuraya-gold-500 font-semibold'>Nur</span> (cahaya) dan{' '}
+                <span className='text-nuraya-blue-400 font-semibold'>Raya</span> (agung/luas).
               </p>
               <p>
                 Kami memulai projek ini dari sebuah pengamatan sederhana: teknologi sering kali
@@ -33,8 +33,10 @@ export function AboutSection() {
 
           {/* Right Column: Principles/Stats */}
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 lg:pt-0'>
-            <Card className='p-6 border-l-4 border-l-nuraya-gold dark:border-l-nuraya-gold hover:-translate-y-2 transition-transform duration-300'>
-              <h3 className='text-4xl font-bold text-deep-navy dark:text-white mb-2'>100%</h3>
+            <Card className='p-6 border-l-4 border-l-nuraya-gold-500 dark:border-l-nuraya-gold-500 hover:-translate-y-2 transition-transform duration-300'>
+              <h3 className='text-2xl md:text-3xl font-bold text-deep-navy dark:text-white mb-2'>
+                100%
+              </h3>
               <p className='text-sm font-medium text-warm-gray dark:text-gray-400 uppercase tracking-wider'>
                 Berpusat pada Manusia
               </p>
@@ -43,8 +45,10 @@ export function AboutSection() {
               </p>
             </Card>
 
-            <Card className='p-6 border-l-4 border-l-sky-blue dark:border-l-sky-blue hover:-translate-y-2 transition-transform duration-300 sm:translate-y-8'>
-              <h3 className='text-4xl font-bold text-deep-navy dark:text-white mb-2'>0%</h3>
+            <Card className='p-6 border-l-4 border-l-nuraya-blue-400 dark:border-l-nuraya-blue-400 hover:-translate-y-2 transition-transform duration-300 sm:translate-y-8'>
+              <h3 className='text-2xl md:text-3xl font-bold text-deep-navy dark:text-white mb-2'>
+                0%
+              </h3>
               <p className='text-sm font-medium text-warm-gray dark:text-gray-400 uppercase tracking-wider'>
                 Gimmick
               </p>

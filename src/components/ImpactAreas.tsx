@@ -27,8 +27,8 @@ export function ImpactAreas() {
     <section className='py-24 bg-deep-navy text-white relative overflow-hidden'>
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>
-        <div className='absolute right-0 top-0 w-96 h-96 bg-nuraya-gold rounded-full blur-[120px]' />
-        <div className='absolute left-0 bottom-0 w-96 h-96 bg-sky-blue rounded-full blur-[120px]' />
+        <div className='absolute right-0 top-0 w-96 h-96 bg-nuraya-gold-400 rounded-full blur-[120px]' />
+        <div className='absolute left-0 bottom-0 w-96 h-96 bg-nuraya-blue-400 rounded-full blur-[120px]' />
       </div>
 
       <div className='container mx-auto px-6 md:px-12 relative z-10'>
@@ -45,8 +45,8 @@ export function ImpactAreas() {
             <div
               key={area.title}
               className='group p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1'>
-              <div className='mb-6 inline-flex p-3 rounded-lg bg-gradient-to-br from-nuraya-gold/20 to-transparent border border-nuraya-gold/20 group-hover:border-nuraya-gold/40 transition-colors'>
-                <area.icon className='w-6 h-6 text-nuraya-gold' />
+              <div className='mb-6 inline-flex p-3 rounded-lg bg-gradient-to-br from-nuraya-gold-400/20 to-transparent border border-nuraya-gold-400/20 group-hover:border-nuraya-gold-400/40 transition-colors'>
+                <area.icon className='w-6 h-6 text-nuraya-gold-400' />
               </div>
               <h3 className='text-xl font-semibold mb-3'>{area.title}</h3>
               <p className='text-gray-400 text-sm leading-relaxed'>{area.description}</p>

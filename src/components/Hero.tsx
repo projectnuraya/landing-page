@@ -31,7 +31,7 @@ export function Hero() {
               PROJECT NURAYA
             </div>
 
-            <h1 className='text-4xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[1.2] lg:leading-[1.2] font-bold tracking-tight text-deep-navy dark:text-white mb-6'>
+            <h1 className='text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-6'>
               Menerangi masa depan dengan{' '}
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
                 teknologi yang bermakna

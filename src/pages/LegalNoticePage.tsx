@@ -57,7 +57,7 @@ export function LegalNoticePage() {
                       <strong>Email Kontak:</strong>{' '}
                       <a
                         href='mailto:hello@projectnuraya.id'
-                        className='text-nuraya-gold hover:underline'>
+                        className='text-nuraya-gold-500 hover:underline'>
                         hello@projectnuraya.id
                       </a>
                     </p>
@@ -65,7 +65,7 @@ export function LegalNoticePage() {
                       <strong>Email Legal:</strong>{' '}
                       <a
                         href='mailto:hello@projectnuraya.id'
-                        className='text-nuraya-gold hover:underline'>
+                        className='text-nuraya-gold-500 hover:underline'>
                         hello@projectnuraya.id
                       </a>
                     </p>
@@ -73,7 +73,7 @@ export function LegalNoticePage() {
                       <strong>Website:</strong>{' '}
                       <a
                         href='https://projectnuraya.id'
-                        className='text-nuraya-gold hover:underline'
+                        className='text-nuraya-gold-500 hover:underline'
                         target='_blank'
                         rel='noopener noreferrer'>
                         https://projectnuraya.id
@@ -83,7 +83,7 @@ export function LegalNoticePage() {
                       <strong>Sertifikat Registrasi:</strong>{' '}
                       <a
                         href='https://ptp.ahu.go.id/sertifikat?id=686e322971635ffa733f6966a9e546eb:2da925ddd9d2909e1ba364ee1d3dba84'
-                        className='text-nuraya-gold hover:underline'
+                        className='text-nuraya-gold-500 hover:underline'
                         target='_blank'
                         rel='noopener noreferrer'>
                         Lihat Sertifikat
@@ -189,7 +189,7 @@ export function LegalNoticePage() {
                       <strong>Email Legal:</strong>{' '}
                       <a
                         href='mailto:hello@projectnuraya.id'
-                        className='text-nuraya-gold hover:underline'>
+                        className='text-nuraya-gold-400 hover:underline'>
                         hello@projectnuraya.id
                       </a>
                     </p>
@@ -233,7 +233,7 @@ export function LegalNoticePage() {
                       <strong>Email Umum:</strong>{' '}
                       <a
                         href='mailto:hello@projectnuraya.id'
-                        className='text-nuraya-gold hover:underline'>
+                        className='text-nuraya-gold-400 hover:underline'>
                         hello@projectnuraya.id
                       </a>
                     </p>
@@ -241,7 +241,7 @@ export function LegalNoticePage() {
                       <strong>Email Legal:</strong>{' '}
                       <a
                         href='mailto:hello@projectnuraya.id'
-                        className='text-nuraya-gold hover:underline'>
+                        className='text-nuraya-gold-400 hover:underline'>
                         hello@projectnuraya.id
                       </a>
                     </p>
@@ -249,7 +249,7 @@ export function LegalNoticePage() {
                       <strong>Email Privasi:</strong>{' '}
                       <a
                         href='mailto:privacy@projectnuraya.id'
-                        className='text-nuraya-gold hover:underline'>
+                        className='text-nuraya-gold-400 hover:underline'>
                         privacy@projectnuraya.id
                       </a>
                     </p>
@@ -277,7 +277,9 @@ export function LegalNoticePage() {
           <div className='container mx-auto px-6 md:px-12 text-center'>
             <p className='text-lg mb-4'>
               Punya pertanyaan hukum? Hubungi kami di{' '}
-              <a href='mailto:hello@projectnuraya.id' className='text-nuraya-gold hover:underline'>
+              <a
+                href='mailto:hello@projectnuraya.id'
+                className='text-nuraya-gold-400 hover:underline'>
                 hello@projectnuraya.id
               </a>
             </p>
