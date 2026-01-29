@@ -83,7 +83,7 @@ export function ProductSection() {
   }
 
   return (
-    <section id='products' className='py-24 md:py-32 bg-light-sand/90 dark:bg-dark-surface/90'>
+    <section id='products' className='py-20 md:py-32 bg-light-sand/90 dark:bg-dark-surface/90'>
       <div className='container mx-auto px-6 md:px-12'>
         {/* Section Header */}
         <div className='mb-16 max-w-3xl'>

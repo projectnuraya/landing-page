@@ -2,7 +2,7 @@ import { Button } from './ui/Button'
 
 export function CollaborationSection() {
   return (
-    <section id='collaboration' className='py-24 md:py-32 bg-light-sand/90 dark:bg-dark-surface/90'>
+    <section id='collaboration' className='py-20 md:py-32 bg-light-sand/90 dark:bg-dark-surface/90'>
       <div className='container mx-auto px-6 md:px-12'>
         <div className='flex flex-col lg:flex-row items-center gap-16'>
           <div className='lg:w-1/2'>

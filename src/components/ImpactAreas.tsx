@@ -22,9 +22,10 @@ const areas = [
     description: 'Leveraging data to support sustainability and conservation efforts.',
   },
 ]
+
 export function ImpactAreas() {
   return (
-    <section className='py-24 bg-deep-navy text-white relative overflow-hidden'>
+    <section className='py-20 md:py-32 bg-deep-navy text-white relative overflow-hidden'>
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>
         <div className='absolute right-0 top-0 w-96 h-96 bg-nuraya-gold-400 rounded-full blur-[120px]' />

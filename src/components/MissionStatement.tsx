@@ -4,7 +4,7 @@ export function MissionStatement() {
   return (
     <section
       id='mission'
-      className='py-24 md:py-32 relative overflow-hidden bg-light-sand/90 dark:bg-dark-surface/90'>
+      className='py-20 md:py-32 relative overflow-hidden bg-light-sand/90 dark:bg-dark-surface/90'>
       <div className='container mx-auto px-6 md:px-12'>
         <div className='max-w-4xl mx-auto text-center'>
           <div className='inline-flex items-center justify-center w-12 h-12 rounded-full bg-nuraya-gold-400/10 text-nuraya-gold-400 mb-8'>

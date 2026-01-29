@@ -53,11 +53,12 @@ const values = [
     bg: 'bg-green-500/10',
   },
 ]
+
 export function ValuesSection() {
   return (
     <section
       id='values'
-      className='py-24 md:py-32 bg-gradient-to-br from-nuraya-gold-400/20 via-nuraya-blue-400/15 to-warm-gray/10 dark:from-gray-800 dark:via-gray-700/50 dark:to-gray-800/80 text-deep-navy dark:text-white relative overflow-hidden'>
+      className='py-20 md:py-32 bg-gradient-to-br from-nuraya-gold-400/20 via-nuraya-blue-400/15 to-warm-gray/10 dark:from-gray-800 dark:via-gray-700/50 dark:to-gray-800/80 text-deep-navy dark:text-white relative overflow-hidden'>
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-40 dark:opacity-25'>
         <div className='absolute right-0 top-0 w-96 h-96 bg-nuraya-gold-400 rounded-full blur-[120px]' />

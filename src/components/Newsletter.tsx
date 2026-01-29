@@ -3,7 +3,7 @@ import { Input } from './ui/Input'
 
 export function Newsletter() {
   return (
-    <section className='py-20 bg-white dark:bg-dark-bg border-t border-gray-100 dark:border-white/5'>
+    <section className='py-16 md:py-24 bg-white dark:bg-dark-bg border-t border-gray-100 dark:border-white/5'>
       <div className='container mx-auto px-6 md:px-12'>
         <div className='max-w-3xl mx-auto text-center'>
           <h3 className='text-2xl md:text-3xl font-bold text-deep-navy dark:text-white mb-4'>

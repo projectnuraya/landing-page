@@ -2,7 +2,7 @@ import { Card } from './ui/Card'
 
 export function AboutSection() {
   return (
-    <section id='about' className='py-24 md:py-32 bg-white dark:bg-dark-bg'>
+    <section id='about' className='py-20 md:py-32 bg-white dark:bg-dark-bg'>
       <div className='container mx-auto px-6 md:px-12'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
           {/* Left Column: Story */}
