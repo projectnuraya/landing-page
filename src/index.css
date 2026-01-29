@@ -7,19 +7,19 @@
 @layer base {
   :root {
     --background: 0 0% 98%;
-    --foreground: 222 47% 11%;
+    --foreground: 180 59% 12%; /* Accent dark */
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 43 74% 63%; /* Nuraya Gold */
+    --ring: 48 100% 44%; /* Nuraya Gold */
     --radius: 0.5rem;
   }
 
   .dark {
     --background: 210 25% 8%; /* #0F1419 */
-    --foreground: 210 40% 98%;
-    --border: 217 19% 27%;
-    --input: 217 19% 27%;
-    --ring: 43 86% 69%; /* Nuraya Gold Bright */
+    --foreground: 0 0% 96%;
+    --border: 180 40% 25%;
+    --input: 180 40% 25%;
+    --ring: 48 100% 50%; /* Nuraya Gold Bright */
   }
 
   html {
@@ -41,11 +41,27 @@
   }
 
   .glow-gold {
-    box-shadow: 0 0 20px rgba(230, 182, 92, 0.3);
+    box-shadow: 0 0 20px rgba(226, 180, 66, 0.3);
   }
 
   .dark .glow-gold {
-    box-shadow: 0 0 25px rgba(244, 201, 107, 0.2);
+    box-shadow: 0 0 25px rgba(226, 180, 66, 0.25);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(0, 174, 239, 0.3);
+  }
+
+  .dark .glow-blue {
+    box-shadow: 0 0 25px rgba(0, 174, 239, 0.25);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(0, 48, 63, 0.3);
+  }
+
+  .dark .glow-accent {
+    box-shadow: 0 0 25px rgba(0, 174, 239, 0.2);
   }
 
   .glass-panel {
