@@ -14,7 +14,8 @@ export function MissionStatement() {
           <h2 className='text-3xl md:text-4xl font-bold leading-tight text-deep-navy dark:text-white mb-12'>
             Teknologi bukan sekadar kode dan piksel. Ia adalah{' '}
             <span className='text-nuraya-gold-400'>cahaya</span> — yang menerangi berbagai
-            persoalan, memberdayakan sesama, dan menciptakan dampak sosial yang bermakna.
+            persoalan, memberdayakan <span className='text-nuraya-blue-400'>sesama</span>, dan
+            menciptakan dampak sosial yang bermakna.
           </h2>
 
           <div className='h-1 w-24 bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400 mx-auto rounded-full' />
