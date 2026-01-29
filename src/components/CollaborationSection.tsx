@@ -33,8 +33,8 @@ export function CollaborationSection() {
 
           <div className='lg:w-1/2 w-full'>
             <div className='relative'>
-              <div className='absolute -inset-4 bg-nuraya-blue-400 dark:bg-nuraya-gold-400 opacity-20 blur-2xl rounded-full' />
-              <div className='relative bg-white dark:bg-dark-surface p-8 md:p-10 rounded-2xl shadow-xl border border-black/5 dark:border-white/5'>
+              <div className='absolute -inset-4 bg-nuraya-blue-400/20 dark:bg-nuraya-gold-400/15 opacity-20 blur-2xl rounded-full' />
+              <div className='relative bg-white dark:bg-dark-surface p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 dark:border-white/10'>
                 <h3 className='text-xl md:text-2xl font-semibold mb-2 text-deep-navy dark:text-white'>
                   Punya ide projek?
                 </h3>
@@ -47,18 +47,18 @@ export function CollaborationSection() {
                     <input
                       type='text'
                       placeholder='Nama'
-                      className='w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-nuraya-gold/50 transition-all'
+                      className='w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-white/10 text-deep-navy dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-nuraya-gold-400 dark:focus:ring-nuraya-gold-300 focus:border-transparent transition-all'
                     />
                     <input
                       type='email'
                       placeholder='Email'
-                      className='w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-nuraya-gold/50 transition-all'
+                      className='w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-white/10 text-deep-navy dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-nuraya-gold-400 dark:focus:ring-nuraya-gold-300 focus:border-transparent transition-all'
                     />
                   </div>
                   <textarea
                     placeholder='Ceritakan sedikit tentang visi Anda...'
                     rows={4}
-                    className='w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-nuraya-gold/50 transition-all resize-none'
+                    className='w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-white/10 text-deep-navy dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-nuraya-gold-400 dark:focus:ring-nuraya-gold-300 focus:border-transparent transition-all resize-none'
                   />
                   <Button type='submit' className='w-full'>
                     Kirim Pesan

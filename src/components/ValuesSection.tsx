@@ -60,13 +60,13 @@ export function ValuesSection() {
       id='values'
       className='py-20 md:py-32 bg-gradient-to-br from-nuraya-gold-400/20 via-nuraya-blue-400/15 to-warm-gray/10 dark:from-gray-800 dark:via-gray-700/50 dark:to-gray-800/80 text-deep-navy dark:text-white relative overflow-hidden'>
       {/* Background Pattern */}
-      <div className='absolute inset-0 opacity-40 dark:opacity-25'>
-        <div className='absolute right-0 top-0 w-96 h-96 bg-nuraya-gold-400 rounded-full blur-[120px]' />
-        <div className='absolute left-0 bottom-0 w-96 h-96 bg-nuraya-blue-400 rounded-full blur-[120px]' />
+      <div className='absolute inset-0 opacity-40 dark:opacity-20'>
+        <div className='absolute right-0 top-0 w-96 h-96 bg-nuraya-gold-400/60 dark:bg-nuraya-gold-400/40 rounded-full blur-[120px]' />
+        <div className='absolute left-0 bottom-0 w-96 h-96 bg-nuraya-blue-400/60 dark:bg-nuraya-blue-400/40 rounded-full blur-[120px]' />
       </div>
 
       {/* Border glow effect */}
-      <div className='absolute inset-0 border-y border-nuraya-gold-400/30 dark:border-nuraya-gold-400/20 pointer-events-none' />
+      <div className='absolute inset-0 border-y border-nuraya-gold-400/30 dark:border-nuraya-gold-400/15 pointer-events-none' />
 
       <div className='container mx-auto px-6 md:px-12 relative z-10'>
         <div className='mb-12 max-w-2xl'>

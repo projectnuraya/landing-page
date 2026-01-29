@@ -13,8 +13,14 @@ export function AboutSection() {
             <div className='space-y-6 text-lg text-warm-gray dark:text-gray-300 leading-relaxed'>
               <p>
                 Nama "Nuraya" lahir dari perpaduan dua kata:{' '}
-                <span className='text-nuraya-gold-500 font-semibold'>Nur</span> (cahaya) dan{' '}
-                <span className='text-nuraya-blue-400 font-semibold'>Raya</span> (agung/luas).
+                <span className='text-nuraya-gold-500 dark:text-nuraya-gold-300 font-semibold'>
+                  Nur
+                </span>{' '}
+                (cahaya) dan{' '}
+                <span className='text-nuraya-blue-500 dark:text-nuraya-blue-300 font-semibold'>
+                  Raya
+                </span>{' '}
+                (agung/luas).
               </p>
               <p>
                 Kami memulai projek ini dari sebuah pengamatan sederhana: teknologi sering kali
