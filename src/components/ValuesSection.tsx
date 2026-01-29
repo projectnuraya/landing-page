@@ -83,8 +83,9 @@ export function ValuesSection() {
           {values.map((value, index) => (
             <Card
               key={value.title}
+              variant={index % 2 === 0 ? 'gold' : 'blue'}
               className={`
-                group hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-gray-900 backdrop-blur-sm border border-black/10 dark:border-white/20 hover:shadow-xl hover:border-nuraya-gold-400/40 dark:hover:border-nuraya-gold-300/50
+                group hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-gray-900 backdrop-blur-sm
                 ${index === 0 ? 'lg:col-span-7' : ''}
                 ${index === 1 ? 'lg:col-span-5' : ''}
                 ${index === 2 ? 'lg:col-span-5' : ''}

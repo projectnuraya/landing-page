@@ -111,6 +111,7 @@ export function ProductSection() {
             {services.map((service) => (
               <Card
                 key={service.title}
+                variant='gold'
                 className='group hover:-translate-y-1 transition-all duration-300 relative overflow-hidden'>
                 {/* Available Badge */}
                 <div className='absolute top-4 right-4'>
@@ -153,6 +154,7 @@ export function ProductSection() {
             {comingSoon.map((product) => (
               <Card
                 key={product.title}
+                variant='blue'
                 className='group hover:-translate-y-1 transition-all duration-300 relative overflow-hidden opacity-90 hover:opacity-100'>
                 {/* Coming Soon Badge */}
                 <div className='absolute top-4 right-4'>

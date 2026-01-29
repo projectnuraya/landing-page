@@ -33,7 +33,9 @@ export function AboutSection() {
 
           {/* Right Column: Principles/Stats */}
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 lg:pt-0'>
-            <Card className='p-6 border-l-4 border-l-nuraya-gold-500 dark:border-l-nuraya-gold-500 hover:-translate-y-2 transition-transform duration-300'>
+            <Card
+              variant='gold'
+              className='p-6 border-l-4 border-l-nuraya-gold-500 dark:border-l-nuraya-gold-500 hover:-translate-y-2 transition-transform duration-300'>
               <h3 className='text-2xl md:text-3xl font-bold text-deep-navy dark:text-white mb-2'>
                 100%
               </h3>
@@ -45,7 +47,9 @@ export function AboutSection() {
               </p>
             </Card>
 
-            <Card className='p-6 border-l-4 border-l-nuraya-blue-400 dark:border-l-nuraya-blue-400 hover:-translate-y-2 transition-transform duration-300 sm:translate-y-8'>
+            <Card
+              variant='blue'
+              className='p-6 border-l-4 border-l-nuraya-blue-400 dark:border-l-nuraya-blue-400 hover:-translate-y-2 transition-transform duration-300 sm:translate-y-8'>
               <h3 className='text-2xl md:text-3xl font-bold text-deep-navy dark:text-white mb-2'>
                 0%
               </h3>
