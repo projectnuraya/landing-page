@@ -25,38 +25,38 @@ export function Hero() {
         <div className='absolute bottom-[10%] left-[-10%] w-[600px] h-[600px] bg-nuraya-blue-400/15 dark:bg-nuraya-blue-400/8 rounded-full blur-[120px]' />
       </div>
 
-      <div className='container mx-auto px-8 md:px-16 lg:px-20 py-12 md:py-16 relative z-10'>
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center'>
+      <div className='container mx-auto px-6 md:px-12 lg:px-20 py-8 md:py-12 relative z-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center'>
           {/* Text Content - Asymmetric Left (7 cols) */}
           <div className='lg:col-span-7 flex flex-col items-start text-left animate-fade-up'>
-            <div className='inline-block px-3 py-1 mb-6 rounded-full bg-deep-navy/15 dark:bg-nuraya-gold-400/10 border border-deep-navy/30 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-sm font-medium tracking-wide'>
+            <div className='inline-block px-3 py-1 mb-4 md:mb-6 rounded-full bg-deep-navy/15 dark:bg-nuraya-gold-400/10 border border-deep-navy/30 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-sm font-medium tracking-wide'>
               PROJECT NURAYA
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-6'>
+            <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6'>
               Menerangi masa depan dengan{' '}
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
                 teknologi yang bermakna
               </span>
             </h1>
 
-            <p className='text-xl md:text-2xl text-gray-700 dark:text-gray-100 max-w-2xl mb-2'>
+            <p className='text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-100 max-w-2xl mb-2'>
               <strong>Membangun makna, menyalakan harapan.</strong>
             </p>
 
-            <p className='text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-xl mb-10 leading-relaxed'>
+            <p className='text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-xl mb-8 md:mb-10 leading-relaxed'>
               Kami membangun produk digital yang memecahkan masalah nyata, bukan gimmick. Teknologi
               harus menjadi alat untuk pendidikan, pemberdayaan, dan kolaborasi sosial.
             </p>
 
-            <div className='flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-16'>
-              <Button onClick={scrollToMission} className='h-12 px-8 text-base'>
+            <div className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto'>
+              <Button onClick={scrollToMission} className='h-11 md:h-12 px-6 md:px-8 text-base'>
                 Jelajahi Misi Kami
               </Button>
               <Button
                 onClick={scrollToAbout}
                 variant='outline'
-                className='h-12 px-8 text-base border-deep-navy/10 text-deep-navy hover:bg-deep-navy/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5'>
+                className='h-11 md:h-12 px-6 md:px-8 text-base border-deep-navy/10 text-deep-navy hover:bg-deep-navy/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5'>
                 Tentang Kami
               </Button>
             </div>
@@ -90,17 +90,13 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className='absolute bottom-10 inset-x-0 flex justify-center z-20'>
-        <div
-          className='flex flex-col items-center animate-glow opacity-50 hover:opacity-100 transition-opacity cursor-pointer'
-          onClick={scrollToMission}>
-          <span className='text-xs uppercase tracking-widest mb-2 text-deep-navy dark:text-white'>
-            Scroll
-          </span>
-          <ArrowDown className='w-5 h-5 text-deep-navy dark:text-white' />
-        </div>
-      </div>
+      {/* Simplified Scroll Indicator */}
+      <button
+        onClick={scrollToMission}
+        className='absolute bottom-8 left-1/2 -translate-x-1/2 z-20 group'
+        aria-label='Scroll to mission section'>
+        <ArrowDown className='w-6 h-6 text-nuraya-gold-400 dark:text-nuraya-gold-300 animate-bounce opacity-60 group-hover:opacity-100 transition-opacity' />
+      </button>
     </section>
   )
 }
