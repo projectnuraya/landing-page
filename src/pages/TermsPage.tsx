@@ -1,8 +1,8 @@
+import { FileText } from 'lucide-react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
-import { FileText } from 'lucide-react'
+import { Navbar } from '../components/Navbar'
 
 export function TermsPage() {
   useEffect(() => {
@@ -124,7 +124,7 @@ export function TermsPage() {
             <Link
               to='/'
               onClick={() => window.scrollTo(0, 0)}
-              className='inline-block px-8 py-3 bg-nuraya-gold hover:bg-nuraya-gold-bright text-deep-navy font-semibold rounded-lg transition-colors duration-300'>
+              className='inline-block px-8 py-3 bg-nuraya-gold-400 hover:bg-nuraya-gold-500 text-deep-navy font-semibold rounded-lg transition-colors duration-300'>
               Kembali ke Beranda
             </Link>
           </div>

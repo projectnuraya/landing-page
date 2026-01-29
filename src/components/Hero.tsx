@@ -27,13 +27,13 @@ export function Hero() {
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center'>
           {/* Text Content - Asymmetric Left (7 cols) */}
           <div className='lg:col-span-7 flex flex-col items-start text-left animate-fade-up'>
-            <div className='inline-block px-3 py-1 mb-6 rounded-full bg-deep-navy/15 dark:bg-nuraya-gold/10 border border-deep-navy/30 dark:border-nuraya-gold/20 text-deep-navy dark:text-nuraya-gold-bright text-sm font-medium tracking-wide'>
+            <div className='inline-block px-3 py-1 mb-6 rounded-full bg-deep-navy/15 dark:bg-nuraya-gold-400/10 border border-deep-navy/30 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-sm font-medium tracking-wide'>
               PROJECT NURAYA
             </div>
 
             <h1 className='text-4xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[1.2] lg:leading-[1.2] font-bold tracking-tight text-deep-navy dark:text-white mb-6'>
               Menerangi masa depan dengan{' '}
-              <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold to-sky-blue'>
+              <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
                 teknologi yang bermakna
               </span>
             </h1>
