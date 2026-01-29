@@ -22,7 +22,8 @@ export const theme = {
       foreground: 'hsl(var(--foreground))',
     },
     fontFamily: {
-      sans: ['Poppins', 'system-ui', 'sans-serif'],
+      sans: ['Plus Jakarta Sans', 'Poppins', 'system-ui', 'sans-serif'],
+      'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
     },
     animation: {
       'fade-up': 'fadeUp 0.8s ease-out forwards',
