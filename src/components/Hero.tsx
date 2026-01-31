@@ -8,6 +8,12 @@ export function Hero() {
       behavior: 'smooth',
     })
   }
+  const scrollToProducts = () => {
+    const productsSection = document.getElementById('products')
+    productsSection?.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about')
     aboutSection?.scrollIntoView({
@@ -50,8 +56,8 @@ export function Hero() {
             </p>
 
             <div className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto'>
-              <Button onClick={scrollToMission} className='h-11 md:h-12 px-6 md:px-8 text-base'>
-                Jelajahi Misi Kami
+              <Button onClick={scrollToProducts} className='h-11 md:h-12 px-6 md:px-8 text-base'>
+                Lihat Solusi
               </Button>
               <Button
                 onClick={scrollToAbout}
