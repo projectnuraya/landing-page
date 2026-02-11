@@ -1,7 +1,8 @@
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import nurayaLogo from '../assets/nuraya_logo.svg'
+import nurayaLogoDark from '../assets/nuraya_logo_dark.svg'
+import nurayaLogoLight from '../assets/nuraya_logo_light.svg'
 import { DarkModeToggle } from './DarkModeToggle'
 
 export function Navbar() {
@@ -9,6 +10,7 @@ export function Navbar() {
   const location = useLocation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
+  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'))
 
   // Intersection Observer for active section detection
   useEffect(() => {
@@ -40,6 +42,20 @@ export function Navbar() {
       observers.forEach((observer) => observer.disconnect())
     }
   }, [location.pathname])
+
+  // Watch for dark mode changes
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains('dark'))
+    })
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   const handleSectionClick = (sectionId: string) => (e: React.MouseEvent) => {
     e.preventDefault()
@@ -76,7 +92,11 @@ export function Navbar() {
         {/* Logo */}
         <div className='font-bold text-xl tracking-tight text-deep-navy dark:text-white'>
           <Link to='/' onClick={() => window.scrollTo(0, 0)}>
-            <img src={nurayaLogo} alt='Project Nuraya Logo' className='h-8 w-auto' />
+            <img
+              src={isDark ? nurayaLogoDark : nurayaLogoLight}
+              alt='Project Nuraya Logo'
+              className='h-8 w-auto'
+            />
           </Link>
         </div>
 
