@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import nurayaLogo from '../assets/nuraya_logo.svg'
 import { DarkModeToggle } from './DarkModeToggle'
 
 export function Navbar() {
@@ -74,8 +75,8 @@ export function Navbar() {
       <header className='fixed top-0 left-0 right-0 z-50 px-6 py-4 flex justify-between items-center bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-gray-100 dark:border-white/5'>
         {/* Logo */}
         <div className='font-bold text-xl tracking-tight text-deep-navy dark:text-white'>
-          <Link to='/' aria-label='Project Nuraya Logo' onClick={() => window.scrollTo(0, 0)}>
-            NURAYA
+          <Link to='/' onClick={() => window.scrollTo(0, 0)}>
+            <img src={nurayaLogo} alt='Project Nuraya Logo' className='h-8 w-auto' />
           </Link>
         </div>
 
