@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+
 import { AboutSection } from '../components/AboutSection'
 import { CollaborationSection } from '../components/CollaborationSection'
 import { Footer } from '../components/Footer'
@@ -22,10 +23,8 @@ export function LandingPage() {
         <MissionStatement />
         <AboutSection />
         <ValuesSection />
-        {/* <ImpactAreas /> */}
         <ProductSection />
         <CollaborationSection />
-        {/* <Newsletter /> */}
       </main>
 
       <Footer />

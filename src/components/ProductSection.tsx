@@ -1,4 +1,7 @@
 import { Bike, BookOpen, Database, FileText, Globe, Lightbulb, Wrench } from 'lucide-react'
+
+import { scrollToSection } from '../lib/scroll'
+
 import { Button } from './ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card'
 
@@ -75,13 +78,6 @@ const comingSoon = [
 ]
 
 export function ProductSection() {
-  const scrollToCollaboration = () => {
-    const collaborationSection = document.getElementById('collaboration')
-    collaborationSection?.scrollIntoView({
-      behavior: 'smooth',
-    })
-  }
-
   return (
     <section id='products' className='py-20 md:py-32 bg-light-sand/90 dark:bg-dark-surface/90'>
       <div className='container mx-auto px-6 md:px-12'>
@@ -187,7 +183,7 @@ export function ProductSection() {
               Punya kebutuhan spesifik yang tidak ada di daftar? Ceritakan pada kami — mungkin kami
               bisa membantu.
             </p>
-            <Button onClick={scrollToCollaboration} className='px-8'>
+            <Button onClick={() => scrollToSection('collaboration')} className='px-8'>
               Diskusikan Kebutuhan Anda
             </Button>
           </div>

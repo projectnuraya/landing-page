@@ -1,27 +1,11 @@
 import { ArrowDown } from 'lucide-react'
-import { Button } from './ui/Button'
+
 import nurayaPattern from '../assets/nuraya_pattern.svg'
+import { scrollToSection } from '../lib/scroll'
+
+import { Button } from './ui/Button'
 
 export function Hero() {
-  const scrollToMission = () => {
-    const missionSection = document.getElementById('mission')
-    missionSection?.scrollIntoView({
-      behavior: 'smooth',
-    })
-  }
-  const scrollToProducts = () => {
-    const productsSection = document.getElementById('products')
-    productsSection?.scrollIntoView({
-      behavior: 'smooth',
-    })
-  }
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about')
-    aboutSection?.scrollIntoView({
-      behavior: 'smooth',
-    })
-  }
-
   // Generate pattern mosaic tiles
   const COLS = 7
   const ROWS = 4
@@ -71,11 +55,13 @@ export function Hero() {
             </p>
 
             <div className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto'>
-              <Button onClick={scrollToProducts} className='h-11 md:h-12 px-6 md:px-8 text-base'>
+              <Button
+                onClick={() => scrollToSection('products')}
+                className='h-11 md:h-12 px-6 md:px-8 text-base'>
                 Lihat Solusi
               </Button>
               <Button
-                onClick={scrollToAbout}
+                onClick={() => scrollToSection('about')}
                 variant='outline'
                 className='h-11 md:h-12 px-6 md:px-8 text-base border-deep-navy/10 text-deep-navy hover:bg-deep-navy/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5'>
                 Tentang Kami
@@ -123,7 +109,7 @@ export function Hero() {
 
       {/* Simplified Scroll Indicator */}
       <button
-        onClick={scrollToMission}
+        onClick={() => scrollToSection('mission')}
         className='absolute bottom-8 left-1/2 -translate-x-1/2 z-20 group'
         aria-label='Scroll to mission section'>
         <ArrowDown className='w-6 h-6 text-nuraya-gold-400 dark:text-nuraya-gold-300 animate-bounce opacity-60 group-hover:opacity-100 transition-opacity' />

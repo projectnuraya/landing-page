@@ -1,11 +1,8 @@
 import { Slot } from '@radix-ui/react-slot'
-import { clsx, type ClassValue } from 'clsx'
 import React, { forwardRef } from 'react'
-import { twMerge } from 'tailwind-merge'
 
-function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-}
+import { cn } from '../../lib/utils'
+
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost'

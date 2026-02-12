@@ -1,4 +1,5 @@
 import { Heart, Lightbulb, Sprout, Zap } from 'lucide-react'
+
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card'
 
 const values = [

@@ -1,5 +1,6 @@
 import { CheckCircle, Send } from 'lucide-react'
 import { type FormEvent, useState } from 'react'
+
 import { Button } from './ui/Button'
 
 const CONTACT_EMAIL = 'hello@projectnuraya.id'

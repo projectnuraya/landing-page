@@ -1,8 +1,12 @@
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+
 import nurayaLogoDark from '../assets/nuraya_logo_dark.svg'
 import nurayaLogoLight from '../assets/nuraya_logo_light.svg'
+import { useDarkMode } from '../hooks/useDarkMode'
+import { scrollToSection } from '../lib/scroll'
+
 import { DarkModeToggle } from './DarkModeToggle'
 
 export function Navbar() {
@@ -10,11 +14,7 @@ export function Navbar() {
   const location = useLocation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
-  const [isDark, setIsDark] = useState(() => {
-    const storedTheme = localStorage.getItem('theme')
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    return storedTheme === 'dark' || (!storedTheme && systemPrefersDark)
-  })
+  const { isDark } = useDarkMode()
 
   // Intersection Observer for active section detection
   useEffect(() => {
@@ -47,20 +47,6 @@ export function Navbar() {
     }
   }, [location.pathname])
 
-  // Watch for dark mode changes
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      setIsDark(document.documentElement.classList.contains('dark'))
-    })
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
   const handleSectionClick = (sectionId: string) => (e: React.MouseEvent) => {
     e.preventDefault()
     setIsMobileMenuOpen(false) // Close mobile menu on click
@@ -68,16 +54,10 @@ export function Navbar() {
     if (location.pathname !== '/') {
       navigate('/')
       setTimeout(() => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-        }
+        scrollToSection(sectionId)
       }, 100)
     } else {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
+      scrollToSection(sectionId)
     }
   }
 

@@ -13,9 +13,9 @@
   "trailingComma": "all",
   "useTabs": false,
   "importOrderSeparation": true,
-  "importOrderBuiltinModulesToTop": true,
   "importOrderSortSpecifiers": true,
   "importOrderCaseInsensitive": true,
   "importOrder": ["^@/(.*)$", "^../", "^./"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "endOfLine": "auto"
 }

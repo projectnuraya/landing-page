@@ -1,6 +1,7 @@
 import { ArrowLeft, Home } from 'lucide-react'
 import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+
 import { Button } from '../components/ui/Button'
 
 export function NotFoundPage() {

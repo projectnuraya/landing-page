@@ -1,6 +1,7 @@
 import { Shield } from 'lucide-react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+
 import { Footer } from '../components/Footer'
 import { Navbar } from '../components/Navbar'
 
@@ -115,7 +116,9 @@ export function PrivacyPage() {
           <div className='container mx-auto px-6 md:px-12 text-center'>
             <p className='text-lg mb-4'>
               Punya pertanyaan tentang privasi Anda? Hubungi kami di{' '}
-              <a href='mailto:hello@projectnuraya.id' className='text-nuraya-gold-500 hover:underline'>
+              <a
+                href='mailto:hello@projectnuraya.id'
+                className='text-nuraya-gold-500 hover:underline'>
                 hello@projectnuraya.id
               </a>
             </p>
