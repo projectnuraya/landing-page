@@ -75,6 +75,7 @@ export const theme = {
       'fade-up': 'fadeUp 0.8s ease-out forwards',
       glow: 'glow 3s ease-in-out infinite',
       float: 'float 6s ease-in-out infinite',
+      'pulse-slow': 'pulseSlow 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
     },
     keyframes: {
       fadeUp: {
@@ -88,6 +89,10 @@ export const theme = {
       float: {
         '0%, 100%': { transform: 'translateY(0)' },
         '50%': { transform: 'translateY(-20px)' },
+      },
+      pulseSlow: {
+        '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+        '50%': { transform: 'scale(1.15)', opacity: '0.6' },
       },
     },
     backgroundImage: {
