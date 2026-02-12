@@ -33,7 +33,7 @@ export function Hero() {
       <div className='container mx-auto px-6 md:px-12 lg:px-20 py-8 md:py-12 relative z-10'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center'>
           {/* Text Content - Asymmetric Left (7 cols) */}
-          <div className='lg:col-span-7 flex flex-col items-start text-left animate-fade-up'>
+          <div className='lg:col-span-8 flex flex-col items-start text-left animate-fade-up'>
             <div className='inline-block px-3 py-1 mb-4 md:mb-6 rounded-full bg-deep-navy/15 dark:bg-nuraya-gold-400/10 border border-deep-navy/30 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-sm font-medium tracking-wide'>
               PROJECT NURAYA
             </div>
@@ -70,7 +70,7 @@ export function Hero() {
           </div>
 
           {/* Visual Element - Pattern Mosaic Grid */}
-          <div className='lg:col-span-5 relative hidden lg:block min-h-[500px]'>
+          <div className='lg:col-span-4 relative hidden lg:block min-h-[500px]'>
             {/* Horizontal mask: fade from left (transparent) to right (visible) */}
             <div
               className='absolute inset-y-[-15%] left-[-15%] right-[-25%] opacity-90 dark:opacity-50'
