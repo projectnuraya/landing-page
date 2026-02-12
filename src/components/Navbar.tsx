@@ -10,7 +10,11 @@ export function Navbar() {
   const location = useLocation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
-  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'))
+  const [isDark, setIsDark] = useState(() => {
+    const storedTheme = localStorage.getItem('theme')
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    return storedTheme === 'dark' || (!storedTheme && systemPrefersDark)
+  })
 
   // Intersection Observer for active section detection
   useEffect(() => {
