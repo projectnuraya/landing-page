@@ -63,7 +63,8 @@ export function AboutSection() {
                 Gimmick
               </p>
               <p className='mt-4 text-sm text-gray-600 dark:text-gray-300'>
-                Kami hadir untuk menyelesaikan masalah nyata, bukan masalah yang diada-adakan.
+                Fokus kami sederhana: Menghadirkan solusi teknologi untuk tantangan nyata yang
+                dihadapi masyarakat hari ini.
               </p>
             </Card>
           </div>
