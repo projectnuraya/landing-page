@@ -1,19 +1,22 @@
-# Project Nuraya Landing Page
+# PT Nuraya Digital Nusantara
 
-## Overview
+> **"Membangun makna, menyalakan harapan."**
 
-This is the official landing page for **Project Nuraya** (PT Nuraya Digital Nusantara), a tech company lighting up the world with meaningful, human-centered solutions. We're all about building digital products that solve real problems, empower communities, and foster collaboration—think education, transparency, and growth through tech. Our mission? Create a better society one line of code at a time. Dive in to learn about our vision, values, and impact areas.
+**Project Nuraya** is a digital transformation company built on a simple premise: Technology should solve real problems, not create new ones. We prioritize solid engineering over gimmicks, focusing on efficiency, scalability, and human impact.
 
-## Setup Instructions
+### Our Core Focus
 
-1. **Clone the repo**: `git clone https://github.com/projectnuraya/landing-page.git`
-2. **Install dependencies**: `npm install` (or `yarn install` if you're that type)
-3. **Run locally**: `npm run dev` (fires up Vite dev server)
-4. **Build for production**: `npm run build`
-5. **Preview build**: `npm run preview`
+*   **Cloud & Infrastructure Optimization** (Proxmox, Docker, Traefik)
+*   **Backend Engineering** (Golang, Kafka, High-Performance Systems)
+*   **Digital Transformation** (Custom Solutions for Real-World Efficiency)
 
-Built with React, TypeScript, Vite, Tailwind CSS, and some love.
+### Tech Stack
 
-## Contact Us
+Built with precision using:
+*   **Runtime:** React + TypeScript (Vite)
+*   **Styling:** Tailwind CSS (Clean & Responsive)
+*   **Infrastructure:** Self-Hosted on Proxmox LXC + Cloudflare Tunnel
 
-Got questions or wanna collaborate? Reach out at [hello@projectnuraya.com](mailto:hello@projectnuraya.com).
+---
+[**Visit Official Website**](https://projectnuraya.id)
+---
