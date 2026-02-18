@@ -23,9 +23,9 @@ export function AboutSection() {
                 (agung/luas).
               </p>
               <p>
-                Kami memulai projek ini dari sebuah pengamatan sederhana: teknologi sering kali
-                dibangun demi keuntungan semata, baru kemudian untuk manusia. Kami ingin membalikkan
-                keadaan tersebut.
+                Banyak teknologi hari ini diciptakan untuk menyita perhatian kita, bukan memecahkan
+                masalah kita. Kami ingin mengubah narasi tersebut: Teknologi seharusnya hadir untuk
+                memberdayakan, bukan sekadar menciptakan ketergantungan.
               </p>
               <p>
                 Filosofi kami berakar pada keyakinan bahwa perangkat digital haruslah aksesibel,
@@ -63,7 +63,8 @@ export function AboutSection() {
                 Gimmick
               </p>
               <p className='mt-4 text-sm text-gray-600 dark:text-gray-300'>
-                Kami hadir untuk menyelesaikan masalah nyata, bukan masalah yang diada-adakan.
+                Fokus kami sederhana: Menghadirkan solusi teknologi untuk tantangan nyata yang
+                dihadapi masyarakat hari ini.
               </p>
             </Card>
           </div>
