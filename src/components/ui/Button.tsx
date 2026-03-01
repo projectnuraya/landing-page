@@ -19,8 +19,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       secondary:
         'bg-nuraya-blue-400 text-white hover:bg-nuraya-blue-500 shadow-lg shadow-nuraya-blue-400/20 dark:bg-nuraya-blue-300 dark:hover:bg-nuraya-blue-400 dark:text-deep-navy',
       outline:
-        'border border-input bg-background hover:bg-accent-50 hover:text-accent-500 dark:border-white/10 dark:hover:bg-white/5',
-      ghost: 'hover:bg-accent-50 hover:text-accent-500 dark:hover:bg-white/5',
+        'border border-input bg-background hover:bg-accent-50 hover:text-accent-500 dark:border-white/10 dark:hover:bg-white/5 dark:hover:text-white',
+      ghost: 'hover:bg-accent-50 hover:text-accent-500 dark:hover:bg-white/5 dark:hover:text-white',
     }
     const sizes = {
       default: 'h-10 px-4 py-2',

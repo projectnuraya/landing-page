@@ -58,15 +58,6 @@ const comingSoon = [
     bg: 'bg-orange-500/10',
   },
   {
-    icon: BookOpen,
-    title: 'Tilawah Tracker',
-    description:
-      'Koordinasi tilawah bersama tanpa ribet. Bagi juz mingguan, update status bacaan peserta, dan langsung generate rekap yang siap dibagikan ke grup WA. Minim lupa, lebih tertib.',
-    status: 'coming',
-    color: 'text-green-500',
-    bg: 'bg-green-500/10',
-  },
-  {
     icon: FileText,
     title: 'Sistem Administrasi Surat RT/RW',
     description:
@@ -74,6 +65,18 @@ const comingSoon = [
     status: 'coming',
     color: 'text-rose-500',
     bg: 'bg-rose-500/10',
+  },
+]
+
+const liveProducts = [
+  {
+    icon: BookOpen,
+    title: 'Tilawah Tracker',
+    description:
+      'Koordinasi tilawah bersama tanpa ribet. Bagi juz mingguan, update status bacaan peserta, dan langsung generate rekap yang siap dibagikan ke grup WA. Minim lupa, lebih tertib.',
+    url: 'https://tilawah-tracker.projectnuraya.id/',
+    color: 'text-emerald-500',
+    bg: 'bg-emerald-500/10',
   },
 ]
 
@@ -136,6 +139,59 @@ export function ProductSection() {
           </div>
         </div>
 
+        {/* Live Products Section */}
+        <div className='mb-20'>
+          <div className='flex items-center gap-3 mb-8'>
+            <div className='h-px flex-1 bg-gradient-to-r from-emerald-500/50 to-transparent dark:from-emerald-500/30' />
+            <span className='text-sm font-semibold text-emerald-500 uppercase tracking-wider'>
+              Produk Kami
+            </span>
+            <div className='h-px flex-1 bg-gradient-to-l from-emerald-500/50 to-transparent dark:from-emerald-500/30' />
+          </div>
+
+          <div className='max-w-xl mx-auto'>
+            {liveProducts.map((product) => (
+              <Card
+                key={product.title}
+                variant='gold'
+                className='group hover:-translate-y-1 transition-all duration-300 relative overflow-hidden'>
+                {/* Live Badge */}
+                <div className='absolute top-4 right-4'>
+                  <span className='inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400'>
+                    <span className='relative flex h-2 w-2'>
+                      <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75'></span>
+                      <span className='relative inline-flex rounded-full h-2 w-2 bg-emerald-500'></span>
+                    </span>
+                    Live
+                  </span>
+                </div>
+
+                <CardHeader className='pb-4'>
+                  <div
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${product.bg} border ${product.color} transition-transform group-hover:scale-110 duration-300`}>
+                    <product.icon className={`w-6 h-6 ${product.color}`} />
+                  </div>
+                  <CardTitle className='text-xl'>{product.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className='text-warm-gray dark:text-gray-400 leading-relaxed text-sm mb-6'>
+                    {product.description}
+                  </p>
+                  <Button asChild className='w-full sm:w-auto hover:-translate-y-0.5 transition-transform' variant='outline'>
+                    <a
+                      href={product.url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      aria-label={`Kunjungi ${product.title} (membuka tab baru)`}>
+                      Kunjungi Produk &rarr;
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         {/* Coming Soon Section */}
         <div className='mb-16'>
           <div className='flex items-center gap-3 mb-8'>
@@ -146,7 +202,7 @@ export function ProductSection() {
             <div className='h-px flex-1 bg-gradient-to-l from-sky-blue/50 to-transparent dark:from-sky-blue/30' />
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
             {comingSoon.map((product) => (
               <Card
                 key={product.title}
