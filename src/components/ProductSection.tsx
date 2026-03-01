@@ -149,7 +149,7 @@ export function ProductSection() {
             <div className='h-px flex-1 bg-gradient-to-l from-emerald-500/50 to-transparent dark:from-emerald-500/30' />
           </div>
 
-          <div className='max-w-xl mx-auto'>
+          <div className='max-w-xl mx-auto flex flex-col gap-6'>
             {liveProducts.map((product) => (
               <Card
                 key={product.title}
@@ -159,7 +159,7 @@ export function ProductSection() {
                 <div className='absolute top-4 right-4'>
                   <span className='inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400'>
                     <span className='relative flex h-2 w-2'>
-                      <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75'></span>
+                      <span className='motion-safe:animate-ping motion-reduce:hidden absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75'></span>
                       <span className='relative inline-flex rounded-full h-2 w-2 bg-emerald-500'></span>
                     </span>
                     Live
