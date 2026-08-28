@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 import nurayaLogoDark from '../assets/nuraya_logo_dark.svg'
 import nurayaLogoLight from '../assets/nuraya_logo_light.svg'
-import { useDarkMode } from '../hooks/useDarkMode'
 import { scrollToSection } from '../lib/scroll'
 
 import { DarkModeToggle } from './DarkModeToggle'
@@ -14,7 +13,6 @@ export function Navbar() {
   const location = useLocation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
-  const { isDark } = useDarkMode()
 
   // Intersection Observer for active section detection
   useEffect(() => {
@@ -76,10 +74,19 @@ export function Navbar() {
         {/* Logo */}
         <div className='font-bold text-xl tracking-tight text-deep-navy dark:text-white'>
           <Link to='/' onClick={() => window.scrollTo(0, 0)}>
+            {/* Both logos ship in the markup and CSS picks one, so the
+                prerendered HTML is correct in either theme and hydration has
+                nothing to reconcile. */}
             <img
-              src={isDark ? nurayaLogoDark : nurayaLogoLight}
+              src={nurayaLogoLight}
               alt='Project Nuraya Logo'
-              className='h-8 w-auto'
+              className='h-8 w-auto dark:hidden'
+            />
+            <img
+              src={nurayaLogoDark}
+              alt=''
+              aria-hidden='true'
+              className='h-8 w-auto hidden dark:block'
             />
           </Link>
         </div>

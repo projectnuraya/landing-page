@@ -1,14 +1,21 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * Reads the initial theme.
+ *
+ * During prerendering there is no DOM, so we fall back to light. In the browser
+ * we read the `dark` class that the inline bootstrap script in `index.html` has
+ * already applied before first paint, which keeps this in sync with what the
+ * user actually sees.
+ */
 function getInitialDark(): boolean {
-  const storedTheme = localStorage.getItem('theme')
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-  return storedTheme === 'dark' || (!storedTheme && systemPrefersDark)
+  if (typeof document === 'undefined') return false
+  return document.documentElement.classList.contains('dark')
 }
 
 /**
  * Shared hook for dark mode state.
- * - Reads initial value from localStorage / system preference
+ * - Reads initial value from the `dark` class set by the bootstrap script
  * - Syncs the `dark` class on `<html>` and persists to localStorage
  * - Listens for external changes (e.g. another component toggling the class)
  */
