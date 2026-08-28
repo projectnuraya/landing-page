@@ -1,6 +1,8 @@
 import { ArrowUp, Github } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
+import { company } from '../config/company'
+
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -65,9 +67,9 @@ export function Footer() {
             </h3>
             <div className='space-y-4'>
               <a
-                href='mailto:hello@projectnuraya.id'
+                href={`mailto:${company.email}`}
                 className='block text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
-                hello@projectnuraya.id
+                {company.email}
               </a>
               <div>
                 <h4 className='text-sm font-semibold text-deep-navy dark:text-white mb-3'>
@@ -75,7 +77,7 @@ export function Footer() {
                 </h4>
                 <div className='flex gap-4'>
                   <a
-                    href='https://github.com/projectnuraya'
+                    href={company.github}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
@@ -92,11 +94,11 @@ export function Footer() {
           <p className='text-center md:text-left'>
             © {new Date().getFullYear()}{' '}
             <a
-              href='https://ptp.ahu.go.id/sertifikat?id=686e322971635ffa733f6966a9e546eb:2da925ddd9d2909e1ba364ee1d3dba84'
+              href={company.ahuCertificateUrl}
               target='_blank'
               rel='noopener noreferrer'
               className='hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
-              PT Nuraya Digital Nusantara
+              {company.legalName}
             </a>
             . All rights reserved.
           </p>

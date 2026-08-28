@@ -1,9 +1,11 @@
 import { CheckCircle, Send } from 'lucide-react'
 import { type FormEvent, useState } from 'react'
 
+import { company } from '../config/company'
+
 import { Button } from './ui/Button'
 
-const CONTACT_EMAIL = 'hello@projectnuraya.id'
+const CONTACT_EMAIL = company.email
 
 export function CollaborationSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })

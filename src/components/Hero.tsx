@@ -35,7 +35,7 @@ export function Hero() {
           {/* Text Content - Asymmetric Left (7 cols) */}
           <div className='lg:col-span-8 flex flex-col items-start text-left animate-fade-up'>
             <div className='inline-block px-3 py-1 mb-4 md:mb-6 rounded-full bg-deep-navy/15 dark:bg-nuraya-gold-400/10 border border-deep-navy/30 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-sm font-medium tracking-wide'>
-              PROJECT NURAYA
+              Project Nuraya
             </div>
 
             <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6'>

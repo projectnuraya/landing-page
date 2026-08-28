@@ -177,7 +177,10 @@ export function ProductSection() {
                   <p className='text-warm-gray dark:text-gray-400 leading-relaxed text-sm mb-6'>
                     {product.description}
                   </p>
-                  <Button asChild className='w-full sm:w-auto hover:-translate-y-0.5 transition-transform' variant='outline'>
+                  <Button
+                    asChild
+                    className='w-full sm:w-auto hover:-translate-y-0.5 transition-transform'
+                    variant='outline'>
                     <a
                       href={product.url}
                       target='_blank'
