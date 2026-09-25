@@ -76,10 +76,13 @@ export const theme = {
       glow: 'glow 3s ease-in-out infinite',
       float: 'float 6s ease-in-out infinite',
       'pulse-slow': 'pulseSlow 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      'gentle-glide': 'gentleGlide 2.4s ease-in-out infinite',
+      'shimmer-subtle': 'shimmerSubtle 6s ease-in-out infinite',
+      'fade-in-scale': 'fadeInScale 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards',
     },
     keyframes: {
       fadeUp: {
-        '0%': { opacity: '0', transform: 'translateY(30px)' },
+        '0%': { opacity: '0', transform: 'translateY(20px)' },
         '100%': { opacity: '1', transform: 'translateY(0)' },
       },
       glow: {
@@ -93,6 +96,18 @@ export const theme = {
       pulseSlow: {
         '0%, 100%': { transform: 'scale(1)', opacity: '1' },
         '50%': { transform: 'scale(1.15)', opacity: '0.6' },
+      },
+      gentleGlide: {
+        '0%, 100%': { transform: 'translateY(0)', opacity: '0.6' },
+        '50%': { transform: 'translateY(8px)', opacity: '1' },
+      },
+      shimmerSubtle: {
+        '0%, 100%': { opacity: '0.45', transform: 'scale(1)' },
+        '50%': { opacity: '0.9', transform: 'scale(1.02)' },
+      },
+      fadeInScale: {
+        '0%': { opacity: '0', transform: 'scale(0.98) translateY(8px)' },
+        '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
       },
     },
     backgroundImage: {

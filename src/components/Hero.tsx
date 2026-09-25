@@ -1,6 +1,7 @@
-import { ArrowDown } from 'lucide-react'
+import { ArrowDown, MessageCircle } from 'lucide-react'
 
 import nurayaPattern from '../assets/nuraya_pattern.svg'
+import { company } from '../config/company'
 import { scrollToSection } from '../lib/scroll'
 
 import { Button } from './ui/Button'
@@ -14,7 +15,9 @@ export function Hero() {
     const col = i % COLS
     // Alternate rotation for interlocking weave effect
     const rotation = (row + col) % 2 === 0 ? 0 : 180
-    return { rotation, key: `pattern-${row}-${col}` }
+    // Staggered shimmer animation delay for subtle breathing wave
+    const animDelay = `${((row + col) * 0.35).toFixed(2)}s`
+    return { rotation, animDelay, key: `pattern-${row}-${col}` }
   })
 
   return (
@@ -32,48 +35,63 @@ export function Hero() {
 
       <div className='container mx-auto px-6 md:px-12 lg:px-20 py-8 md:py-12 relative z-10'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center'>
-          {/* Text Content - Asymmetric Left (7 cols) */}
-          <div className='lg:col-span-8 flex flex-col items-start text-left animate-fade-up'>
-            <div className='inline-block px-3 py-1 mb-4 md:mb-6 rounded-full bg-deep-navy/15 dark:bg-nuraya-gold-400/10 border border-deep-navy/30 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-sm font-medium tracking-wide'>
-              Project Nuraya
+          {/* Text Content - Asymmetric Left (8 cols) */}
+          <div className='lg:col-span-8 flex flex-col items-start text-left'>
+            {/* Required brand badge for OAuth and brand verification */}
+            <div className='inline-flex items-center gap-2 px-3.5 py-1 mb-4 md:mb-6 rounded-full bg-deep-navy/10 dark:bg-nuraya-gold-400/10 border border-deep-navy/20 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-xs sm:text-sm font-medium tracking-wide animate-fade-up'>
+              <span className='w-2 h-2 rounded-full bg-nuraya-gold-400 animate-pulse' />
+              <span>Project Nuraya</span>
+              <span className='text-gray-400 dark:text-gray-500'>|</span>
+              <span className='text-gray-600 dark:text-gray-300 font-normal'>Software Studio & Digital Solutions</span>
             </div>
 
-            <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6'>
-              Menerangi masa depan dengan{' '}
+            <h1
+              className='text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6 animate-fade-up'
+              style={{ animationDelay: '100ms' }}>
+              Membangun Solusi Digital Andal untuk{' '}
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
-                teknologi yang bermakna
+                Mengakselerasi Bisnis Anda
               </span>
             </h1>
 
-            <p className='text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-100 max-w-2xl mb-2'>
-              <strong>Membangun makna, menyalakan harapan.</strong>
+            <p
+              className='text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 max-w-2xl mb-4 leading-relaxed animate-fade-up'
+              style={{ animationDelay: '180ms' }}>
+              <strong>PT Nuraya Digital Nusantara</strong> menghadirkan rekayasa perangkat lunak modern,
+              sistem informasi terintegrasi, dan arsitektur data berkinerja tinggi yang dirancang untuk kebutuhan nyata organisasi Anda.
             </p>
 
-            <p className='text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-xl mb-8 md:mb-10 leading-relaxed'>
-              Kami membangun produk digital yang memecahkan masalah nyata, bukan gimmick. Teknologi
-              harus menjadi alat untuk pendidikan, pemberdayaan, dan kolaborasi sosial.
+            <p
+              className='text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mb-8 md:mb-10 leading-relaxed animate-fade-up'
+              style={{ animationDelay: '240ms' }}>
+              Transparan, berakar pada kebutuhan pengguna, dan dikembangkan langsung oleh tim engineering tanpa perantara.
             </p>
 
-            <div className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto'>
+            <div
+              className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto animate-fade-up'
+              style={{ animationDelay: '300ms' }}>
               <Button
-                onClick={() => scrollToSection('products')}
-                className='h-11 md:h-12 px-6 md:px-8 text-base'>
-                Lihat Solusi
+                asChild
+                className='h-11 md:h-12 px-6 md:px-8 text-base bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 shadow-lg shadow-emerald-600/20 gap-2 active:scale-[0.98] transition-transform'>
+                <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
+                  <MessageCircle className='w-5 h-5' />
+                  Konsultasi Proyek (WhatsApp)
+                </a>
               </Button>
               <Button
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection('products')}
                 variant='outline'
-                className='h-11 md:h-12 px-6 md:px-8 text-base border-deep-navy/10 text-deep-navy hover:bg-deep-navy/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5'>
-                Tentang Kami
+                className='h-11 md:h-12 px-6 md:px-8 text-base border-deep-navy/15 text-deep-navy hover:bg-deep-navy/5 dark:border-white/15 dark:text-white dark:hover:bg-white/5 active:scale-[0.98] transition-all'>
+                Eksplorasi Solusi
               </Button>
             </div>
           </div>
 
-          {/* Visual Element - Pattern Mosaic Grid */}
+          {/* Visual Element - Pattern Mosaic Grid with Subtle Breathing Shimmer */}
           <div className='lg:col-span-4 relative hidden lg:block min-h-[500px]'>
             {/* Horizontal mask: fade from left (transparent) to right (visible) */}
             <div
-              className='absolute inset-y-[-15%] left-[-15%] right-[-25%] opacity-90 dark:opacity-50'
+              className='absolute inset-y-[-15%] left-[-15%] right-[-25%] opacity-90 dark:opacity-60'
               style={{
                 maskImage: 'linear-gradient(to right, transparent 5%, black 30%)',
                 WebkitMaskImage: 'linear-gradient(to right, transparent 5%, black 30%)',
@@ -90,8 +108,11 @@ export function Hero() {
                   {patternTiles.map((tile) => (
                     <div
                       key={tile.key}
-                      className='flex items-center justify-center p-1'
-                      style={{ transform: `rotate(${tile.rotation}deg)` }}>
+                      className='flex items-center justify-center p-1 motion-safe:animate-shimmer-subtle'
+                      style={{
+                        transform: `rotate(${tile.rotation}deg)`,
+                        animationDelay: tile.animDelay,
+                      }}>
                       <img
                         src={nurayaPattern}
                         alt=''
@@ -107,12 +128,15 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Simplified Scroll Indicator */}
+      {/* Professional Gentle Glide Scroll Indicator */}
       <button
-        onClick={() => scrollToSection('mission')}
-        className='absolute bottom-8 left-1/2 -translate-x-1/2 z-20 group'
-        aria-label='Scroll to mission section'>
-        <ArrowDown className='w-6 h-6 text-nuraya-gold-400 dark:text-nuraya-gold-300 animate-bounce opacity-60 group-hover:opacity-100 transition-opacity' />
+        onClick={() => scrollToSection('products')}
+        className='absolute bottom-8 left-1/2 -translate-x-1/2 z-20 group flex flex-col items-center gap-1.5 focus:outline-none'
+        aria-label='Scroll ke section solusi'>
+        <span className='text-[11px] font-medium uppercase tracking-wider text-warm-gray dark:text-gray-400 group-hover:text-nuraya-gold-400 transition-colors'>
+          Scroll
+        </span>
+        <ArrowDown className='w-5 h-5 text-nuraya-gold-400 dark:text-nuraya-gold-300 motion-safe:animate-gentle-glide group-hover:text-nuraya-gold-300 transition-colors' />
       </button>
     </section>
   )
