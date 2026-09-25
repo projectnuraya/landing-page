@@ -1,3 +1,6 @@
+import Lenis from 'lenis'
+import 'lenis/dist/lenis.css'
+import { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import { LandingPage } from './pages/LandingPage'
@@ -12,6 +15,32 @@ import { TermsPage } from './pages/TermsPage'
  * during prerendering.
  */
 export default function App() {
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 0.9,
+    })
+
+    ;(window as unknown as { __lenis?: unknown }).__lenis = lenis
+
+    let rafId: number
+    function raf(time: number) {
+      lenis.raf(time)
+      rafId = requestAnimationFrame(raf)
+    }
+
+    rafId = requestAnimationFrame(raf)
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      lenis.destroy()
+      delete (window as unknown as { __lenis?: unknown }).__lenis
+    }
+  }, [])
   return (
     <Routes>
       <Route path='/' element={<LandingPage />} />

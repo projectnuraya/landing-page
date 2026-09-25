@@ -47,7 +47,7 @@ export function Hero() {
 
             <h1
               className='text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6 animate-fade-up'
-              style={{ animationDelay: '100ms' }}>
+              style={{ animationDelay: '200ms' }}>
               Membangun Solusi Digital Andal untuk{' '}
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
                 Mengakselerasi Bisnis Anda
@@ -56,20 +56,20 @@ export function Hero() {
 
             <p
               className='text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 max-w-2xl mb-4 leading-relaxed animate-fade-up'
-              style={{ animationDelay: '180ms' }}>
+              style={{ animationDelay: '380ms' }}>
               <strong>PT Nuraya Digital Nusantara</strong> menghadirkan rekayasa perangkat lunak modern,
               sistem informasi terintegrasi, dan arsitektur data berkinerja tinggi yang dirancang untuk kebutuhan nyata organisasi Anda.
             </p>
 
             <p
               className='text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mb-8 md:mb-10 leading-relaxed animate-fade-up'
-              style={{ animationDelay: '240ms' }}>
+              style={{ animationDelay: '520ms' }}>
               Transparan, berakar pada kebutuhan pengguna, dan dikembangkan langsung oleh tim engineering tanpa perantara.
             </p>
 
             <div
               className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto animate-fade-up'
-              style={{ animationDelay: '300ms' }}>
+              style={{ animationDelay: '660ms' }}>
               <Button
                 asChild
                 className='h-11 md:h-12 px-6 md:px-8 text-base bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 shadow-lg shadow-emerald-600/20 gap-2 active:scale-[0.98] transition-transform'>

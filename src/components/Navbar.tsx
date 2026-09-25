@@ -45,6 +45,18 @@ export function Navbar() {
     }
   }, [location.pathname])
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMobileMenuOpen])
+
   const handleSectionClick = (sectionId: string) => (e: React.MouseEvent) => {
     e.preventDefault()
     setIsMobileMenuOpen(false) // Close mobile menu on click
@@ -124,64 +136,66 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Side Drawer */}
-      {isMobileMenuOpen && (
-        <>
-          {/* Backdrop */}
-          <div
-            className='fixed inset-0 bg-black/50 z-40 md:hidden'
-            onClick={() => setIsMobileMenuOpen(false)}
-            aria-hidden='true'
-          />
+      {/* Mobile Side Drawer & Backdrop */}
+      {/* Backdrop */}
+      <div
+        className={`fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setIsMobileMenuOpen(false)}
+        aria-hidden={!isMobileMenuOpen}
+      />
 
-          {/* Drawer */}
-          <div className='fixed top-0 right-0 h-full w-[280px] bg-white dark:bg-dark-bg shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out'>
-            <div className='flex flex-col h-full'>
-              {/* Drawer Header */}
-              <div className='flex items-center justify-between p-6 border-b border-gray-100 dark:border-white/5'>
-                <span className='font-bold text-xl text-deep-navy dark:text-white'>Menu</span>
-                <button
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className='p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
-                  aria-label='Close menu'>
-                  <X className='w-5 h-5 text-deep-navy dark:text-white' />
-                </button>
-              </div>
-
-              {/* Navigation Links */}
-              <nav className='flex-1 overflow-y-auto py-6 px-4'>
-                <ul className='space-y-2'>
-                  {navLinks.map((link) => (
-                    <li key={link.id}>
-                      <a
-                        href={`#${link.id}`}
-                        onClick={handleSectionClick(link.id)}
-                        className={
-                          link.isButton
-                            ? 'block w-full px-4 py-3 text-center border-2 border-nuraya-gold-400 text-nuraya-gold-400 hover:bg-nuraya-gold-400 hover:text-white dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-lg transition-all font-medium'
-                            : `block px-4 py-3 rounded-lg transition-all ${
-                                activeSection === link.id
-                                  ? 'bg-nuraya-gold-50 text-nuraya-gold-500 dark:bg-nuraya-gold-400/10 dark:text-nuraya-gold-300 font-semibold'
-                                  : 'text-warm-gray dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-deep-navy dark:hover:text-white'
-                              }`
-                        }>
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-
-              {/* Drawer Footer */}
-              <div className='p-6 border-t border-gray-100 dark:border-white/5'>
-                <p className='text-sm text-gray-500 dark:text-gray-400 text-center'>
-                  © {new Date().getFullYear()} Project Nuraya
-                </p>
-              </div>
-            </div>
+      {/* Drawer */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[280px] bg-white dark:bg-dark-bg shadow-2xl z-50 md:hidden transition-transform duration-300 ease-in-out transform ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        aria-hidden={!isMobileMenuOpen}>
+        <div className='flex flex-col h-full'>
+          {/* Drawer Header */}
+          <div className='flex items-center justify-between p-6 border-b border-gray-100 dark:border-white/5'>
+            <span className='font-bold text-xl text-deep-navy dark:text-white'>Menu</span>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className='p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
+              aria-label='Close menu'>
+              <X className='w-5 h-5 text-deep-navy dark:text-white' />
+            </button>
           </div>
-        </>
-      )}
+
+          {/* Navigation Links */}
+          <nav className='flex-1 overflow-y-auto py-6 px-4'>
+            <ul className='space-y-2'>
+              {navLinks.map((link) => (
+                <li key={link.id}>
+                  <a
+                    href={`#${link.id}`}
+                    onClick={handleSectionClick(link.id)}
+                    className={
+                      link.isButton
+                        ? 'block w-full px-4 py-3 text-center border-2 border-nuraya-gold-400 text-nuraya-gold-400 hover:bg-nuraya-gold-400 hover:text-white dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-lg transition-all font-medium'
+                        : `block px-4 py-3 rounded-lg transition-all ${
+                            activeSection === link.id
+                              ? 'bg-nuraya-gold-50 text-nuraya-gold-500 dark:bg-nuraya-gold-400/10 dark:text-nuraya-gold-300 font-semibold'
+                              : 'text-warm-gray dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-deep-navy dark:hover:text-white'
+                          }`
+                    }>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Drawer Footer */}
+          <div className='p-6 border-t border-gray-100 dark:border-white/5'>
+            <p className='text-sm text-gray-500 dark:text-gray-400 text-center'>
+              © {new Date().getFullYear()} Project Nuraya
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

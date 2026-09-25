@@ -72,17 +72,17 @@ export const theme = {
       jakarta: ['Plus Jakarta Sans', 'sans-serif'],
     },
     animation: {
-      'fade-up': 'fadeUp 0.8s ease-out forwards',
-      glow: 'glow 3s ease-in-out infinite',
-      float: 'float 6s ease-in-out infinite',
-      'pulse-slow': 'pulseSlow 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      'gentle-glide': 'gentleGlide 2.4s ease-in-out infinite',
-      'shimmer-subtle': 'shimmerSubtle 6s ease-in-out infinite',
-      'fade-in-scale': 'fadeInScale 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+      'fade-up': 'fadeUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+      glow: 'glow 5s ease-in-out infinite',
+      float: 'float 7s ease-in-out infinite',
+      'pulse-slow': 'pulseSlow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      'gentle-glide': 'gentleGlide 3.6s ease-in-out infinite',
+      'shimmer-subtle': 'shimmerSubtle 8s ease-in-out infinite',
+      'fade-in-scale': 'fadeInScale 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards',
     },
     keyframes: {
       fadeUp: {
-        '0%': { opacity: '0', transform: 'translateY(20px)' },
+        '0%': { opacity: '0', transform: 'translateY(24px)' },
         '100%': { opacity: '1', transform: 'translateY(0)' },
       },
       glow: {
@@ -98,7 +98,7 @@ export const theme = {
         '50%': { transform: 'scale(1.15)', opacity: '0.6' },
       },
       gentleGlide: {
-        '0%, 100%': { transform: 'translateY(0)', opacity: '0.6' },
+        '0%, 100%': { transform: 'translateY(0)', opacity: '0.5' },
         '50%': { transform: 'translateY(8px)', opacity: '1' },
       },
       shimmerSubtle: {
@@ -106,7 +106,7 @@ export const theme = {
         '50%': { opacity: '0.9', transform: 'scale(1.02)' },
       },
       fadeInScale: {
-        '0%': { opacity: '0', transform: 'scale(0.98) translateY(8px)' },
+        '0%': { opacity: '0', transform: 'scale(0.98) translateY(10px)' },
         '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
       },
     },
