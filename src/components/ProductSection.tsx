@@ -154,7 +154,7 @@ export function ProductSection() {
 
         {/* Tab 1: Client Services */}
         {activeTab === 'services' && (
-          <div className='motion-safe:animate-fade-in-scale space-y-12'>
+          <div className='motion-safe:animate-tab-fade space-y-12'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
               {services.map((service) => (
                 <Card
@@ -239,7 +239,7 @@ export function ProductSection() {
 
         {/* Tab 2: Proprietary Products & Roadmap */}
         {activeTab === 'products' && (
-          <div className='motion-safe:animate-fade-in-scale space-y-16'>
+          <div className='motion-safe:animate-tab-fade space-y-16'>
             {/* Live Featured Product */}
             <div>
               <div className='flex items-center gap-3 mb-6'>

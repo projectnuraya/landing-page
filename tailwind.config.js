@@ -72,6 +72,8 @@ export const theme = {
       jakarta: ['Plus Jakarta Sans', 'sans-serif'],
     },
     animation: {
+      'fade-in': 'fadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+      'tab-fade': 'fadeIn 0.28s ease-out forwards',
       'fade-up': 'fadeUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       glow: 'glow 5s ease-in-out infinite',
       float: 'float 7s ease-in-out infinite',
@@ -81,6 +83,10 @@ export const theme = {
       'fade-in-scale': 'fadeInScale 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards',
     },
     keyframes: {
+      fadeIn: {
+        '0%': { opacity: '0' },
+        '100%': { opacity: '1' },
+      },
       fadeUp: {
         '0%': { opacity: '0', transform: 'translateY(24px)' },
         '100%': { opacity: '1', transform: 'translateY(0)' },
