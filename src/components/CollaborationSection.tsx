@@ -88,7 +88,7 @@ export function CollaborationSection() {
                   <div className='pt-2'>
                     <Button
                       asChild
-                      className='bg-emerald-600 hover:bg-emerald-700 text-white gap-2 text-sm h-10 px-5 active:scale-[0.98] transition-transform shadow-md'>
+                      className='bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 dark:text-white gap-2 text-sm h-10 px-5 active:scale-[0.98] transition-transform shadow-md shadow-emerald-600/20'>
                       <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
                         <MessageCircle className='w-4 h-4' />
                         Buka Obrolan WhatsApp &rarr;
