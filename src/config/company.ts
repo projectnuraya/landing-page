@@ -29,13 +29,26 @@ export const company = {
   entityTypeEn: 'Individual Limited Liability Company',
   /** Nomor Induk Berusaha, issued via OSS. */
   nib: '1401260091258',
+  /** Date of incorporation, ISO 8601. */
+  foundedDate: '2026-01-09',
+  founder: {
+    name: 'Hanif Naufal Ashari',
+    roleId: 'Pendiri',
+    roleEn: 'Founder',
+  },
   address,
   addressLine,
   email: 'hello@projectnuraya.id',
+  /** Official business WhatsApp contact (placeholder, replace with real number) */
+  whatsappNumber: '6281200000000',
+  whatsappFormatted: '+62 812-0000-0000',
+  whatsappUrl:
+    'https://wa.me/6281200000000?text=Halo%20Project%20Nuraya,%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20solusi%20digital/website.',
   website: 'https://projectnuraya.id',
   ahuCertificateUrl:
     'https://ptp.ahu.go.id/sertifikat?id=686e322971635ffa733f6966a9e546eb:2da925ddd9d2909e1ba364ee1d3dba84',
   github: 'https://github.com/projectnuraya',
+  linkedin: 'https://www.linkedin.com/company/nuraya-digital-nusantara/',
   /** Forum for disputes that survive the good-faith negotiation window. */
   courtVenue: 'Pengadilan Negeri Malang',
   courtVenueEn: 'Malang District Court (Pengadilan Negeri Malang)',
@@ -63,6 +76,13 @@ export const legalEffectiveDateLabel = {
   id: idDate.format(new Date(`${legalEffectiveDate}T00:00:00Z`)),
   en: enDate.format(new Date(`${legalEffectiveDate}T00:00:00Z`)),
 } as const
+
+/** Month and year of incorporation, e.g. "Januari 2026". */
+export const foundedLabel = new Intl.DateTimeFormat('id-ID', {
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(`${company.foundedDate}T00:00:00Z`))
 
 /**
  * OAuth scopes requested across all our applications. All three are

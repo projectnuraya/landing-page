@@ -1,7 +1,7 @@
-import { ArrowUp, Github } from 'lucide-react'
+import { ArrowUp, Github, Linkedin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-import { company } from '../config/company'
+import { company, foundedLabel } from '../config/company'
 
 export function Footer() {
   const scrollToTop = () => {
@@ -84,6 +84,14 @@ export function Footer() {
                     aria-label='Visit our GitHub'>
                     <Github className='w-5 h-5' />
                   </a>
+                  <a
+                    href={company.linkedin}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
+                    aria-label='Visit our LinkedIn'>
+                    <Linkedin className='w-5 h-5' />
+                  </a>
                 </div>
               </div>
             </div>
@@ -91,17 +99,22 @@ export function Footer() {
         </div>
 
         <div className='flex flex-col md:flex-row justify-between items-center pt-10 border-t border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400 gap-4'>
-          <p className='text-center md:text-left'>
-            © {new Date().getFullYear()}{' '}
-            <a
-              href={company.ahuCertificateUrl}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
-              {company.legalName}
-            </a>
-            . All rights reserved.
-          </p>
+          <div className='text-center md:text-left space-y-1'>
+            <p>
+              © {new Date().getFullYear()}{' '}
+              <a
+                href={company.ahuCertificateUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
+                {company.legalName}
+              </a>
+              . All rights reserved.
+            </p>
+            <p className='text-xs text-gray-500 dark:text-gray-500'>
+              NIB {company.nib} · Didirikan {foundedLabel} · {company.address.city}, {company.address.country}
+            </p>
+          </div>
 
           <div className='flex items-center gap-6'>
             <Link
