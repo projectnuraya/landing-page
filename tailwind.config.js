@@ -81,8 +81,13 @@ export const theme = {
       'gentle-glide': 'gentleGlide 3.6s ease-in-out infinite',
       'shimmer-subtle': 'shimmerSubtle 8s ease-in-out infinite',
       'fade-in-scale': 'fadeInScale 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+      'hero-rise': 'heroRiseUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both',
     },
     keyframes: {
+      heroRiseUp: {
+        '0%': { opacity: '0', transform: 'translateY(10px)' },
+        '100%': { opacity: '1', transform: 'translateY(0)' },
+      },
       fadeIn: {
         '0%': { opacity: '0' },
         '100%': { opacity: '1' },

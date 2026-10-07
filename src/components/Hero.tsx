@@ -37,53 +37,57 @@ export function Hero() {
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center'>
           {/* Text Content - Asymmetric Left (8 cols) */}
           <div className='lg:col-span-8 flex flex-col items-start text-left'>
-            {/* Required brand badge for OAuth and brand verification */}
-            <div className='inline-flex items-center gap-2 px-3.5 py-1 mb-4 md:mb-6 rounded-full bg-deep-navy/10 dark:bg-nuraya-gold-400/10 border border-deep-navy/20 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-xs sm:text-sm font-medium tracking-wide animate-fade-in'>
-              <span className='w-2 h-2 rounded-full bg-nuraya-gold-400 animate-pulse' />
-              <span>Project Nuraya</span>
-              <span className='text-gray-400 dark:text-gray-500'>|</span>
-              <span className='text-gray-600 dark:text-gray-300 font-normal'>Software Studio & Digital Solutions</span>
+            {/* Beat 1: Brand badge & Main Headline (Instant 0ms) */}
+            <div className='motion-safe:animate-hero-rise flex flex-col items-start w-full'>
+              {/* Required brand badge for OAuth and brand verification */}
+              <div className='inline-flex items-center gap-2 px-3.5 py-1 mb-4 md:mb-6 rounded-full bg-deep-navy/10 dark:bg-nuraya-gold-400/10 border border-deep-navy/20 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-xs sm:text-sm font-medium tracking-wide'>
+                <span className='w-2 h-2 rounded-full bg-nuraya-gold-400 animate-pulse' />
+                <span>Project Nuraya</span>
+                <span className='text-gray-400 dark:text-gray-500'>|</span>
+                <span className='text-gray-600 dark:text-gray-300 font-normal'>
+                  Software Studio & Digital Solutions
+                </span>
+              </div>
+
+              <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6'>
+                Membangun Solusi Digital Andal untuk{' '}
+                <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
+                  Mengakselerasi Bisnis Anda
+                </span>
+              </h1>
             </div>
 
-            <h1
-              className='text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6 animate-fade-in'
-              style={{ animationDelay: '180ms' }}>
-              Membangun Solusi Digital Andal untuk{' '}
-              <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
-                Mengakselerasi Bisnis Anda
-              </span>
-            </h1>
-
-            <p
-              className='text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 max-w-2xl mb-4 leading-relaxed animate-fade-in'
-              style={{ animationDelay: '340ms' }}>
-              <strong>PT Nuraya Digital Nusantara</strong> menghadirkan rekayasa perangkat lunak modern,
-              sistem informasi terintegrasi, dan arsitektur data berkinerja tinggi yang dirancang untuk kebutuhan nyata organisasi Anda.
-            </p>
-
-            <p
-              className='text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mb-8 md:mb-10 leading-relaxed animate-fade-in'
-              style={{ animationDelay: '480ms' }}>
-              Transparan, berakar pada kebutuhan pengguna, dan dikembangkan langsung oleh tim engineering tanpa perantara.
-            </p>
-
+            {/* Beat 2: Descriptions & Action CTA Buttons (130ms snappy follow-up) */}
             <div
-              className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto animate-fade-in'
-              style={{ animationDelay: '600ms' }}>
-              <Button
-                asChild
-                className='h-11 md:h-12 px-6 md:px-8 text-base bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 shadow-lg shadow-emerald-600/20 gap-2 active:scale-[0.98] transition-transform'>
-                <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
-                  <MessageCircle className='w-5 h-5' />
-                  Konsultasi Proyek (WhatsApp)
-                </a>
-              </Button>
-              <Button
-                onClick={() => scrollToSection('products')}
-                variant='outline'
-                className='h-11 md:h-12 px-6 md:px-8 text-base border-deep-navy/15 text-deep-navy hover:bg-deep-navy/5 dark:border-white/15 dark:text-white dark:hover:bg-white/5 active:scale-[0.98] transition-all'>
-                Eksplorasi Solusi
-              </Button>
+              className='motion-safe:animate-hero-rise flex flex-col items-start w-full'
+              style={{ animationDelay: '130ms' }}>
+              <p className='text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 max-w-2xl mb-4 leading-relaxed'>
+                <strong>PT Nuraya Digital Nusantara</strong> menghadirkan rekayasa perangkat lunak modern,
+                sistem informasi terintegrasi, dan arsitektur data berkinerja tinggi yang dirancang untuk
+                kebutuhan nyata organisasi Anda.
+              </p>
+
+              <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mb-8 md:mb-10 leading-relaxed'>
+                Transparan, berakar pada kebutuhan pengguna, dan dikembangkan langsung oleh tim engineering
+                tanpa perantara.
+              </p>
+
+              <div className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto'>
+                <Button
+                  asChild
+                  className='h-11 md:h-12 px-6 md:px-8 text-base bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 shadow-lg shadow-emerald-600/20 gap-2 active:scale-[0.98] transition-transform'>
+                  <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
+                    <MessageCircle className='w-5 h-5' />
+                    Konsultasi Proyek (WhatsApp)
+                  </a>
+                </Button>
+                <Button
+                  onClick={() => scrollToSection('products')}
+                  variant='outline'
+                  className='h-11 md:h-12 px-6 md:px-8 text-base border-deep-navy/15 text-deep-navy hover:bg-deep-navy/5 dark:border-white/15 dark:text-white dark:hover:bg-white/5 active:scale-[0.98] transition-all'>
+                  Eksplorasi Solusi
+                </Button>
+              </div>
             </div>
           </div>
 
