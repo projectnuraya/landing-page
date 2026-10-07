@@ -1,5 +1,6 @@
 import { ShieldCheck, Server } from 'lucide-react'
 
+import { company, foundedLabel } from '../config/company'
 import { Card } from './ui/Card'
 
 export function AboutSection() {
@@ -35,6 +36,16 @@ export function AboutSection() {
               <p>
                 Kami tidak sekadar menulis kode, kami mendesain aset digital yang dapat diandalkan untuk jangka panjang—didukung
                 oleh infrastruktur mandiri, kepatuhan regulasi data, dan komunikasi langsung dengan para insinyur yang membangunnya.
+              </p>
+            </div>
+
+            <div className='border-l-4 border-l-nuraya-gold-400 pl-5 py-1'>
+              <p className='text-lg font-bold text-deep-navy dark:text-white'>
+                {company.founder.name}
+              </p>
+              <p className='text-sm text-warm-gray dark:text-gray-400'>
+                {company.founder.roleId}, {company.legalName} · Didirikan {foundedLabel} di{' '}
+                {company.address.city}
               </p>
             </div>
           </div>
