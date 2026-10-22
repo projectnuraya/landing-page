@@ -26,6 +26,13 @@ export default buildConfig({
     },
     meta: {
       titleSuffix: ` — ${company.brandName} CMS`,
+      icons: [{ rel: 'icon', type: 'image/svg+xml', url: '/favicon.svg' }],
+    },
+    components: {
+      graphics: {
+        Logo: '/components/admin/Logo#Logo',
+        Icon: '/components/admin/Icon#Icon',
+      },
     },
   },
   collections: [Posts, Categories, Media, Users],

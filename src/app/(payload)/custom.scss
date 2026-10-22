@@ -1,0 +1,15 @@
+.nuraya-admin-logo img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.nuraya-admin-logo__dark,
+html[data-theme='dark'] .nuraya-admin-logo__light {
+  display: none !important;
+}
+
+html[data-theme='dark'] .nuraya-admin-logo__dark {
+  display: block !important;
+}
