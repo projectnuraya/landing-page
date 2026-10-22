@@ -1,6 +1,6 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { seoPlugin } from '@payloadcms/plugin-seo'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { FixedToolbarFeature, HeadingFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 import { id } from '@payloadcms/translations/languages/id'
 import path from 'path'
 import { buildConfig } from 'payload'
@@ -13,6 +13,7 @@ import { Posts } from './collections/Posts'
 import { Users } from './collections/Users'
 import { company } from './config/company'
 import { SiteSettings } from './globals/SiteSettings'
+import { idTranslations } from './i18n/id'
 import { postPath } from './lib/blog'
 import { siteUrl } from './lib/seo'
 import { migrations } from './migrations'
@@ -43,35 +44,18 @@ export default buildConfig({
   i18n: {
     supportedLanguages: { id },
     fallbackLanguage: 'id',
-    translations: {
-      // The SEO plugin ships no Indonesian strings of its own.
-      id: {
-        'plugin-seo': {
-          almostThere: 'Hampir',
-          autoGenerate: 'Buat otomatis',
-          bestPractices: 'panduan praktik terbaik',
-          characterCount: '{{current}}/{{minLength}}-{{maxLength}} karakter, ',
-          charactersLeftOver: 'kelebihan {{characters}}',
-          charactersToGo: 'kurang {{characters}} lagi',
-          charactersTooMany: 'kelebihan {{characters}}',
-          checksPassing: '{{current}}/{{max}} pemeriksaan lolos',
-          good: 'Bagus',
-          imageAutoGenerationTip: 'Buat otomatis akan memakai gambar sampul yang dipilih.',
-          lengthTipDescription:
-            'Sebaiknya {{minLength}} sampai {{maxLength}} karakter. Untuk tips menulis deskripsi meta, lihat ',
-          lengthTipTitle:
-            'Sebaiknya {{minLength}} sampai {{maxLength}} karakter. Untuk tips menulis judul meta, lihat ',
-          missing: 'Belum diisi',
-          noImage: 'Tanpa gambar',
-          preview: 'Pratinjau',
-          previewDescription: 'Tampilan di hasil pencarian bisa sedikit berbeda.',
-          tooLong: 'Terlalu panjang',
-          tooShort: 'Terlalu pendek',
-        },
-      },
-    },
+    translations: { id: idTranslations },
   },
-  editor: lexicalEditor(),
+  editor: lexicalEditor({
+    features: ({ defaultFeatures }) => [
+      ...defaultFeatures.filter((feature) => feature.key !== 'heading'),
+      // Word-style toolbar pinned above the editor, on top of the default
+      // selection popup and "/" command menu.
+      FixedToolbarFeature(),
+      // The article title is already the page's <h1>.
+      HeadingFeature({ enabledHeadingSizes: ['h2', 'h3', 'h4'] }),
+    ],
+  }),
   // The site only talks to Payload through the Local API and REST.
   graphQL: { disable: true },
   secret: process.env.PAYLOAD_SECRET || '',
