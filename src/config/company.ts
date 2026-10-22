@@ -42,8 +42,9 @@ export const company = {
   /** Official business WhatsApp contact (placeholder, replace with real number) */
   whatsappNumber: '6285730457714',
   whatsappFormatted: '+62 857-3045-7714',
-  whatsappUrl:
-    'https://wa.me/6285730457714?text=Halo%20Project%20Nuraya,%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20solusi%20digital/website.',
+  /** Prefilled text for WhatsApp links; editable later in Pengaturan Situs. */
+  whatsappMessage:
+    'Halo Project Nuraya, saya ingin berkonsultasi mengenai kebutuhan solusi digital/website.',
   website: 'https://projectnuraya.id',
   ahuCertificateUrl:
     'https://ptp.ahu.go.id/sertifikat?id=686e322971635ffa733f6966a9e546eb:2da925ddd9d2909e1ba364ee1d3dba84',

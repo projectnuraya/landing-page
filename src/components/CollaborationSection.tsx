@@ -5,11 +5,11 @@ import { type FormEvent, useState } from 'react'
 
 import { company } from '../config/company'
 
+import { useSiteSettings } from './site/SiteSettingsProvider'
 import { Button } from './ui/Button'
 
-const CONTACT_EMAIL = company.email
-
 export function CollaborationSection() {
+  const { email: contactEmail, whatsappUrl } = useSiteSettings()
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -36,7 +36,7 @@ export function CollaborationSection() {
     const body = encodeURIComponent(
       `Nama: ${formData.name}\nEmail: ${formData.email}\n\nPesan:\n${formData.message}`,
     )
-    window.open(`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`, '_self')
+    window.open(`mailto:${contactEmail}?subject=${subject}&body=${body}`, '_self')
 
     setIsSubmitted(true)
   }
@@ -91,7 +91,7 @@ export function CollaborationSection() {
                     <Button
                       asChild
                       className='bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 dark:text-white gap-2 text-sm h-10 px-5 active:scale-[0.98] transition-transform shadow-md shadow-emerald-600/20'>
-                      <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
+                      <a href={whatsappUrl} target='_blank' rel='noopener noreferrer'>
                         <MessageCircle className='w-4 h-4' />
                         Buka Obrolan WhatsApp &rarr;
                       </a>
@@ -105,7 +105,7 @@ export function CollaborationSection() {
             <div className='space-y-3 pt-2 text-sm text-warm-gray dark:text-gray-300'>
               <div className='flex items-center gap-3'>
                 <Mail className='w-4 h-4 text-nuraya-blue-400 shrink-0' />
-                <span>Email Resmi: <strong className='text-deep-navy dark:text-white'>{company.email}</strong></span>
+                <span>Email Resmi: <strong className='text-deep-navy dark:text-white'>{contactEmail}</strong></span>
               </div>
               <div className='flex items-center gap-3'>
                 <MapPin className='w-4 h-4 text-nuraya-gold-400 shrink-0' />
@@ -142,7 +142,7 @@ export function CollaborationSection() {
                       <Button
                         asChild
                         className='text-xs gap-1.5 h-9 bg-emerald-600 hover:bg-emerald-700 text-white'>
-                        <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
+                        <a href={whatsappUrl} target='_blank' rel='noopener noreferrer'>
                           <MessageCircle className='w-3.5 h-3.5' />
                           Kirim via WhatsApp
                         </a>

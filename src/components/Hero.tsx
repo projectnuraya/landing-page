@@ -2,12 +2,13 @@
 
 import { ArrowDown, MessageCircle } from 'lucide-react'
 
-import { company } from '../config/company'
 import { scrollToSection } from '../lib/scroll'
 
+import { useSiteSettings } from './site/SiteSettingsProvider'
 import { Button } from './ui/Button'
 
 export function Hero() {
+  const { whatsappUrl } = useSiteSettings()
   // Generate pattern mosaic tiles
   const COLS = 7
   const ROWS = 4
@@ -77,7 +78,7 @@ export function Hero() {
                 <Button
                   asChild
                   className='h-11 md:h-12 px-6 md:px-8 text-base bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 shadow-lg shadow-emerald-600/20 gap-2 active:scale-[0.98] transition-transform'>
-                  <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
+                  <a href={whatsappUrl} target='_blank' rel='noopener noreferrer'>
                     <MessageCircle className='w-5 h-5' />
                     Konsultasi Proyek (WhatsApp)
                   </a>

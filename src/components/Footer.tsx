@@ -5,7 +5,10 @@ import Link from 'next/link'
 
 import { company, foundedLabel } from '../config/company'
 
+import { useSiteSettings } from './site/SiteSettingsProvider'
+
 export function Footer() {
+  const { email, github, linkedin } = useSiteSettings()
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -69,9 +72,9 @@ export function Footer() {
             </h3>
             <div className='space-y-4'>
               <a
-                href={`mailto:${company.email}`}
+                href={`mailto:${email}`}
                 className='block text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
-                {company.email}
+                {email}
               </a>
               <div>
                 <h4 className='text-sm font-semibold text-deep-navy dark:text-white mb-3'>
@@ -79,7 +82,7 @@ export function Footer() {
                 </h4>
                 <div className='flex gap-4'>
                   <a
-                    href={company.github}
+                    href={github}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
@@ -87,7 +90,7 @@ export function Footer() {
                     <Github className='w-5 h-5' />
                   </a>
                   <a
-                    href={company.linkedin}
+                    href={linkedin}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'

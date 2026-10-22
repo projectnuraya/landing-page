@@ -3,9 +3,11 @@ import Script from 'next/script'
 import type { ReactNode } from 'react'
 
 import '../../app/globals.css'
+import { getSiteSettings } from '../../lib/getSiteSettings'
 import type { Locale } from '../../lib/seo'
 import { themeBootstrapScript } from '../../lib/theme'
 
+import { SiteSettingsProvider } from './SiteSettingsProvider'
 import { SmoothScroll } from './SmoothScroll'
 
 /**
@@ -14,7 +16,9 @@ import { SmoothScroll } from './SmoothScroll'
  * Each language has its own root layout so the server can send the right
  * `lang` attribute; a single layout cannot see the URL it is rendering.
  */
-export function SiteDocument({ lang, children }: { lang: Locale; children: ReactNode }) {
+export async function SiteDocument({ lang, children }: { lang: Locale; children: ReactNode }) {
+  const settings = await getSiteSettings()
+
   return (
     // The bootstrap script adds `dark` to <html> before hydration, which React
     // would otherwise report as a mismatch.
@@ -37,7 +41,7 @@ export function SiteDocument({ lang, children }: { lang: Locale; children: React
       </head>
       <body>
         <SmoothScroll />
-        {children}
+        <SiteSettingsProvider value={settings}>{children}</SiteSettingsProvider>
       </body>
     </html>
   )

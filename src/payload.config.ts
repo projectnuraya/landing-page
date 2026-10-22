@@ -1,6 +1,7 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { id } from '@payloadcms/translations/languages/id'
 import path from 'path'
 import { buildConfig } from 'payload'
 import sharp from 'sharp'
@@ -11,6 +12,7 @@ import { Media } from './collections/Media'
 import { Posts } from './collections/Posts'
 import { Users } from './collections/Users'
 import { company } from './config/company'
+import { SiteSettings } from './globals/SiteSettings'
 import { postPath } from './lib/blog'
 import { siteUrl } from './lib/seo'
 import { migrations } from './migrations'
@@ -36,6 +38,39 @@ export default buildConfig({
     },
   },
   collections: [Posts, Categories, Media, Users],
+  globals: [SiteSettings],
+  // The admin is Indonesian only, matching the labels in the collections.
+  i18n: {
+    supportedLanguages: { id },
+    fallbackLanguage: 'id',
+    translations: {
+      // The SEO plugin ships no Indonesian strings of its own.
+      id: {
+        'plugin-seo': {
+          almostThere: 'Hampir',
+          autoGenerate: 'Buat otomatis',
+          bestPractices: 'panduan praktik terbaik',
+          characterCount: '{{current}}/{{minLength}}-{{maxLength}} karakter, ',
+          charactersLeftOver: 'kelebihan {{characters}}',
+          charactersToGo: 'kurang {{characters}} lagi',
+          charactersTooMany: 'kelebihan {{characters}}',
+          checksPassing: '{{current}}/{{max}} pemeriksaan lolos',
+          good: 'Bagus',
+          imageAutoGenerationTip: 'Buat otomatis akan memakai gambar sampul yang dipilih.',
+          lengthTipDescription:
+            'Sebaiknya {{minLength}} sampai {{maxLength}} karakter. Untuk tips menulis deskripsi meta, lihat ',
+          lengthTipTitle:
+            'Sebaiknya {{minLength}} sampai {{maxLength}} karakter. Untuk tips menulis judul meta, lihat ',
+          missing: 'Belum diisi',
+          noImage: 'Tanpa gambar',
+          preview: 'Pratinjau',
+          previewDescription: 'Tampilan di hasil pencarian bisa sedikit berbeda.',
+          tooLong: 'Terlalu panjang',
+          tooShort: 'Terlalu pendek',
+        },
+      },
+    },
+  },
   editor: lexicalEditor(),
   // The site only talks to Payload through the Local API and REST.
   graphQL: { disable: true },

@@ -3,9 +3,9 @@
 import { Bike, BookOpen, Check, Database, ExternalLink, FileText, Globe, Lightbulb, MessageCircle, Wrench } from 'lucide-react'
 import { useState } from 'react'
 
-import { company } from '../config/company'
 import { scrollToSection } from '../lib/scroll'
 
+import { useSiteSettings } from './site/SiteSettingsProvider'
 import { Button } from './ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card'
 
@@ -109,6 +109,7 @@ const roadmapProducts = [
 ]
 
 export function ProductSection() {
+  const { whatsappUrl } = useSiteSettings()
   const [activeTab, setActiveTab] = useState<'services' | 'products'>('services')
 
   return (
@@ -230,7 +231,7 @@ export function ProductSection() {
               <Button
                 asChild
                 className='shrink-0 bg-emerald-600 hover:bg-emerald-700 text-white gap-2 active:scale-[0.98] transition-transform'>
-                <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
+                <a href={whatsappUrl} target='_blank' rel='noopener noreferrer'>
                   <MessageCircle className='w-4 h-4' />
                   Konsultasi Cepat (WhatsApp)
                 </a>

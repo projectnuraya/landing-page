@@ -80,9 +80,9 @@ export const Posts: CollectionConfig = {
               descriptionPath: 'meta.description',
               imagePath: 'meta.image',
             }),
-            MetaTitleField({ hasGenerateFn: true }),
-            MetaImageField({ relationTo: 'media' }),
-            MetaDescriptionField({ hasGenerateFn: true }),
+            MetaTitleField({ hasGenerateFn: true, overrides: { label: 'Judul meta' } }),
+            MetaImageField({ relationTo: 'media', overrides: { label: 'Gambar meta' } }),
+            MetaDescriptionField({ hasGenerateFn: true, overrides: { label: 'Deskripsi meta' } }),
             PreviewField({
               hasGenerateFn: true,
               titlePath: 'meta.title',
