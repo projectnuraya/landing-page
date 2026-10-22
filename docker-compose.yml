@@ -1,0 +1,43 @@
+# Local development: `docker compose up -d db` starts only Postgres, then
+# `npm run dev` runs the site against it.
+#
+# Production (e.g. on the Proxmox LXC): fill in .env, then
+# `docker compose up -d --build` runs Postgres and the site together.
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nuraya
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-nuraya}
+      POSTGRES_DB: nuraya
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U nuraya -d nuraya']
+      interval: 5s
+      retries: 10
+
+  app:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL:-https://projectnuraya.id}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://nuraya:${POSTGRES_PASSWORD:-nuraya}@db:5432/nuraya
+      PAYLOAD_SECRET: ${PAYLOAD_SECRET:?set PAYLOAD_SECRET in .env}
+    ports:
+      - '3000:3000'
+    volumes:
+      - media:/app/media
+
+volumes:
+  pgdata:
+  media:

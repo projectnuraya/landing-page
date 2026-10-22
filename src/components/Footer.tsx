@@ -1,5 +1,7 @@
+'use client'
+
 import { ArrowUp, Github, Linkedin } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 import { company, foundedLabel } from '../config/company'
 
@@ -30,32 +32,32 @@ export function Footer() {
             </h3>
             <ul className='space-y-3'>
               <li>
-                <a
+                <Link
                   href='/#products'
                   className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                   Sistem Digital Sewa Sepeda
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href='/#products'
                   className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                   Catat Servis
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href='/#products'
                   className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                   Tilawah Tracker
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href='/#products'
                   className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                   Sistem Administrasi Surat RT/RW
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -118,20 +120,22 @@ export function Footer() {
 
           <div className='flex items-center gap-6'>
             <Link
-              to='/privacy'
-              onClick={() => window.scrollTo(0, 0)}
+              href='/blog'
+              className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
+              Blog
+            </Link>
+            <Link
+              href='/privacy'
               className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
               Privacy
             </Link>
             <Link
-              to='/terms'
-              onClick={() => window.scrollTo(0, 0)}
+              href='/terms'
               className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
               Terms
             </Link>
             <Link
-              to='/legal'
-              onClick={() => window.scrollTo(0, 0)}
+              href='/legal'
               className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
               Legal
             </Link>

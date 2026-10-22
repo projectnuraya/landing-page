@@ -1,3 +1,5 @@
+'use client'
+
 import { CheckCircle, Copy, Mail, MapPin, MessageCircle, Send } from 'lucide-react'
 import { type FormEvent, useState } from 'react'
 

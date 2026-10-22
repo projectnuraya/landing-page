@@ -1,16 +1,26 @@
-import { Menu, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+'use client'
 
-import nurayaLogoDark from '../assets/nuraya_logo_dark.svg'
-import nurayaLogoLight from '../assets/nuraya_logo_light.svg'
+import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+
 import { scrollToSection } from '../lib/scroll'
 
 import { DarkModeToggle } from './DarkModeToggle'
 
+interface NavLink {
+  label: string
+  /** Section on the landing page this link scrolls to. */
+  id?: string
+  /** Separate page this link opens instead. */
+  href?: string
+  isButton?: boolean
+}
+
 export function Navbar() {
-  const navigate = useNavigate()
-  const location = useLocation()
+  const pathname = usePathname()
+  const isHome = pathname === '/'
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
 
@@ -43,7 +53,7 @@ export function Navbar() {
     return () => {
       observers.forEach((observer) => observer.disconnect())
     }
-  }, [location.pathname])
+  }, [pathname])
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -57,26 +67,27 @@ export function Navbar() {
     }
   }, [isMobileMenuOpen])
 
-  const handleSectionClick = (sectionId: string) => (e: React.MouseEvent) => {
-    e.preventDefault()
+  // On the landing page section links scroll smoothly in place. Elsewhere
+  // they are plain links to `/#section` and the browser jumps on arrival.
+  const handleLinkClick = (link: NavLink) => (e: React.MouseEvent) => {
     setIsMobileMenuOpen(false) // Close mobile menu on click
 
-    if (location.pathname !== '/') {
-      navigate('/')
-      setTimeout(() => {
-        scrollToSection(sectionId)
-      }, 100)
-    } else {
-      scrollToSection(sectionId)
+    if (link.id && isHome) {
+      e.preventDefault()
+      scrollToSection(link.id)
     }
   }
 
-  const navLinks = [
+  const isActive = (link: NavLink) =>
+    link.href ? pathname.startsWith(link.href) : isHome && activeSection === link.id
+
+  const navLinks: NavLink[] = [
     { id: 'hero', label: 'Beranda' },
     { id: 'mission', label: 'Misi' },
     { id: 'about', label: 'Tentang' },
     { id: 'values', label: 'Nilai-nilai' },
     { id: 'products', label: 'Produk' },
+    { href: '/blog', label: 'Blog' },
     { id: 'collaboration', label: 'Kolaborasi', isButton: true },
   ]
 
@@ -85,17 +96,17 @@ export function Navbar() {
       <header className='fixed top-0 left-0 right-0 z-50 px-6 py-4 flex justify-between items-center bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-gray-100 dark:border-white/5'>
         {/* Logo */}
         <div className='font-bold text-xl tracking-tight text-deep-navy dark:text-white'>
-          <Link to='/' onClick={() => window.scrollTo(0, 0)}>
+          <Link href='/' onClick={() => window.scrollTo(0, 0)}>
             {/* Both logos ship in the markup and CSS picks one, so the
-                prerendered HTML is correct in either theme and hydration has
-                nothing to reconcile. */}
+                server-rendered HTML is correct in either theme and hydration
+                has nothing to reconcile. */}
             <img
-              src={nurayaLogoLight}
+              src='/images/nuraya_logo_light.svg'
               alt='Project Nuraya Logo'
               className='h-8 w-auto dark:hidden'
             />
             <img
-              src={nurayaLogoDark}
+              src='/images/nuraya_logo_dark.svg'
               alt=''
               aria-hidden='true'
               className='h-8 w-auto hidden dark:block'
@@ -106,21 +117,21 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <nav className='hidden md:flex space-x-6 lg:space-x-8 items-center'>
           {navLinks.map((link) => (
-            <a
-              key={link.id}
-              href={`#${link.id}`}
-              onClick={handleSectionClick(link.id)}
+            <Link
+              key={link.label}
+              href={link.href ?? `/#${link.id}`}
+              onClick={handleLinkClick(link)}
               className={
                 link.isButton
                   ? 'px-3 py-1.5 border-2 border-nuraya-gold-400 text-nuraya-gold-400 hover:bg-nuraya-gold-400 hover:text-white dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-md transition-all'
                   : `text-sm lg:text-base transition-colors ${
-                      activeSection === link.id
+                      isActive(link)
                         ? 'text-nuraya-gold-500 dark:text-nuraya-gold-300 font-semibold'
                         : 'text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300'
                     }`
               }>
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -168,21 +179,21 @@ export function Navbar() {
           <nav className='flex-1 overflow-y-auto py-6 px-4'>
             <ul className='space-y-2'>
               {navLinks.map((link) => (
-                <li key={link.id}>
-                  <a
-                    href={`#${link.id}`}
-                    onClick={handleSectionClick(link.id)}
+                <li key={link.label}>
+                  <Link
+                    href={link.href ?? `/#${link.id}`}
+                    onClick={handleLinkClick(link)}
                     className={
                       link.isButton
                         ? 'block w-full px-4 py-3 text-center border-2 border-nuraya-gold-400 text-nuraya-gold-400 hover:bg-nuraya-gold-400 hover:text-white dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-lg transition-all font-medium'
                         : `block px-4 py-3 rounded-lg transition-all ${
-                            activeSection === link.id
+                            isActive(link)
                               ? 'bg-nuraya-gold-50 text-nuraya-gold-500 dark:bg-nuraya-gold-400/10 dark:text-nuraya-gold-300 font-semibold'
                               : 'text-warm-gray dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-deep-navy dark:hover:text-white'
                           }`
                     }>
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react'
 /**
  * Reads the initial theme.
  *
- * During prerendering there is no DOM, so we fall back to light. In the browser
- * we read the `dark` class that the inline bootstrap script in `index.html` has
- * already applied before first paint, which keeps this in sync with what the
+ * During server rendering there is no DOM, so we fall back to light. In the
+ * browser we read the `dark` class that the inline bootstrap script in
+ * `SiteDocument` has already applied before first paint, which keeps this in sync with what the
  * user actually sees.
  */
 function getInitialDark(): boolean {

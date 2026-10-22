@@ -1,9 +1,7 @@
 import type { LucideIcon } from 'lucide-react'
-import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 import type { LegalBlock, LegalDocument } from '../../content/legal/types'
-import { findPageMeta } from '../../lib/seo'
 import { Footer } from '../Footer'
 import { Navbar } from '../Navbar'
 
@@ -91,18 +89,9 @@ interface Props {
   doc: LegalDocument
   icon: LucideIcon
   accent: LegalAccent
-  /** Route path, used to look up head metadata for client-side navigation. */
-  path: string
 }
 
-export function LegalPageLayout({ doc, icon: Icon, accent, path }: Props) {
-  // Prerendering writes the real <title> into each static file; this only keeps
-  // it correct after client-side navigation.
-  useEffect(() => {
-    const meta = findPageMeta(path)
-    if (meta) document.title = meta.title
-  }, [path])
-
+export function LegalPageLayout({ doc, icon: Icon, accent }: Props) {
   return (
     <div className='min-h-screen bg-soft-white dark:bg-dark-bg transition-colors duration-300'>
       <Navbar />
@@ -118,8 +107,7 @@ export function LegalPageLayout({ doc, icon: Icon, accent, path }: Props) {
               <p className='text-lg text-gray-300'>{doc.intro}</p>
               <p className='text-sm text-gray-400 mt-4'>{doc.lastUpdated}</p>
               <Link
-                to={doc.languageSwitch.to}
-                onClick={() => window.scrollTo(0, 0)}
+                href={doc.languageSwitch.to}
                 hrefLang={doc.locale === 'id' ? 'en' : 'id'}
                 className='inline-block mt-6 text-sm text-nuraya-gold-400 hover:text-nuraya-gold-300 underline underline-offset-4'>
                 {doc.languageSwitch.label}
@@ -162,8 +150,7 @@ export function LegalPageLayout({ doc, icon: Icon, accent, path }: Props) {
               <InlineText text={doc.contactPrompt} />
             </p>
             <Link
-              to='/'
-              onClick={() => window.scrollTo(0, 0)}
+              href='/'
               className='inline-block px-8 py-3 bg-nuraya-gold-400 hover:bg-nuraya-gold-500 text-deep-navy font-semibold rounded-lg transition-colors duration-300'>
               {doc.backHome}
             </Link>

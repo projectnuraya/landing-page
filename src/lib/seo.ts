@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 import { company } from '../config/company'
 
 export type Locale = 'id' | 'en'
@@ -13,13 +15,11 @@ export interface PageMeta {
 }
 
 /**
- * Head metadata for every prerendered route.
+ * Head metadata for every static route.
  *
- * This is the single source used by both the build-time prerenderer and
- * client-side navigation, so a route can never end up with a stale title in one
- * and not the other. Before this existed, titles were set from `useEffect`,
- * which never runs during prerendering — that is why every route in production
- * shipped the same `<title>`.
+ * Pages turn their entry into Next metadata with `pageMetadata`, and the
+ * sitemap lists these paths, so a route's title, canonical URL and language
+ * alternates all come from one place.
  */
 export const pages: PageMeta[] = [
   {
@@ -27,6 +27,12 @@ export const pages: PageMeta[] = [
     title: `${company.brandName} — ${company.legalName}`,
     description:
       'Nuraya Digital Nusantara — Membangun produk digital yang memecahkan masalah nyata. Teknologi untuk pendidikan, pemberdayaan, dan kolaborasi sosial.',
+    lang: 'id',
+  },
+  {
+    path: '/blog',
+    title: `Blog — ${company.brandName}`,
+    description: `Catatan, tutorial, dan cerita di balik produk dan layanan ${company.brandName}.`,
     lang: 'id',
   },
   {
@@ -77,4 +83,47 @@ const byPath = new Map(pages.map((p) => [p.path, p]))
 
 export function findPageMeta(path: string): PageMeta | undefined {
   return byPath.get(path === '/' ? path : path.replace(/\/+$/, ''))
+}
+
+/** Public origin, without a trailing slash. */
+export const siteUrl = (process.env.NEXT_PUBLIC_SERVER_URL || company.website).replace(/\/+$/, '')
+
+/** Open Graph locale for a page language. */
+export const ogLocale = (lang: Locale) => (lang === 'id' ? 'id_ID' : 'en_US')
+
+/** Defaults every page inherits from its root layout. */
+export const baseMetadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  applicationName: company.brandName,
+  icons: { icon: { url: '/favicon.svg', type: 'image/svg+xml' } },
+  openGraph: { siteName: company.brandName, type: 'website' },
+}
+
+/** Next metadata for a route registered in `pages`. */
+export function pageMetadata(path: string): Metadata {
+  const page = findPageMeta(path)
+  if (!page) throw new Error(`No page metadata registered for ${path}`)
+
+  const languages: Record<string, string> = {}
+  if (page.alternate) {
+    const idPath = page.lang === 'id' ? page.path : page.alternate
+    const enPath = page.lang === 'en' ? page.path : page.alternate
+    languages.id = idPath
+    languages.en = enPath
+    languages['x-default'] = idPath
+  }
+
+  return {
+    title: page.title,
+    description: page.description,
+    alternates: { canonical: page.path, languages },
+    openGraph: {
+      // Next replaces a parent's openGraph object instead of merging it.
+      ...baseMetadata.openGraph,
+      title: page.title,
+      description: page.description,
+      url: page.path,
+      locale: ogLocale(page.lang),
+    },
+  }
 }

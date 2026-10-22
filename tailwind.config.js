@@ -1,6 +1,8 @@
+import typography from '@tailwindcss/typography'
+
 /** @type {import('tailwindcss').Config} */
 export const darkMode = 'class'
-export const content = ['./index.html', './src/**/*.{js,ts,jsx,tsx}']
+export const content = ['./src/**/*.{js,ts,jsx,tsx}']
 export const theme = {
   extend: {
     colors: {
@@ -127,4 +129,8 @@ export const theme = {
   },
 }
 
-export const plugins = []
+export const plugins = [
+  // Renamed from `prose` so the legal pages, which carry `prose` classes that
+  // were never wired to this plugin, keep rendering exactly as before.
+  typography({ className: 'rich-text' }),
+]

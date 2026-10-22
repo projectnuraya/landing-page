@@ -1,6 +1,7 @@
+'use client'
+
 import { ArrowDown, MessageCircle } from 'lucide-react'
 
-import nurayaPattern from '../assets/nuraya_pattern.svg'
 import { company } from '../config/company'
 import { scrollToSection } from '../lib/scroll'
 
@@ -118,7 +119,7 @@ export function Hero() {
                         animationDelay: tile.animDelay,
                       }}>
                       <img
-                        src={nurayaPattern}
+                        src='/images/nuraya_pattern.svg'
                         alt=''
                         className='w-full h-auto select-none pointer-events-none'
                         draggable={false}

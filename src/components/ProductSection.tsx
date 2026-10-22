@@ -1,3 +1,5 @@
+'use client'
+
 import { Bike, BookOpen, Check, Database, ExternalLink, FileText, Globe, Lightbulb, MessageCircle, Wrench } from 'lucide-react'
 import { useState } from 'react'
 
