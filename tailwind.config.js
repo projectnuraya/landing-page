@@ -29,13 +29,6 @@ export const theme = {
         800: '#1E4772',
         900: '#17344F',
       },
-      // Bridge hue for the brand gradient only (gold -> teal -> blue). Not a brandbook color:
-      // it is what gold and blue produce between them, kept chromatic instead of gray.
-      'nuraya-teal': {
-        300: '#5FD3C8',
-        400: '#3DBDB3',
-        600: '#0B8F8B',
-      },
       accent: {
         50: '#E8EEF2',
         100: '#D0DCE3',

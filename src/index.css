@@ -91,19 +91,16 @@
 }
 
 @layer utilities {
-  /* Brand gradient: gold and blue hold the two ends, teal is only the bridge between them.
-     Interpolating in OKLCH keeps that bridge chromatic instead of collapsing to gray the way
-     sRGB does between complementary hues. The plateaus (gold to 22%, blue from 78%) keep the
-     brand colors dominant and the teal short. The sRGB lines are
-     the fallback for browsers without `in oklch`. Text ends are the darker shades so large
-     display text stays above 3:1 on white. */
+  /* Brand gradient: gold into blue, two colors only. Each holds a plateau (gold to 35%, blue from
+     65%) so the brand colors stay dominant and the blend between them stays short. Interpolating
+     in OKLab keeps that blend even; the sRGB lines are the fallback for browsers without
+     `in oklab`. Text ends are the darker shades so large display text stays above 3:1 on white. */
   .text-brand-gradient {
     background-image: linear-gradient(
       to right,
       theme('colors.nuraya-gold.600'),
-      theme('colors.nuraya-gold.600') 22%,
-      theme('colors.nuraya-teal.600') 50%,
-      theme('colors.nuraya-blue.600') 78%,
+      theme('colors.nuraya-gold.600') 35%,
+      theme('colors.nuraya-blue.600') 65%,
       theme('colors.nuraya-blue.600')
     );
     -webkit-background-clip: text;
@@ -115,9 +112,8 @@
     background-image: linear-gradient(
       to right,
       theme('colors.nuraya-gold.300'),
-      theme('colors.nuraya-gold.300') 22%,
-      theme('colors.nuraya-teal.300') 50%,
-      theme('colors.nuraya-blue.300') 78%,
+      theme('colors.nuraya-gold.300') 35%,
+      theme('colors.nuraya-blue.300') 65%,
       theme('colors.nuraya-blue.300')
     );
   }
@@ -126,43 +122,39 @@
     background-image: linear-gradient(
       to right,
       theme('colors.nuraya-gold.400'),
-      theme('colors.nuraya-gold.400') 22%,
-      theme('colors.nuraya-teal.400') 50%,
-      theme('colors.nuraya-blue.400') 78%,
+      theme('colors.nuraya-gold.400') 35%,
+      theme('colors.nuraya-blue.400') 65%,
       theme('colors.nuraya-blue.400')
     );
   }
 
-  @supports (background-image: linear-gradient(to right in oklch, red, blue)) {
+  @supports (background-image: linear-gradient(to right in oklab, red, blue)) {
     .text-brand-gradient {
       background-image: linear-gradient(
-        to right in oklch,
+        to right in oklab,
         theme('colors.nuraya-gold.600'),
-        theme('colors.nuraya-gold.600') 22%,
-        theme('colors.nuraya-teal.600') 50%,
-        theme('colors.nuraya-blue.600') 78%,
+        theme('colors.nuraya-gold.600') 35%,
+        theme('colors.nuraya-blue.600') 65%,
         theme('colors.nuraya-blue.600')
       );
     }
 
     .dark .text-brand-gradient {
       background-image: linear-gradient(
-        to right in oklch,
+        to right in oklab,
         theme('colors.nuraya-gold.300'),
-        theme('colors.nuraya-gold.300') 22%,
-        theme('colors.nuraya-teal.300') 50%,
-        theme('colors.nuraya-blue.300') 78%,
+        theme('colors.nuraya-gold.300') 35%,
+        theme('colors.nuraya-blue.300') 65%,
         theme('colors.nuraya-blue.300')
       );
     }
 
     .bg-brand-gradient {
       background-image: linear-gradient(
-        to right in oklch,
+        to right in oklab,
         theme('colors.nuraya-gold.400'),
-        theme('colors.nuraya-gold.400') 22%,
-        theme('colors.nuraya-teal.400') 50%,
-        theme('colors.nuraya-blue.400') 78%,
+        theme('colors.nuraya-gold.400') 35%,
+        theme('colors.nuraya-blue.400') 65%,
         theme('colors.nuraya-blue.400')
       );
     }
