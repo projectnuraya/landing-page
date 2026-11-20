@@ -79,34 +79,6 @@
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .glow-gold {
-    box-shadow: 0 0 20px rgba(212, 178, 77, 0.3);
-  }
-
-  .dark .glow-gold {
-    box-shadow: 0 0 25px rgba(212, 178, 77, 0.25);
-  }
-
-  .glow-blue {
-    box-shadow: 0 0 20px rgba(97, 171, 235, 0.3);
-  }
-
-  .dark .glow-blue {
-    box-shadow: 0 0 25px rgba(97, 171, 235, 0.25);
-  }
-
-  .glow-accent {
-    box-shadow: 0 0 20px rgba(29, 51, 65, 0.3);
-  }
-
-  .dark .glow-accent {
-    box-shadow: 0 0 25px rgba(97, 171, 235, 0.2);
-  }
-
   /* Brand gradient: gold and blue hold the two ends, teal is only the bridge between them.
      Interpolating in OKLCH keeps that bridge chromatic instead of collapsing to gray the way
      sRGB does between complementary hues. The plateaus (gold to 22%, blue from 78%) keep the
@@ -182,13 +154,5 @@
         theme('colors.nuraya-blue.400')
       );
     }
-  }
-
-  .glass-panel {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
-  }
-
-  .dark .glass-panel {
-    @apply bg-dark-surface/60 backdrop-blur-md border border-white/5 shadow-none;
   }
 }
