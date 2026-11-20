@@ -110,9 +110,6 @@ export function ProductSection() {
       <div className='container mx-auto px-6 md:px-12'>
         {/* Section Header */}
         <div className='mb-14 md:mb-16 max-w-3xl'>
-          <div className='inline-block px-3 py-1 mb-3 rounded-full bg-nuraya-gold-400/10 text-nuraya-gold-800 dark:text-nuraya-gold-300 text-xs font-semibold uppercase tracking-wider'>
-            Layanan & Produk
-          </div>
           <h2 className='tracking-tight text-3xl md:text-4xl font-extrabold text-deep-navy dark:text-white mb-4'>
             Solusi Rekayasa & Produk Digital
           </h2>

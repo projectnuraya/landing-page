@@ -26,7 +26,7 @@ export const pages: PageMeta[] = [
     path: '/',
     title: `${company.brandName} — ${company.legalName}`,
     description:
-      'Nuraya Digital Nusantara — Membangun produk digital yang memecahkan masalah nyata. Teknologi untuk pendidikan, pemberdayaan, dan kolaborasi sosial.',
+      'Project Nuraya (PT Nuraya Digital Nusantara), software studio di Malang. Pengembangan web dan aplikasi custom, konsultasi IT dan arsitektur sistem, serta data dan otomasi proses. Bicara langsung dengan engineer-nya.',
     lang: 'id',
   },
   {

@@ -6,6 +6,7 @@ import type { LegalBlock, LegalDocument } from '../../content/legal/types'
 import { findPageMeta } from '../../lib/seo'
 import { Footer } from '../Footer'
 import { Navbar } from '../Navbar'
+import { SkipLink } from '../SkipLink'
 
 import type { LegalAccent } from './accents'
 import { InlineText } from './InlineText'
@@ -48,7 +49,7 @@ function Block({ block }: { block: LegalBlock }) {
 
     case 'note':
       return (
-        <div className='border-l-4 border-warm-gray/30 dark:border-gray-600 pl-4 py-1 mt-4'>
+        <div className='bg-light-sand/50 dark:bg-dark-surface rounded-lg p-4 mt-4'>
           <p className={`${bodyClass} text-sm`}>
             <InlineText text={block.text} />
           </p>
@@ -105,9 +106,10 @@ export function LegalPageLayout({ doc, icon: Icon, accent, path }: Props) {
 
   return (
     <div className='min-h-screen bg-soft-white dark:bg-dark-bg transition-colors duration-300'>
+      <SkipLink />
       <Navbar />
 
-      <main className='pt-24'>
+      <main id='main-content' tabIndex={-1} className='pt-24 outline-none'>
         <section className='py-16 md:py-24 bg-gradient-to-br from-deep-navy to-deep-navy/90 dark:from-dark-surface dark:to-dark-bg text-white'>
           <div className='container mx-auto px-6 md:px-12'>
             <div className='max-w-4xl mx-auto text-center'>

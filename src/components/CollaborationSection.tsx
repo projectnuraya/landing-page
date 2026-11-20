@@ -119,7 +119,7 @@ export function CollaborationSection() {
   }
 
   const inputBaseClass =
-    'w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-dark-bg text-base text-deep-navy dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-nuraya-gold-400 dark:focus:ring-nuraya-gold-300 focus:border-transparent transition-all'
+    'w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-dark-bg text-base text-deep-navy dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-nuraya-gold-600 dark:focus:ring-nuraya-gold-300 focus:border-transparent transition-all'
   const labelClass = 'block mb-1.5 text-sm font-medium text-deep-navy dark:text-gray-100'
   const errorClass = 'mt-1.5 text-sm text-red-600 dark:text-red-400'
   const borderFor = (field: Field) =>
@@ -133,9 +133,6 @@ export function CollaborationSection() {
           {/* Left Column: Direct WhatsApp & Company Contact Info */}
           <div className='lg:w-1/2 space-y-8'>
             <div>
-              <div className='inline-block px-3 py-1 mb-3 rounded-full bg-nuraya-gold-400/15 text-nuraya-gold-300 text-xs font-semibold uppercase tracking-wider'>
-                Konsultasi & Kontak
-              </div>
               <h2 className='tracking-tight text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight'>
                 Mulai Diskusi Kebutuhan Teknologi Anda
               </h2>
@@ -199,7 +196,7 @@ export function CollaborationSection() {
           {/* Right Column: Inquiry Form */}
           <div className='lg:w-1/2 w-full'>
             <div className='relative'>
-              <div className='relative bg-white dark:bg-dark-surface p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 dark:border-white/10'>
+              <div className='relative bg-white dark:bg-dark-surface [&_:focus-visible]:outline-nuraya-gold-700 dark:[&_:focus-visible]:outline-nuraya-gold-300 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 dark:border-white/10'>
                 {isDrafted ? (
                   <div className='space-y-5'>
                     <div className='text-center space-y-3'>

@@ -8,7 +8,7 @@ export function NotFoundPage() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    document.title = 'Halaman Tidak Ditemukan — Nuraya Digital Nusantara'
+    document.title = 'Halaman Tidak Ditemukan — Project Nuraya'
   }, [])
 
   return (

@@ -67,6 +67,18 @@
     color: inherit;
   }
 
+  /* One focus ring for the whole site, in the brand gold. Dark gold on light surfaces, light
+     gold on dark ones, so it stays above 3:1 against whatever it sits on. */
+  :focus-visible {
+    outline: 2px solid theme('colors.nuraya-gold.700');
+    outline-offset: 2px;
+  }
+
+  .dark :focus-visible,
+  .bg-deep-navy :focus-visible {
+    outline-color: theme('colors.nuraya-gold.300');
+  }
+
   input,
   textarea {
     caret-color: #8f7125;

@@ -9,9 +9,6 @@ export function AboutSection() {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
           {/* Left Column: Story & Philosophy */}
           <div className='space-y-8'>
-            <div className='inline-block px-3 py-1 rounded-full bg-nuraya-blue-400/10 text-nuraya-blue-700 dark:text-nuraya-blue-300 text-xs font-semibold uppercase tracking-wider'>
-              Tentang Perusahaan
-            </div>
             <h2 className='tracking-tight text-3xl md:text-4xl font-extrabold text-deep-navy dark:text-white leading-tight'>
               Membangun Fondasi Digital dengan Transparansi & Integritas
             </h2>
