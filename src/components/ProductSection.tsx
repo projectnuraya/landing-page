@@ -19,6 +19,11 @@ const services = [
       'Aplikasi web kustom & portal internal operasional',
       'Integrasi payment gateway, sistem otentikasi & API',
     ],
+    price: {
+      label: 'Mulai dari',
+      value: 'Rp5.000.000',
+      note: 'Untuk landing page & website korporat. Aplikasi kustom dihitung sesuai kebutuhan.',
+    },
     status: 'Tersedia',
     color: 'text-nuraya-blue-400',
     bg: 'bg-nuraya-blue-400/10',
@@ -34,6 +39,11 @@ const services = [
       'Strategi deployment & optimalisasi self-hosted / cloud',
       'Perencanaan keamanan & kepatuhan data',
     ],
+    price: {
+      label: 'Harga',
+      value: 'Sesuai kebutuhan',
+      note: 'Estimasi biaya & waktu kami kirim transparan setelah diskusi awal.',
+    },
     status: 'Tersedia',
     color: 'text-nuraya-gold-400',
     bg: 'bg-nuraya-gold-400/10',
@@ -49,6 +59,11 @@ const services = [
       'Otomatisasi proses repetitif antar sistem',
       'Arsitektur & manajemen basis data relasional',
     ],
+    price: {
+      label: 'Harga',
+      value: 'Sesuai kebutuhan',
+      note: 'Estimasi biaya & waktu kami kirim transparan setelah diskusi awal.',
+    },
     status: 'Tersedia',
     color: 'text-emerald-500',
     bg: 'bg-emerald-500/10',
@@ -184,6 +199,18 @@ export function ProductSection() {
                       <p className='text-warm-gray dark:text-gray-300 leading-relaxed text-sm mb-4'>
                         {service.description}
                       </p>
+
+                      <div className='mb-4 rounded-lg bg-black/[0.03] dark:bg-white/5 px-3.5 py-3'>
+                        <span className='block text-xs font-medium text-slate-600 dark:text-gray-300'>
+                          {service.price.label}
+                        </span>
+                        <span className='block text-lg font-bold text-deep-navy dark:text-white'>
+                          {service.price.value}
+                        </span>
+                        <span className='block mt-1 text-xs leading-relaxed text-slate-600 dark:text-gray-300'>
+                          {service.price.note}
+                        </span>
+                      </div>
 
                       <div className='border-t border-gray-100 dark:border-white/5 pt-3'>
                         <span className='text-xs font-semibold text-deep-navy dark:text-gray-200 block mb-2'>
