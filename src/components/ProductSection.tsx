@@ -137,7 +137,7 @@ export function ProductSection() {
                 <Card
                   key={service.title}
                   variant='gold'
-                  className='group hover:-translate-y-1 transition-all duration-300 relative overflow-hidden flex flex-col justify-between border-black/5 dark:border-white/10'>
+                  className='md:max-lg:last:col-span-2 group hover:-translate-y-1 transition-all duration-300 relative overflow-hidden flex flex-col justify-between border-black/5 dark:border-white/10'>
                   <div>
                     <CardHeader className='pb-3'>
                       <div
