@@ -8,7 +8,6 @@ import { MissionStatement } from '../components/MissionStatement'
 import { Navbar } from '../components/Navbar'
 import { ProductSection } from '../components/ProductSection'
 import { SkipLink } from '../components/SkipLink'
-import { ValuesSection } from '../components/ValuesSection'
 import { findPageMeta } from '../lib/seo'
 
 export function LandingPage() {
@@ -24,10 +23,9 @@ export function LandingPage() {
 
       <main id='main-content' tabIndex={-1} className='outline-none'>
         <Hero />
+        <ProductSection />
         <MissionStatement />
         <AboutSection />
-        <ValuesSection />
-        <ProductSection />
         <CollaborationSection />
       </main>
 

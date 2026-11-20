@@ -16,7 +16,7 @@ export function Navbar() {
 
   // Intersection Observer for active section detection
   useEffect(() => {
-    const sections = ['hero', 'mission', 'about', 'values', 'products', 'collaboration']
+    const sections = ['layanan', 'produk-berjalan', 'about', 'collaboration']
     const observers: IntersectionObserver[] = []
 
     sections.forEach((sectionId) => {
@@ -94,11 +94,9 @@ export function Navbar() {
   }
 
   const navLinks = [
-    { id: 'hero', label: 'Beranda' },
-    { id: 'mission', label: 'Misi' },
+    { id: 'layanan', label: 'Layanan' },
+    { id: 'produk-berjalan', label: 'Produk' },
     { id: 'about', label: 'Tentang' },
-    { id: 'values', label: 'Nilai-nilai' },
-    { id: 'products', label: 'Produk' },
     { id: 'collaboration', label: 'Konsultasi', isButton: true },
   ]
 

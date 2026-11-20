@@ -2,9 +2,16 @@ import { ShieldCheck, Server } from 'lucide-react'
 
 import { company, foundedLabel } from '../config/company'
 
+const values = [
+  { name: 'Transparansi', gloss: 'Kejelasan dan kejujuran', rule: 'border-nuraya-gold-400' },
+  { name: 'Aksi', gloss: 'Eksekusi di atas wacana', rule: 'border-nuraya-blue-400' },
+  { name: 'Empati', gloss: 'Manusia yang utama', rule: 'border-nuraya-gold-400' },
+  { name: 'Pertumbuhan', gloss: 'Tumbuh bersama, berkelanjutan', rule: 'border-nuraya-blue-400' },
+]
+
 export function AboutSection() {
   return (
-    <section id='about' className='pt-20 md:pt-32 pb-14 md:pb-20 bg-white dark:bg-dark-bg'>
+    <section id='about' className='pt-20 md:pt-32 pb-20 md:pb-32 bg-white dark:bg-dark-bg'>
       <div className='container mx-auto px-6 md:px-12'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
           {/* Left Column: Story & Philosophy */}
@@ -77,6 +84,19 @@ export function AboutSection() {
             </div>
           </div>
         </div>
+
+        {/* Values as a quiet strip: the name and the one phrase behind it */}
+        <h3 className='sr-only'>Nilai-nilai kami</h3>
+        <ul className='mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-8'>
+          {values.map((value) => (
+            <li key={value.name} className={`border-t-2 pt-4 ${value.rule}`}>
+              <p className='text-lg font-bold text-deep-navy dark:text-white'>{value.name}</p>
+              <p className='mt-1 text-sm text-warm-gray dark:text-gray-300 leading-relaxed'>
+                {value.gloss}
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
