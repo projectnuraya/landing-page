@@ -33,7 +33,7 @@ export function Hero() {
         />
       </div>
 
-      <div className='container mx-auto px-6 md:px-12 lg:px-20 py-8 md:py-12 relative z-10'>
+      <div className='container mx-auto px-6 md:px-12 lg:px-20 pt-8 pb-8 md:pt-12 md:pb-28 relative z-10'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center'>
           {/* Text Content - Asymmetric Left (8 cols) */}
           <div className='lg:col-span-8 flex flex-col items-start text-left'>
@@ -135,7 +135,7 @@ export function Hero() {
       {/* Professional Gentle Glide Scroll Indicator */}
       <button
         onClick={() => scrollToSection('products')}
-        className='absolute bottom-8 left-1/2 -translate-x-1/2 z-20 group flex flex-col items-center gap-1.5 focus:outline-none'
+        className='absolute bottom-6 left-1/2 -translate-x-1/2 z-20 group hidden md:flex flex-col items-center justify-center gap-1.5 min-h-11 min-w-11 px-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nuraya-gold-400 rounded-md'
         aria-label='Scroll ke section solusi'>
         <span className='text-[11px] font-medium uppercase tracking-wider text-warm-gray dark:text-gray-400 group-hover:text-nuraya-gold-400 transition-colors'>
           Scroll
