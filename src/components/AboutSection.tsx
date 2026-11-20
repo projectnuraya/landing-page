@@ -10,20 +10,20 @@ export function AboutSection() {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
           {/* Left Column: Story & Philosophy */}
           <div className='space-y-8'>
-            <div className='inline-block px-3 py-1 rounded-full bg-nuraya-blue-400/10 text-nuraya-blue-500 dark:text-nuraya-blue-300 text-xs font-semibold uppercase tracking-wider'>
+            <div className='inline-block px-3 py-1 rounded-full bg-nuraya-blue-400/10 text-nuraya-blue-700 dark:text-nuraya-blue-300 text-xs font-semibold uppercase tracking-wider'>
               Tentang Perusahaan
             </div>
-            <h2 className='text-3xl md:text-4xl font-bold text-deep-navy dark:text-white leading-tight'>
+            <h2 className='tracking-tight text-3xl md:text-4xl font-extrabold text-deep-navy dark:text-white leading-tight'>
               Membangun Fondasi Digital dengan Transparansi & Integritas
             </h2>
             <div className='space-y-5 text-base md:text-lg text-warm-gray dark:text-gray-300 leading-relaxed'>
               <p>
                 Nama "Nuraya" berakar dari perpaduan dua kata:{' '}
-                <span className='text-nuraya-gold-500 dark:text-nuraya-gold-300 font-semibold'>
+                <span className='text-nuraya-gold-800 dark:text-nuraya-gold-300 font-semibold'>
                   Nur
                 </span>{' '}
                 (cahaya yang memberi kejelasan) dan{' '}
-                <span className='text-nuraya-blue-500 dark:text-nuraya-blue-300 font-semibold'>
+                <span className='text-nuraya-blue-700 dark:text-nuraya-blue-300 font-semibold'>
                   Raya
                 </span>{' '}
                 (keluasan pandangan dan visi jangka panjang).
@@ -62,7 +62,7 @@ export function AboutSection() {
                 <h3 className='text-xl font-bold text-deep-navy dark:text-white mb-1'>
                   Kedaulatan Data
                 </h3>
-                <p className='text-xs font-semibold text-nuraya-gold-500 dark:text-nuraya-gold-300 uppercase tracking-wider mb-3'>
+                <p className='text-xs font-semibold text-nuraya-gold-800 dark:text-nuraya-gold-300 uppercase tracking-wider mb-3'>
                   Infrastruktur di Indonesia
                 </p>
                 <p className='text-sm text-gray-600 dark:text-gray-300 leading-relaxed'>
@@ -82,7 +82,7 @@ export function AboutSection() {
                 <h3 className='text-xl font-bold text-deep-navy dark:text-white mb-1'>
                   Entitas Resmi & Legal
                 </h3>
-                <p className='text-xs font-semibold text-nuraya-blue-500 dark:text-nuraya-blue-300 uppercase tracking-wider mb-3'>
+                <p className='text-xs font-semibold text-nuraya-blue-700 dark:text-nuraya-blue-300 uppercase tracking-wider mb-3'>
                   Terdaftar Kemenkumham
                 </p>
                 <p className='text-sm text-gray-600 dark:text-gray-300 leading-relaxed'>

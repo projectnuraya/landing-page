@@ -21,7 +21,7 @@ export function NotFoundPage() {
           </span>
         </h1>
 
-        <h2 className='text-2xl md:text-3xl font-bold text-deep-navy dark:text-white mt-4 mb-3'>
+        <h2 className='tracking-tight text-2xl md:text-3xl font-extrabold text-deep-navy dark:text-white mt-4 mb-3'>
           Halaman Tidak Ditemukan
         </h2>
         <p className='text-warm-gray dark:text-gray-400 mb-10 leading-relaxed'>

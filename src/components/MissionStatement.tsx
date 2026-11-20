@@ -11,11 +11,11 @@ export function MissionStatement() {
             <Sparkles className='w-6 h-6' />
           </div>
 
-          <h2 className='text-3xl md:text-4xl font-bold leading-tight text-deep-navy dark:text-white mb-12'>
+          <h2 className='tracking-tight text-3xl md:text-4xl font-extrabold leading-tight text-deep-navy dark:text-white mb-12'>
             Teknologi bukan sekadar kode dan piksel. Ia adalah{' '}
-            <span className='text-nuraya-gold-500 dark:text-nuraya-gold-300'>cahaya</span> — yang
+            <span className='text-nuraya-gold-700 dark:text-nuraya-gold-300'>cahaya</span> — yang
             menerangi berbagai persoalan, memberdayakan{' '}
-            <span className='text-nuraya-blue-500 dark:text-nuraya-blue-300'>sesama</span>, dan
+            <span className='text-nuraya-blue-700 dark:text-nuraya-blue-300'>sesama</span>, dan
             menciptakan dampak sosial yang bermakna.
           </h2>
 

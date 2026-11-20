@@ -15,8 +15,8 @@ export function Footer() {
       <div className='container mx-auto px-6 md:px-12'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-start gap-12 mb-16'>
           <div className='max-w-xs'>
-            <h2 className='text-2xl md:text-3xl font-bold text-deep-navy dark:text-white mb-3'>
-              PROJECT <span className='text-nuraya-gold-400'>NURAYA</span>
+            <h2 className='tracking-tight text-2xl md:text-3xl font-extrabold text-deep-navy dark:text-white mb-3'>
+              PROJECT <span className='text-nuraya-gold-700 dark:text-nuraya-gold-400'>NURAYA</span>
             </h2>
             <p className='text-base text-warm-gray dark:text-gray-400 leading-relaxed'>
               Membangun makna, menyalakan harapan.
@@ -35,28 +35,28 @@ export function Footer() {
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label='Buka Tilawah Tracker di tab baru'
-                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-colors'>
                   Tilawah Tracker
                 </a>
               </li>
               <li>
                 <a
                   href='/#roadmap'
-                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-colors'>
                   Sistem Digital Sewa Sepeda
                 </a>
               </li>
               <li>
                 <a
                   href='/#roadmap'
-                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-colors'>
                   Catat Servis Digital
                 </a>
               </li>
               <li>
                 <a
                   href='/#roadmap'
-                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-colors'>
                   Sistem Administrasi Komunitas & Warga
                 </a>
               </li>
@@ -71,7 +71,7 @@ export function Footer() {
             <div>
               <a
                 href={`mailto:${company.email}`}
-                className='flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                className='flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-colors'>
                 {company.email}
               </a>
               <div>
@@ -83,7 +83,7 @@ export function Footer() {
                     href={company.github}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='inline-flex items-center justify-center w-11 h-11 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
+                    className='inline-flex items-center justify-center w-11 h-11 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
                     aria-label='Visit our GitHub'>
                     <Github className='w-5 h-5' />
                   </a>
@@ -91,7 +91,7 @@ export function Footer() {
                     href={company.linkedin}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='inline-flex items-center justify-center w-11 h-11 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
+                    className='inline-flex items-center justify-center w-11 h-11 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
                     aria-label='Visit our LinkedIn'>
                     <Linkedin className='w-5 h-5' />
                   </a>
@@ -109,12 +109,12 @@ export function Footer() {
                 href={company.ahuCertificateUrl}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
+                className='hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
                 {company.legalName}
               </a>
               . All rights reserved.
             </p>
-            <p className='text-xs text-gray-500 dark:text-gray-500'>
+            <p className='text-sm text-gray-600 dark:text-gray-400'>
               NIB {company.nib} · Didirikan {foundedLabel} · {company.address.city}, {company.address.country}
             </p>
           </div>
@@ -123,24 +123,24 @@ export function Footer() {
             <Link
               to='/privacy'
               onClick={() => window.scrollTo(0, 0)}
-              className='inline-flex items-center min-h-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
+              className='inline-flex items-center min-h-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
               Privacy
             </Link>
             <Link
               to='/terms'
               onClick={() => window.scrollTo(0, 0)}
-              className='inline-flex items-center min-h-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
+              className='inline-flex items-center min-h-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
               Terms
             </Link>
             <Link
               to='/legal'
               onClick={() => window.scrollTo(0, 0)}
-              className='inline-flex items-center min-h-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
+              className='inline-flex items-center min-h-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-900 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
               Legal
             </Link>
             <button
               onClick={scrollToTop}
-              className='inline-flex items-center justify-center gap-1.5 min-h-11 min-w-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 transition-colors font-medium'
+              className='inline-flex items-center justify-center gap-1.5 min-h-11 min-w-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300 transition-colors font-medium'
               aria-label='Scroll to top'>
               <span className='hidden sm:inline'>Top</span>
               <ArrowUp className='w-4 h-4' />

@@ -71,7 +71,7 @@ export function ValuesSection() {
 
       <div className='container mx-auto px-6 md:px-12 relative z-10'>
         <div className='mb-12 max-w-2xl'>
-          <h2 className='text-3xl md:text-4xl font-bold text-deep-navy dark:text-white mb-6'>
+          <h2 className='tracking-tight text-3xl md:text-4xl font-extrabold text-deep-navy dark:text-white mb-6'>
             Core Values
           </h2>
           <p className='text-lg text-warm-gray dark:text-gray-300'>

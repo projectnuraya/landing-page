@@ -134,11 +134,11 @@ export function Navbar() {
               onClick={handleSectionClick(link.id)}
               className={
                 link.isButton
-                  ? 'px-3 py-1.5 border-2 border-nuraya-gold-400 text-nuraya-gold-400 hover:bg-nuraya-gold-400 hover:text-white dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-md transition-all'
+                  ? 'px-3 py-1.5 border-2 border-nuraya-gold-500 text-nuraya-gold-800 hover:bg-nuraya-gold-400 hover:border-nuraya-gold-400 hover:text-deep-navy dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-md transition-all'
                   : `text-sm lg:text-base transition-colors ${
                       activeSection === link.id
-                        ? 'text-nuraya-gold-500 dark:text-nuraya-gold-300 font-semibold'
-                        : 'text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300'
+                        ? 'text-nuraya-gold-800 dark:text-nuraya-gold-300 font-semibold'
+                        : 'text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300'
                     }`
               }>
               {link.label}
@@ -200,10 +200,10 @@ export function Navbar() {
                     onClick={handleSectionClick(link.id)}
                     className={
                       link.isButton
-                        ? 'block w-full px-4 py-3 text-center border-2 border-nuraya-gold-400 text-nuraya-gold-400 hover:bg-nuraya-gold-400 hover:text-white dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-lg transition-all font-medium'
+                        ? 'block w-full px-4 py-3 text-center border-2 border-nuraya-gold-500 text-nuraya-gold-800 hover:bg-nuraya-gold-400 hover:border-nuraya-gold-400 hover:text-deep-navy dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-lg transition-all font-medium'
                         : `block px-4 py-3 rounded-lg transition-all ${
                             activeSection === link.id
-                              ? 'bg-nuraya-gold-50 text-nuraya-gold-500 dark:bg-nuraya-gold-400/10 dark:text-nuraya-gold-300 font-semibold'
+                              ? 'bg-nuraya-gold-50 text-nuraya-gold-800 dark:bg-nuraya-gold-400/10 dark:text-nuraya-gold-300 font-semibold'
                               : 'text-warm-gray dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-deep-navy dark:hover:text-white'
                           }`
                     }>

@@ -43,15 +43,15 @@ export function Hero() {
               <div className='inline-flex items-center gap-2 px-3.5 py-1 mb-4 md:mb-6 rounded-full bg-deep-navy/10 dark:bg-nuraya-gold-400/10 border border-deep-navy/20 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-xs sm:text-sm font-medium tracking-wide'>
                 <span className='w-2 h-2 rounded-full bg-nuraya-gold-400 animate-pulse' />
                 <span>Project Nuraya</span>
-                <span className='text-gray-400 dark:text-gray-500'>|</span>
+                <span aria-hidden='true' className='text-gray-500 dark:text-gray-400'>|</span>
                 <span className='text-gray-600 dark:text-gray-300 font-normal'>
                   Software Studio & Digital Solutions
                 </span>
               </div>
 
-              <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6'>
+              <h1 className='text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6'>
                 Membangun Solusi Digital Andal untuk{' '}
-                <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
+                <span className='underline decoration-nuraya-gold-400 decoration-[0.09em] underline-offset-[0.14em] [text-decoration-skip-ink:none]'>
                   Mengakselerasi Bisnis Anda
                 </span>
               </h1>
@@ -75,7 +75,7 @@ export function Hero() {
               <div className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto'>
                 <Button
                   asChild
-                  className='h-11 md:h-12 px-6 md:px-8 text-base bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 shadow-lg shadow-emerald-600/20 gap-2 active:scale-[0.98] transition-transform'>
+                  className='h-11 md:h-12 px-6 md:px-8 text-base bg-emerald-700 hover:bg-emerald-800 text-white dark:bg-emerald-700 dark:hover:bg-emerald-800 dark:text-white shadow-lg shadow-emerald-600/20 gap-2 active:scale-[0.98] transition-transform'>
                   <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
                     <MessageCircle className='w-5 h-5' />
                     Konsultasi Proyek (WhatsApp)
@@ -137,7 +137,7 @@ export function Hero() {
         onClick={() => scrollToSection('products')}
         className='absolute bottom-6 left-1/2 -translate-x-1/2 z-20 group hidden md:flex flex-col items-center justify-center gap-1.5 min-h-11 min-w-11 px-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nuraya-gold-400 rounded-md'
         aria-label='Scroll ke section solusi'>
-        <span className='text-[11px] font-medium uppercase tracking-wider text-warm-gray dark:text-gray-400 group-hover:text-nuraya-gold-400 transition-colors'>
+        <span className='text-xs font-medium uppercase tracking-wider text-warm-gray dark:text-gray-400 group-hover:text-nuraya-gold-400 transition-colors'>
           Scroll
         </span>
         <ArrowDown className='w-5 h-5 text-nuraya-gold-400 dark:text-nuraya-gold-300 motion-safe:animate-gentle-glide group-hover:text-nuraya-gold-300 transition-colors' />

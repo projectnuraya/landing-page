@@ -132,10 +132,10 @@ export function CollaborationSection() {
           {/* Left Column: Direct WhatsApp & Company Contact Info */}
           <div className='lg:w-1/2 space-y-8'>
             <div>
-              <div className='inline-block px-3 py-1 mb-3 rounded-full bg-nuraya-gold-400/10 text-nuraya-gold-500 dark:text-nuraya-gold-300 text-xs font-semibold uppercase tracking-wider'>
+              <div className='inline-block px-3 py-1 mb-3 rounded-full bg-nuraya-gold-400/10 text-nuraya-gold-800 dark:text-nuraya-gold-300 text-xs font-semibold uppercase tracking-wider'>
                 Konsultasi & Kontak
               </div>
-              <h2 className='text-3xl md:text-4xl font-bold text-deep-navy dark:text-white mb-4 leading-tight'>
+              <h2 className='tracking-tight text-3xl md:text-4xl font-extrabold text-deep-navy dark:text-white mb-4 leading-tight'>
                 Mulai Diskusi Kebutuhan Teknologi Anda
               </h2>
               <p className='text-base md:text-lg text-warm-gray dark:text-gray-300 leading-relaxed'>
@@ -151,7 +151,7 @@ export function CollaborationSection() {
                   <MessageCircle className='w-6 h-6' />
                 </div>
                 <div className='space-y-2 min-w-0 w-full'>
-                  <span className='inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-200 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300'>
+                  <span className='inline-block px-2 py-0.5 rounded text-xs font-semibold bg-emerald-200 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300'>
                     Saluran Komunikasi Tercepat
                   </span>
                   <h3 className='text-lg font-bold text-deep-navy dark:text-white'>
@@ -170,7 +170,7 @@ export function CollaborationSection() {
                   <div className='pt-2'>
                     <Button
                       asChild
-                      className='bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 dark:text-white gap-2 text-sm h-auto min-h-11 py-2.5 px-5 w-full sm:w-auto whitespace-normal text-center active:scale-[0.98] transition-transform shadow-md shadow-emerald-600/20'>
+                      className='bg-emerald-700 hover:bg-emerald-800 text-white dark:bg-emerald-700 dark:hover:bg-emerald-800 dark:text-white gap-2 text-sm h-auto min-h-11 py-2.5 px-5 w-full sm:w-auto whitespace-normal text-center active:scale-[0.98] transition-transform shadow-md shadow-emerald-600/20'>
                       <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
                         <MessageCircle className='w-4 h-4' />
                         Buka Obrolan WhatsApp &rarr;
@@ -203,7 +203,7 @@ export function CollaborationSection() {
                   <div className='space-y-5'>
                     <div className='text-center space-y-3'>
                       <div className='inline-flex items-center justify-center w-14 h-14 rounded-full bg-nuraya-gold-400/15'>
-                        <Mail className='w-7 h-7 text-nuraya-gold-700 dark:text-nuraya-gold-300' />
+                        <Mail className='w-7 h-7 text-nuraya-gold-800 dark:text-nuraya-gold-300' />
                       </div>
                       <h3
                         ref={draftHeadingRef}
@@ -244,7 +244,7 @@ export function CollaborationSection() {
                       </Button>
                       <Button
                         asChild
-                        className='h-11 gap-2 sm:flex-1 bg-emerald-600 hover:bg-emerald-700 text-white'>
+                        className='h-11 gap-2 sm:flex-1 bg-emerald-700 hover:bg-emerald-800 text-white dark:bg-emerald-700 dark:hover:bg-emerald-800 dark:text-white'>
                         <a href={whatsappDraftUrl} target='_blank' rel='noopener noreferrer'>
                           <MessageCircle className='w-4 h-4' />
                           Kirim lewat WhatsApp
@@ -261,13 +261,13 @@ export function CollaborationSection() {
                     <div className='flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-1 text-sm font-medium'>
                       <a
                         href={mailtoUrl}
-                        className='inline-flex items-center min-h-11 px-1 text-nuraya-gold-700 dark:text-nuraya-gold-300 underline underline-offset-4 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nuraya-gold-400 rounded'>
+                        className='inline-flex items-center min-h-11 px-1 text-nuraya-gold-800 dark:text-nuraya-gold-300 underline underline-offset-4 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nuraya-gold-400 rounded'>
                         Buka ulang draf email
                       </a>
                       <button
                         type='button'
                         onClick={() => setIsDrafted(false)}
-                        className='inline-flex items-center min-h-11 px-1 text-nuraya-gold-700 dark:text-nuraya-gold-300 underline underline-offset-4 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nuraya-gold-400 rounded'>
+                        className='inline-flex items-center min-h-11 px-1 text-nuraya-gold-800 dark:text-nuraya-gold-300 underline underline-offset-4 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nuraya-gold-400 rounded'>
                         Ubah pesan
                       </button>
                     </div>
@@ -397,7 +397,7 @@ export function CollaborationSection() {
                           href={company.whatsappUrl}
                           target='_blank'
                           rel='noopener noreferrer'
-                          className='font-medium text-nuraya-gold-700 dark:text-nuraya-gold-300 underline underline-offset-4 hover:no-underline'>
+                          className='font-medium text-nuraya-gold-800 dark:text-nuraya-gold-300 underline underline-offset-4 hover:no-underline'>
                           Langsung via WhatsApp
                         </a>
                         .
