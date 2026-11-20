@@ -24,7 +24,6 @@ const services = [
       value: 'Rp5.000.000',
       note: 'Untuk landing page & website korporat. Aplikasi kustom dihitung sesuai kebutuhan.',
     },
-    status: 'Tersedia',
     color: 'text-nuraya-blue-400',
     bg: 'bg-nuraya-blue-400/10',
   },
@@ -44,7 +43,6 @@ const services = [
       value: 'Sesuai kebutuhan',
       note: 'Estimasi biaya & waktu kami kirim transparan setelah diskusi awal.',
     },
-    status: 'Tersedia',
     color: 'text-nuraya-gold-400',
     bg: 'bg-nuraya-gold-400/10',
   },
@@ -64,7 +62,6 @@ const services = [
       value: 'Sesuai kebutuhan',
       note: 'Estimasi biaya & waktu kami kirim transparan setelah diskusi awal.',
     },
-    status: 'Tersedia',
     color: 'text-emerald-500',
     bg: 'bg-emerald-500/10',
   },
@@ -130,7 +127,7 @@ export function ProductSection() {
         {/* Section Header */}
         <div className='mb-12 max-w-3xl'>
           <div className='inline-block px-3 py-1 mb-3 rounded-full bg-nuraya-gold-400/10 text-nuraya-gold-500 dark:text-nuraya-gold-300 text-xs font-semibold uppercase tracking-wider'>
-            Portofolio & Kapabilitas
+            Layanan & Produk
           </div>
           <h2 className='text-3xl md:text-4xl font-bold text-deep-navy dark:text-white mb-4'>
             Solusi Rekayasa & Produk Digital
@@ -177,13 +174,6 @@ export function ProductSection() {
                   variant='gold'
                   className='group hover:-translate-y-1 transition-all duration-300 relative overflow-hidden flex flex-col justify-between border-black/5 dark:border-white/10'>
                   <div>
-                    {/* Status Badge */}
-                    <div className='absolute top-4 right-4'>
-                      <span className='inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300'>
-                        {service.status}
-                      </span>
-                    </div>
-
                     <CardHeader className='pb-3'>
                       <div
                         className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${service.bg} border ${service.color} transition-transform group-hover:scale-105 duration-300`}>
@@ -249,7 +239,7 @@ export function ProductSection() {
                   Punya spesifikasi sistem atau kebutuhan arsitektur khusus?
                 </h4>
                 <p className='text-sm text-warm-gray dark:text-gray-300 max-w-xl'>
-                  Diskusikan langsung dengan tim engineering kami tanpa perantara sales untuk estimasi waktu dan biaya yang transparan.
+                  Diskusikan langsung dengan engineer yang akan mengerjakannya, tanpa perantara sales, untuk estimasi waktu dan biaya yang transparan.
                 </p>
               </div>
               <Button

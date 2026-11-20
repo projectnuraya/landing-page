@@ -158,7 +158,14 @@ export function CollaborationSection() {
                     Konsultasi Cepat via WhatsApp
                   </h3>
                   <p className='text-sm text-gray-600 dark:text-gray-300'>
-                    Hubungi langsung tim rekayasa kami untuk diskusi kebutuhan awal, estimasi ruang lingkup, dan jadwal pengerjaan.
+                    Diskusi langsung dengan engineer yang akan membangun sistem Anda: kebutuhan awal, estimasi biaya, dan jadwal pengerjaan.
+                  </p>
+                  <p className='text-sm text-slate-700 dark:text-gray-200'>
+                    <span className='font-semibold tabular-nums text-deep-navy dark:text-white'>
+                      {company.whatsappFormatted}
+                    </span>
+                    <span aria-hidden='true' className='hidden sm:inline'> · </span>
+                    <span className='block sm:inline'>Balasan WhatsApp dan email dalam 1 hari kerja.</span>
                   </p>
                   <div className='pt-2'>
                     <Button

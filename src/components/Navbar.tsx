@@ -77,7 +77,7 @@ export function Navbar() {
     { id: 'about', label: 'Tentang' },
     { id: 'values', label: 'Nilai-nilai' },
     { id: 'products', label: 'Produk' },
-    { id: 'collaboration', label: 'Kolaborasi', isButton: true },
+    { id: 'collaboration', label: 'Konsultasi', isButton: true },
   ]
 
   return (

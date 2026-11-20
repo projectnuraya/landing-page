@@ -35,7 +35,7 @@ export function AboutSection() {
               </p>
               <p>
                 Kami tidak sekadar menulis kode, kami mendesain aset digital yang dapat diandalkan untuk jangka panjang—didukung
-                oleh infrastruktur mandiri, kepatuhan regulasi data, dan komunikasi langsung dengan para insinyur yang membangunnya.
+                oleh infrastruktur mandiri, kepatuhan regulasi data, dan komunikasi langsung dengan engineer yang membangunnya.
               </p>
             </div>
 

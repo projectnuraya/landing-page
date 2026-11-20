@@ -67,9 +67,9 @@ export function Hero() {
                 kebutuhan nyata organisasi Anda.
               </p>
 
-              <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mb-8 md:mb-10 leading-relaxed'>
-                Transparan, berakar pada kebutuhan pengguna, dan dikembangkan langsung oleh tim engineering
-                tanpa perantara.
+              <p className='text-base sm:text-lg font-medium text-deep-navy dark:text-white max-w-xl mb-8 md:mb-10 leading-relaxed'>
+                Anda berdiskusi langsung dengan engineer yang membangun sistemnya, tanpa perantara sales,
+                dengan estimasi biaya dan waktu yang transparan.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto'>
@@ -85,7 +85,7 @@ export function Hero() {
                   onClick={() => scrollToSection('products')}
                   variant='outline'
                   className='h-11 md:h-12 px-6 md:px-8 text-base border-deep-navy/15 text-deep-navy hover:bg-deep-navy/5 dark:border-white/15 dark:text-white dark:hover:bg-white/5 active:scale-[0.98] transition-all'>
-                  Eksplorasi Solusi
+                  Lihat Layanan & Produk
                 </Button>
               </div>
             </div>
