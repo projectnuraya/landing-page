@@ -43,6 +43,38 @@
 
   .dark body {
     @apply bg-dark-bg text-gray-100;
+    /* Light text on a dark surface reads tighter; open the tracking a touch. */
+    letter-spacing: 0.005em;
+  }
+
+  /* Headings break into even lines, body copy avoids a lone last word. Both are
+     progressive: a browser that ignores them keeps its default wrap. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  /* Selection and caret follow the palette instead of the browser default. */
+  ::selection {
+    background-color: rgb(226 180 66 / 0.35);
+    color: inherit;
+  }
+
+  input,
+  textarea {
+    caret-color: #a67d23;
+  }
+
+  .dark input,
+  .dark textarea {
+    caret-color: #f0d384;
   }
 }
 

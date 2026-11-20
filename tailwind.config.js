@@ -51,7 +51,7 @@ export const theme = {
       'sky-blue-light': '#7EC0E8',
       'soft-white': '#FAFAFA',
       'deep-navy': '#1F2A44',
-      'warm-gray': '#8A8A8A',
+      'warm-gray': '#5F6672',
       'light-sand': '#F2EFEA',
       'dark-bg': '#0F1419',
       'dark-surface': '#1A2332',
