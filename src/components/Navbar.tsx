@@ -1,5 +1,5 @@
 import { Menu, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 import nurayaLogoDark from '../assets/nuraya_logo_dark.svg'
@@ -57,6 +57,26 @@ export function Navbar() {
     return () => {
       document.body.style.overflow = ''
     }
+  }, [isMobileMenuOpen])
+
+  // Keyboard access for the drawer: Escape closes it, focus moves in on open and back to the
+  // menu button on close, so keyboard users never land in the page behind the backdrop.
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const wasMenuOpen = useRef(false)
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      closeButtonRef.current?.focus()
+    } else if (wasMenuOpen.current) {
+      menuButtonRef.current?.focus()
+    }
+    wasMenuOpen.current = isMobileMenuOpen
+    if (!isMobileMenuOpen) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsMobileMenuOpen(false)
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
   }, [isMobileMenuOpen])
 
   const handleSectionClick = (sectionId: string) => (e: React.MouseEvent) => {
@@ -130,8 +150,10 @@ export function Navbar() {
         <div className='flex items-center gap-3'>
           <DarkModeToggle />
           <button
+            ref={menuButtonRef}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className='md:hidden p-2 text-deep-navy dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
+            aria-expanded={isMobileMenuOpen}
+            className='md:hidden p-2.5 text-deep-navy dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
             aria-label='Toggle mobile menu'>
             {isMobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
@@ -153,14 +175,16 @@ export function Navbar() {
         className={`fixed top-0 right-0 h-full w-[280px] bg-white dark:bg-dark-bg shadow-2xl z-50 md:hidden transition-transform duration-300 ease-in-out transform ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        aria-hidden={!isMobileMenuOpen}>
+        aria-hidden={!isMobileMenuOpen}
+        inert={!isMobileMenuOpen}>
         <div className='flex flex-col h-full'>
           {/* Drawer Header */}
           <div className='flex items-center justify-between p-6 border-b border-gray-100 dark:border-white/5'>
             <span className='font-bold text-xl text-deep-navy dark:text-white'>Menu</span>
             <button
+              ref={closeButtonRef}
               onClick={() => setIsMobileMenuOpen(false)}
-              className='p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
+              className='p-3 hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
               aria-label='Close menu'>
               <X className='w-5 h-5 text-deep-navy dark:text-white' />
             </button>

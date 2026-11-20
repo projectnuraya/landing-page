@@ -28,35 +28,35 @@ export function Footer() {
               <span className='w-1 h-4 bg-nuraya-gold-400 rounded-full' />
               Projects
             </h3>
-            <ul className='space-y-3'>
+            <ul>
               <li>
                 <a
                   href='https://tilawah-tracker.projectnuraya.id/'
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label='Buka Tilawah Tracker di tab baru'
-                  className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                   Tilawah Tracker
                 </a>
               </li>
               <li>
                 <a
                   href='/#roadmap'
-                  className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                   Sistem Digital Sewa Sepeda
                 </a>
               </li>
               <li>
                 <a
                   href='/#roadmap'
-                  className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                   Catat Servis Digital
                 </a>
               </li>
               <li>
                 <a
                   href='/#roadmap'
-                  className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  className='inline-flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                   Sistem Administrasi Komunitas & Warga
                 </a>
               </li>
@@ -68,22 +68,22 @@ export function Footer() {
               <span className='w-1 h-4 bg-nuraya-blue-400 rounded-full' />
               Contact
             </h3>
-            <div className='space-y-4'>
+            <div>
               <a
                 href={`mailto:${company.email}`}
-                className='block text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                className='flex items-center min-h-11 text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                 {company.email}
               </a>
               <div>
-                <h4 className='text-sm font-semibold text-deep-navy dark:text-white mb-3'>
+                <h4 className='text-sm font-semibold text-deep-navy dark:text-white mt-3 mb-1'>
                   Follow Us
                 </h4>
-                <div className='flex gap-4'>
+                <div className='flex gap-1 -ml-3'>
                   <a
                     href={company.github}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
+                    className='inline-flex items-center justify-center w-11 h-11 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
                     aria-label='Visit our GitHub'>
                     <Github className='w-5 h-5' />
                   </a>
@@ -91,7 +91,7 @@ export function Footer() {
                     href={company.linkedin}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
+                    className='inline-flex items-center justify-center w-11 h-11 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-all hover:scale-110'
                     aria-label='Visit our LinkedIn'>
                     <Linkedin className='w-5 h-5' />
                   </a>
@@ -119,28 +119,28 @@ export function Footer() {
             </p>
           </div>
 
-          <div className='flex items-center gap-6'>
+          <div className='flex items-center gap-3 sm:gap-5'>
             <Link
               to='/privacy'
               onClick={() => window.scrollTo(0, 0)}
-              className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
+              className='inline-flex items-center min-h-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
               Privacy
             </Link>
             <Link
               to='/terms'
               onClick={() => window.scrollTo(0, 0)}
-              className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
+              className='inline-flex items-center min-h-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
               Terms
             </Link>
             <Link
               to='/legal'
               onClick={() => window.scrollTo(0, 0)}
-              className='text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
+              className='inline-flex items-center min-h-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors font-medium'>
               Legal
             </Link>
             <button
               onClick={scrollToTop}
-              className='flex items-center gap-1.5 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 transition-colors font-medium'
+              className='inline-flex items-center justify-center gap-1.5 min-h-11 min-w-11 px-1 text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 transition-colors font-medium'
               aria-label='Scroll to top'>
               <span className='hidden sm:inline'>Top</span>
               <ArrowUp className='w-4 h-4' />
