@@ -32,7 +32,9 @@ export function Navbar() {
           },
           {
             rootMargin: '-20% 0px -60% 0px',
-            threshold: 0.1,
+            // Any overlap with the band counts: a ratio threshold never fires for tall sections,
+            // because a 20%-viewport band covers only a sliver of a 2000px+ target.
+            threshold: 0,
           },
         )
         observer.observe(element)

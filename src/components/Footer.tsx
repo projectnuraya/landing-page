@@ -31,30 +31,33 @@ export function Footer() {
             <ul className='space-y-3'>
               <li>
                 <a
-                  href='/#products'
-                  className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
-                  Sistem Digital Sewa Sepeda
-                </a>
-              </li>
-              <li>
-                <a
-                  href='/#products'
-                  className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
-                  Catat Servis
-                </a>
-              </li>
-              <li>
-                <a
-                  href='/#products'
+                  href='https://tilawah-tracker.projectnuraya.id/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label='Buka Tilawah Tracker di tab baru'
                   className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
                   Tilawah Tracker
                 </a>
               </li>
               <li>
                 <a
-                  href='/#products'
+                  href='/#roadmap'
                   className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
-                  Sistem Administrasi Surat RT/RW
+                  Sistem Digital Sewa Sepeda
+                </a>
+              </li>
+              <li>
+                <a
+                  href='/#roadmap'
+                  className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  Catat Servis Digital
+                </a>
+              </li>
+              <li>
+                <a
+                  href='/#roadmap'
+                  className='text-sm md:text-base text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300 active:text-nuraya-gold-500 dark:active:text-nuraya-gold-200 transition-colors'>
+                  Sistem Administrasi Komunitas & Warga
                 </a>
               </li>
             </ul>
