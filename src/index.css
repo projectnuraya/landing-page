@@ -17,7 +17,7 @@
 @layer base {
   :root {
     --background: 0 0% 98%;
-    --foreground: 180 59% 12%; /* Accent dark */
+    --foreground: 203 27% 18%; /* Brand navy #1D3341 */
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 48 100% 44%; /* Nuraya Gold */
@@ -25,10 +25,10 @@
   }
 
   .dark {
-    --background: 210 25% 8%; /* #0F1419 */
+    --background: 200 45% 9%; /* #0D1A22 */
     --foreground: 0 0% 96%;
-    --border: 180 40% 25%;
-    --input: 180 40% 25%;
+    --border: 203 27% 26%;
+    --input: 203 27% 26%;
     --ring: 48 100% 50%; /* Nuraya Gold Bright */
   }
 
@@ -63,18 +63,18 @@
 
   /* Selection and caret follow the palette instead of the browser default. */
   ::selection {
-    background-color: rgb(226 180 66 / 0.35);
+    background-color: rgb(212 178 77 / 0.35);
     color: inherit;
   }
 
   input,
   textarea {
-    caret-color: #a67d23;
+    caret-color: #8f7125;
   }
 
   .dark input,
   .dark textarea {
-    caret-color: #f0d384;
+    caret-color: #e3c874;
   }
 }
 
@@ -84,27 +84,104 @@
   }
 
   .glow-gold {
-    box-shadow: 0 0 20px rgba(226, 180, 66, 0.3);
+    box-shadow: 0 0 20px rgba(212, 178, 77, 0.3);
   }
 
   .dark .glow-gold {
-    box-shadow: 0 0 25px rgba(226, 180, 66, 0.25);
+    box-shadow: 0 0 25px rgba(212, 178, 77, 0.25);
   }
 
   .glow-blue {
-    box-shadow: 0 0 20px rgba(0, 174, 239, 0.3);
+    box-shadow: 0 0 20px rgba(97, 171, 235, 0.3);
   }
 
   .dark .glow-blue {
-    box-shadow: 0 0 25px rgba(0, 174, 239, 0.25);
+    box-shadow: 0 0 25px rgba(97, 171, 235, 0.25);
   }
 
   .glow-accent {
-    box-shadow: 0 0 20px rgba(0, 48, 63, 0.3);
+    box-shadow: 0 0 20px rgba(29, 51, 65, 0.3);
   }
 
   .dark .glow-accent {
-    box-shadow: 0 0 25px rgba(0, 174, 239, 0.2);
+    box-shadow: 0 0 25px rgba(97, 171, 235, 0.2);
+  }
+
+  /* Brand gradient: gold and blue hold the two ends, teal is only the bridge between them.
+     Interpolating in OKLCH keeps that bridge chromatic instead of collapsing to gray the way
+     sRGB does between complementary hues. The plateaus (gold to 22%, blue from 78%) keep the
+     brand colors dominant and the teal short. The sRGB lines are
+     the fallback for browsers without `in oklch`. Text ends are the darker shades so large
+     display text stays above 3:1 on white. */
+  .text-brand-gradient {
+    background-image: linear-gradient(
+      to right,
+      theme('colors.nuraya-gold.600'),
+      theme('colors.nuraya-gold.600') 22%,
+      theme('colors.nuraya-teal.600') 50%,
+      theme('colors.nuraya-blue.600') 78%,
+      theme('colors.nuraya-blue.600')
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .dark .text-brand-gradient {
+    background-image: linear-gradient(
+      to right,
+      theme('colors.nuraya-gold.300'),
+      theme('colors.nuraya-gold.300') 22%,
+      theme('colors.nuraya-teal.300') 50%,
+      theme('colors.nuraya-blue.300') 78%,
+      theme('colors.nuraya-blue.300')
+    );
+  }
+
+  .bg-brand-gradient {
+    background-image: linear-gradient(
+      to right,
+      theme('colors.nuraya-gold.400'),
+      theme('colors.nuraya-gold.400') 22%,
+      theme('colors.nuraya-teal.400') 50%,
+      theme('colors.nuraya-blue.400') 78%,
+      theme('colors.nuraya-blue.400')
+    );
+  }
+
+  @supports (background-image: linear-gradient(to right in oklch, red, blue)) {
+    .text-brand-gradient {
+      background-image: linear-gradient(
+        to right in oklch,
+        theme('colors.nuraya-gold.600'),
+        theme('colors.nuraya-gold.600') 22%,
+        theme('colors.nuraya-teal.600') 50%,
+        theme('colors.nuraya-blue.600') 78%,
+        theme('colors.nuraya-blue.600')
+      );
+    }
+
+    .dark .text-brand-gradient {
+      background-image: linear-gradient(
+        to right in oklch,
+        theme('colors.nuraya-gold.300'),
+        theme('colors.nuraya-gold.300') 22%,
+        theme('colors.nuraya-teal.300') 50%,
+        theme('colors.nuraya-blue.300') 78%,
+        theme('colors.nuraya-blue.300')
+      );
+    }
+
+    .bg-brand-gradient {
+      background-image: linear-gradient(
+        to right in oklch,
+        theme('colors.nuraya-gold.400'),
+        theme('colors.nuraya-gold.400') 22%,
+        theme('colors.nuraya-teal.400') 50%,
+        theme('colors.nuraya-blue.400') 78%,
+        theme('colors.nuraya-blue.400')
+      );
+    }
   }
 
   .glass-panel {

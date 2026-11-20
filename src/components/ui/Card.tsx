@@ -12,8 +12,8 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant = 'default', ...props }, ref) => {
     const variantClasses = {
       default: 'border-black/5 hover:shadow-md dark:border-white/5',
-      gold: 'border-nuraya-gold-400/20 hover:shadow-[0_8px_30px_rgb(226,180,66,0.15)] hover:border-nuraya-gold-400/40 dark:border-nuraya-gold-400/30 dark:hover:shadow-[0_8px_30px_rgb(226,180,66,0.2)]',
-      blue: 'border-nuraya-blue-400/20 hover:shadow-[0_8px_30px_rgb(0,174,239,0.15)] hover:border-nuraya-blue-400/40 dark:border-nuraya-blue-400/30 dark:hover:shadow-[0_8px_30px_rgb(0,174,239,0.2)]',
+      gold: 'border-nuraya-gold-400/20 hover:shadow-[0_8px_30px_rgb(212,178,77,0.15)] hover:border-nuraya-gold-400/40 dark:border-nuraya-gold-400/30 dark:hover:shadow-[0_8px_30px_rgb(212,178,77,0.2)]',
+      blue: 'border-nuraya-blue-400/20 hover:shadow-[0_8px_30px_rgb(97,171,235,0.15)] hover:border-nuraya-blue-400/40 dark:border-nuraya-blue-400/30 dark:hover:shadow-[0_8px_30px_rgb(97,171,235,0.2)]',
     }
 
     return (
