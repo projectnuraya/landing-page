@@ -1,6 +1,9 @@
 import { ArrowUp, Github, Linkedin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
+import nurayaLogoDark from '../assets/nuraya_logo_dark.svg'
+import nurayaLogoLight from '../assets/nuraya_logo_light.svg'
+
 import { company, foundedLabel } from '../config/company'
 
 export function Footer() {
@@ -11,14 +14,18 @@ export function Footer() {
     })
   }
   return (
-    <footer className='bg-white dark:bg-dark-bg pt-20 pb-8 border-t border-gray-100 dark:border-white/5'>
+    <footer className='bg-white dark:bg-dark-bg pb-8'>
+      {/* Same brand rule that opens the contact section, so the page is framed by one motif */}
+      <div aria-hidden='true' className='h-1 bg-brand-gradient mt-14 md:mt-20 mb-16' />
       <div className='container mx-auto px-6 md:px-12'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-start gap-12 mb-16'>
           <div className='max-w-xs'>
-            <h2 className='tracking-tight text-2xl md:text-3xl font-extrabold text-deep-navy dark:text-white mb-3'>
-              PROJECT <span className='text-nuraya-gold-700 dark:text-nuraya-gold-400'>NURAYA</span>
-            </h2>
-            <p className='text-base text-warm-gray dark:text-gray-400 leading-relaxed'>
+            <h2 className='sr-only'>Project Nuraya</h2>
+            <Link to='/' onClick={() => window.scrollTo(0, 0)} aria-label='Project Nuraya, ke beranda'>
+              <img src={nurayaLogoLight} alt='' aria-hidden='true' className='h-10 w-auto dark:hidden' />
+              <img src={nurayaLogoDark} alt='' aria-hidden='true' className='h-10 w-auto hidden dark:block' />
+            </Link>
+            <p className='mt-5 text-xl md:text-2xl font-extrabold tracking-tight leading-snug text-deep-navy dark:text-white'>
               Membangun makna, menyalakan harapan.
             </p>
           </div>
