@@ -13,8 +13,8 @@ const values = [
         tulus.
       </>
     ),
-    color: 'text-nuraya-gold-400',
-    bg: 'bg-nuraya-gold-400/10',
+    color: 'text-nuraya-gold-700 dark:text-nuraya-gold-300',
+    bg: 'bg-nuraya-gold-400/15',
   },
   {
     icon: Zap,
@@ -25,8 +25,8 @@ const values = [
         sekadar diperdebatkan. Ide itu murah; dampak nyata butuh pergerakan.
       </>
     ),
-    color: 'text-nuraya-blue-400',
-    bg: 'bg-nuraya-blue-400/10',
+    color: 'text-nuraya-blue-600 dark:text-nuraya-blue-300',
+    bg: 'bg-nuraya-blue-400/15',
   },
   {
     icon: Heart,
@@ -37,8 +37,8 @@ const values = [
         sebagaimana kami mendesain bagi mereka yang tumbuh dengan digital di perkotaan.
       </>
     ),
-    color: 'text-red-400',
-    bg: 'bg-red-400/10',
+    color: 'text-nuraya-gold-700 dark:text-nuraya-gold-300',
+    bg: 'bg-nuraya-gold-400/15',
   },
   {
     icon: Sprout,
@@ -50,8 +50,8 @@ const values = [
         berkembang seiring luasnya pertumbuhan komunitas di dalamnya.
       </>
     ),
-    color: 'text-green-500',
-    bg: 'bg-green-500/10',
+    color: 'text-nuraya-blue-600 dark:text-nuraya-blue-300',
+    bg: 'bg-nuraya-blue-400/15',
   },
 ]
 

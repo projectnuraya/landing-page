@@ -23,8 +23,8 @@ const services = [
       value: 'Rp5.000.000',
       note: 'Untuk landing page & website korporat. Aplikasi kustom dihitung sesuai kebutuhan.',
     },
-    color: 'text-nuraya-blue-400',
-    bg: 'bg-nuraya-blue-400/10',
+    color: 'text-nuraya-blue-600 dark:text-nuraya-blue-300',
+    bg: 'bg-nuraya-blue-400/15',
   },
   {
     icon: Lightbulb,
@@ -42,8 +42,8 @@ const services = [
       value: 'Sesuai kebutuhan',
       note: 'Estimasi biaya & waktu kami kirim transparan setelah diskusi awal.',
     },
-    color: 'text-nuraya-gold-400',
-    bg: 'bg-nuraya-gold-400/10',
+    color: 'text-nuraya-gold-700 dark:text-nuraya-gold-300',
+    bg: 'bg-nuraya-gold-400/15',
   },
   {
     icon: Database,
@@ -61,8 +61,8 @@ const services = [
       value: 'Sesuai kebutuhan',
       note: 'Estimasi biaya & waktu kami kirim transparan setelah diskusi awal.',
     },
-    color: 'text-emerald-500',
-    bg: 'bg-emerald-500/10',
+    color: 'text-deep-navy dark:text-gray-200',
+    bg: 'bg-deep-navy/10 dark:bg-white/10',
   },
 ]
 
@@ -176,7 +176,7 @@ export function ProductSection() {
                             <li
                               key={item}
                               className='text-sm text-slate-600 dark:text-gray-300 flex items-start gap-2'>
-                              <Check className='w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0' />
+                              <Check className='w-3.5 h-3.5 text-nuraya-blue-600 dark:text-nuraya-blue-300 mt-0.5 shrink-0' />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -209,7 +209,7 @@ export function ProductSection() {
               </div>
               <Button
                 asChild
-                className='shrink-0 h-11 bg-emerald-700 hover:bg-emerald-800 text-white dark:bg-emerald-700 dark:hover:bg-emerald-800 dark:text-white gap-2 active:scale-[0.98] transition-transform'>
+                className='shrink-0 h-11 gap-2 active:scale-[0.98] transition-transform'>
                 <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
                   <MessageCircle className='w-4 h-4' />
                   Konsultasi Cepat (WhatsApp)
@@ -225,7 +225,7 @@ export function ProductSection() {
               <p className={groupLeadClass}>Contoh hasil kerja kami: aplikasi yang sudah live dan bisa Anda buka sekarang.</p>
             </div>
 
-            <article className='grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-14 rounded-2xl border border-emerald-500/30 dark:border-emerald-500/20 bg-white dark:bg-dark-bg/60 p-6 sm:p-8 md:p-10'>
+            <article className='grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-14 rounded-2xl border border-nuraya-gold-400/40 dark:border-nuraya-gold-400/25 bg-white dark:bg-dark-bg/60 p-6 sm:p-8 md:p-10'>
               <div className='lg:col-span-3 flex flex-col items-start'>
                 <span className='inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'>
                   <span className='relative flex h-2 w-2'>
@@ -260,7 +260,7 @@ export function ProductSection() {
                 <ul className='divide-y divide-black/10 dark:divide-white/10'>
                   {liveProduct.highlights.map((item) => (
                     <li key={item} className='flex items-start gap-3 py-3.5 text-base text-slate-700 dark:text-gray-300'>
-                      <Check className='w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-1 shrink-0' />
+                      <Check className='w-4 h-4 text-nuraya-blue-600 dark:text-nuraya-blue-300 mt-1 shrink-0' />
                       <span>{item}</span>
                     </li>
                   ))}

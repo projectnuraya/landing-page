@@ -51,7 +51,7 @@ export function Hero() {
 
               <h1 className='text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-deep-navy dark:text-white mb-4 md:mb-6'>
                 Membangun Solusi Digital Andal untuk{' '}
-                <span className='underline decoration-nuraya-gold-400 decoration-[0.09em] underline-offset-[0.14em] [text-decoration-skip-ink:none]'>
+                <span className='text-brand-gradient'>
                   Mengakselerasi Bisnis Anda
                 </span>
               </h1>
@@ -75,7 +75,7 @@ export function Hero() {
               <div className='flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto'>
                 <Button
                   asChild
-                  className='h-11 md:h-12 px-6 md:px-8 text-base bg-emerald-700 hover:bg-emerald-800 text-white dark:bg-emerald-700 dark:hover:bg-emerald-800 dark:text-white shadow-lg shadow-emerald-600/20 gap-2 active:scale-[0.98] transition-transform'>
+                  className='h-11 md:h-12 px-6 md:px-8 text-base gap-2 active:scale-[0.98] transition-transform'>
                   <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
                     <MessageCircle className='w-5 h-5' />
                     Konsultasi Proyek (WhatsApp)

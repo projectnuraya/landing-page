@@ -16,7 +16,7 @@ export function NotFoundPage() {
       <div className='text-center max-w-lg'>
         {/* Big 404 with gradient */}
         <h1 className='text-8xl md:text-9xl font-extrabold tracking-tighter'>
-          <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
+          <span className='text-brand-gradient'>
             404
           </span>
         </h1>
