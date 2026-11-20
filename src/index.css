@@ -17,7 +17,7 @@
 @layer base {
   :root {
     --background: 0 0% 98%;
-    --foreground: 180 59% 12%; /* Accent dark */
+    --foreground: 203 27% 18%; /* Brand navy #1D3341 */
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 48 100% 44%; /* Nuraya Gold */
@@ -25,10 +25,10 @@
   }
 
   .dark {
-    --background: 210 25% 8%; /* #0F1419 */
+    --background: 200 45% 9%; /* #0D1A22 */
     --foreground: 0 0% 96%;
-    --border: 180 40% 25%;
-    --input: 180 40% 25%;
+    --border: 203 27% 26%;
+    --input: 203 27% 26%;
     --ring: 48 100% 50%; /* Nuraya Gold Bright */
   }
 
@@ -43,43 +43,120 @@
 
   .dark body {
     @apply bg-dark-bg text-gray-100;
+    /* Light text on a dark surface reads tighter; open the tracking a touch. */
+    letter-spacing: 0.005em;
+  }
+
+  /* Headings break into even lines, body copy avoids a lone last word. Both are
+     progressive: a browser that ignores them keeps its default wrap. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  /* Selection and caret follow the palette instead of the browser default. */
+  ::selection {
+    background-color: rgb(212 178 77 / 0.35);
+    color: inherit;
+  }
+
+  /* One focus ring for the whole site, in the brand gold. Dark gold on light surfaces, light
+     gold on dark ones, so it stays above 3:1 against whatever it sits on. */
+  :focus-visible {
+    outline: 2px solid theme('colors.nuraya-gold.700');
+    outline-offset: 2px;
+  }
+
+  .dark :focus-visible,
+  .bg-deep-navy :focus-visible {
+    outline-color: theme('colors.nuraya-gold.300');
+  }
+
+  input,
+  textarea {
+    caret-color: #8f7125;
+  }
+
+  .dark input,
+  .dark textarea {
+    caret-color: #e3c874;
   }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Brand gradient: gold into blue, two colors only. Each holds a plateau (gold to 35%, blue from
+     65%) so the brand colors stay dominant and the blend between them stays short. Interpolating
+     in OKLab keeps that blend even; the sRGB lines are the fallback for browsers without
+     `in oklab`. Text ends are the darker shades so large display text stays above 3:1 on white. */
+  .text-brand-gradient {
+    background-image: linear-gradient(
+      to right,
+      theme('colors.nuraya-gold.600'),
+      theme('colors.nuraya-gold.600') 35%,
+      theme('colors.nuraya-blue.600') 65%,
+      theme('colors.nuraya-blue.600')
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
-  .glow-gold {
-    box-shadow: 0 0 20px rgba(226, 180, 66, 0.3);
+  .dark .text-brand-gradient {
+    background-image: linear-gradient(
+      to right,
+      theme('colors.nuraya-gold.300'),
+      theme('colors.nuraya-gold.300') 35%,
+      theme('colors.nuraya-blue.300') 65%,
+      theme('colors.nuraya-blue.300')
+    );
   }
 
-  .dark .glow-gold {
-    box-shadow: 0 0 25px rgba(226, 180, 66, 0.25);
+  .bg-brand-gradient {
+    background-image: linear-gradient(
+      to right,
+      theme('colors.nuraya-gold.400'),
+      theme('colors.nuraya-gold.400') 35%,
+      theme('colors.nuraya-blue.400') 65%,
+      theme('colors.nuraya-blue.400')
+    );
   }
 
-  .glow-blue {
-    box-shadow: 0 0 20px rgba(0, 174, 239, 0.3);
-  }
+  @supports (background-image: linear-gradient(to right in oklab, red, blue)) {
+    .text-brand-gradient {
+      background-image: linear-gradient(
+        to right in oklab,
+        theme('colors.nuraya-gold.600'),
+        theme('colors.nuraya-gold.600') 35%,
+        theme('colors.nuraya-blue.600') 65%,
+        theme('colors.nuraya-blue.600')
+      );
+    }
 
-  .dark .glow-blue {
-    box-shadow: 0 0 25px rgba(0, 174, 239, 0.25);
-  }
+    .dark .text-brand-gradient {
+      background-image: linear-gradient(
+        to right in oklab,
+        theme('colors.nuraya-gold.300'),
+        theme('colors.nuraya-gold.300') 35%,
+        theme('colors.nuraya-blue.300') 65%,
+        theme('colors.nuraya-blue.300')
+      );
+    }
 
-  .glow-accent {
-    box-shadow: 0 0 20px rgba(0, 48, 63, 0.3);
-  }
-
-  .dark .glow-accent {
-    box-shadow: 0 0 25px rgba(0, 174, 239, 0.2);
-  }
-
-  .glass-panel {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
-  }
-
-  .dark .glass-panel {
-    @apply bg-dark-surface/60 backdrop-blur-md border border-white/5 shadow-none;
+    .bg-brand-gradient {
+      background-image: linear-gradient(
+        to right in oklab,
+        theme('colors.nuraya-gold.400'),
+        theme('colors.nuraya-gold.400') 35%,
+        theme('colors.nuraya-blue.400') 65%,
+        theme('colors.nuraya-blue.400')
+      );
+    }
   }
 }

@@ -1,45 +1,49 @@
-import { ShieldCheck, Server } from 'lucide-react'
+import { Server, ShieldCheck } from 'lucide-react'
 
 import { company, foundedLabel } from '../config/company'
-import { Card } from './ui/Card'
+
+const values = [
+  { name: 'Transparansi', gloss: 'Kejelasan dan kejujuran', rule: 'border-nuraya-gold-400' },
+  { name: 'Aksi', gloss: 'Eksekusi di atas wacana', rule: 'border-nuraya-blue-400' },
+  { name: 'Empati', gloss: 'Manusia yang utama', rule: 'border-nuraya-gold-400' },
+  { name: 'Pertumbuhan', gloss: 'Tumbuh bersama, berkelanjutan', rule: 'border-nuraya-blue-400' },
+]
 
 export function AboutSection() {
   return (
-    <section id='about' className='py-20 md:py-32 bg-white dark:bg-dark-bg'>
+    <section id='about' className='pt-20 md:pt-32 pb-20 md:pb-32 bg-white dark:bg-dark-bg'>
       <div className='container mx-auto px-6 md:px-12'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
           {/* Left Column: Story & Philosophy */}
           <div className='space-y-8'>
-            <div className='inline-block px-3 py-1 rounded-full bg-nuraya-blue-400/10 text-nuraya-blue-500 dark:text-nuraya-blue-300 text-xs font-semibold uppercase tracking-wider'>
-              Tentang Perusahaan
-            </div>
-            <h2 className='text-3xl md:text-4xl font-bold text-deep-navy dark:text-white leading-tight'>
+            <h2 className='tracking-tight text-3xl md:text-4xl font-extrabold text-deep-navy dark:text-white leading-tight'>
               Membangun Fondasi Digital dengan Transparansi & Integritas
             </h2>
             <div className='space-y-5 text-base md:text-lg text-warm-gray dark:text-gray-300 leading-relaxed'>
-              <p>
+              <p className='lg:text-justify'>
                 Nama "Nuraya" berakar dari perpaduan dua kata:{' '}
-                <span className='text-nuraya-gold-500 dark:text-nuraya-gold-300 font-semibold'>
+                <span className='text-nuraya-gold-800 dark:text-nuraya-gold-300 font-semibold'>
                   Nur
                 </span>{' '}
                 (cahaya yang memberi kejelasan) dan{' '}
-                <span className='text-nuraya-blue-500 dark:text-nuraya-blue-300 font-semibold'>
+                <span className='text-nuraya-blue-700 dark:text-nuraya-blue-300 font-semibold'>
                   Raya
                 </span>{' '}
                 (keluasan pandangan dan visi jangka panjang).
               </p>
-              <p>
-                Di tengah ekosistem teknologi yang kerap terjebak jargon berlebihan dan kompleksitas tak perlu,{' '}
-                <strong>PT Nuraya Digital Nusantara</strong> hadir memberikan pendekatan yang pragmatis:
-                membangun solusi digital yang memecahkan hambatan operasional nyata secara terukur.
+              <p className='lg:text-justify'>
+                Di tengah ekosistem teknologi yang kerap terjebak jargon berlebihan dan kompleksitas
+                tak perlu, <strong>PT Nuraya Digital Nusantara</strong> hadir memberikan pendekatan
+                yang pragmatis: membangun solusi digital yang memecahkan hambatan operasional nyata
+                secara terukur.
               </p>
               <p>
-                Kami tidak sekadar menulis kode, kami mendesain aset digital yang dapat diandalkan untuk jangka panjang—didukung
-                oleh infrastruktur mandiri, kepatuhan regulasi data, dan komunikasi langsung dengan para insinyur yang membangunnya.
+                Kami tidak sekadar menulis kode. Kami mendesain aset digital yang dapat diandalkan
+                untuk jangka panjang.
               </p>
             </div>
 
-            <div className='border-l-4 border-l-nuraya-gold-400 pl-5 py-1'>
+            <div className='border-t border-black/10 dark:border-white/10 pt-6'>
               <p className='text-lg font-bold text-deep-navy dark:text-white'>
                 {company.founder.name}
               </p>
@@ -50,49 +54,61 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Right Column: Engineering & Trust Pillars */}
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 lg:pt-0'>
-            <Card
-              variant='gold'
-              className='p-6 border-l-4 border-l-nuraya-gold-500 dark:border-l-nuraya-gold-500 hover:-translate-y-1.5 transition-transform duration-300 flex flex-col justify-between'>
+          {/* Right Column: the two trust pillars, plainly stated */}
+          <div className='space-y-10 lg:pt-14'>
+            <div className='flex gap-4'>
+              <Server
+                className='w-6 h-6 mt-1 shrink-0 text-nuraya-gold-700 dark:text-nuraya-gold-300'
+                aria-hidden='true'
+              />
               <div>
-                <div className='w-10 h-10 rounded-lg bg-nuraya-gold-400/10 text-nuraya-gold-500 flex items-center justify-center mb-4'>
-                  <Server className='w-5 h-5' />
-                </div>
-                <h3 className='text-xl font-bold text-deep-navy dark:text-white mb-1'>
+                <h3 className='text-xl font-bold text-deep-navy dark:text-white'>
                   Kedaulatan Data
                 </h3>
-                <p className='text-xs font-semibold text-nuraya-gold-500 dark:text-nuraya-gold-300 uppercase tracking-wider mb-3'>
+                <p className='text-sm font-semibold text-nuraya-gold-800 dark:text-nuraya-gold-300 mt-1 mb-3'>
                   Infrastruktur di Indonesia
                 </p>
-                <p className='text-sm text-gray-600 dark:text-gray-300 leading-relaxed'>
-                  Seluruh aplikasi dan basis data klien berjalan pada infrastruktur server mandiri (Proxmox)
-                  yang berlokasi di Indonesia untuk privasi maksimal dan kepatuhan regulasi lokal.
+                <p className='text-base text-warm-gray dark:text-gray-300 leading-relaxed'>
+                  Seluruh aplikasi dan basis data klien berjalan pada infrastruktur server mandiri
+                  (Proxmox) yang berlokasi di Indonesia untuk privasi maksimal dan kepatuhan
+                  regulasi lokal.
                 </p>
               </div>
-            </Card>
+            </div>
 
-            <Card
-              variant='blue'
-              className='p-6 border-l-4 border-l-nuraya-blue-400 dark:border-l-nuraya-blue-400 hover:-translate-y-1.5 transition-transform duration-300 sm:translate-y-8 flex flex-col justify-between'>
+            <div className='flex gap-4 border-t border-black/10 dark:border-white/10 pt-10'>
+              <ShieldCheck
+                className='w-6 h-6 mt-1 shrink-0 text-nuraya-blue-600 dark:text-nuraya-blue-300'
+                aria-hidden='true'
+              />
               <div>
-                <div className='w-10 h-10 rounded-lg bg-nuraya-blue-400/10 text-nuraya-blue-500 flex items-center justify-center mb-4'>
-                  <ShieldCheck className='w-5 h-5' />
-                </div>
-                <h3 className='text-xl font-bold text-deep-navy dark:text-white mb-1'>
+                <h3 className='text-xl font-bold text-deep-navy dark:text-white'>
                   Entitas Resmi & Legal
                 </h3>
-                <p className='text-xs font-semibold text-nuraya-blue-500 dark:text-nuraya-blue-300 uppercase tracking-wider mb-3'>
+                <p className='text-sm font-semibold text-nuraya-blue-700 dark:text-nuraya-blue-300 mt-1 mb-3'>
                   Terdaftar Kemenkumham
                 </p>
-                <p className='text-sm text-gray-600 dark:text-gray-300 leading-relaxed'>
-                  Beroperasi resmi dengan NIB dan sertifikat AHU yang valid. Setiap kerja sama dilindungi oleh
-                  kontrak transparan dan jaminan purna jual profesional.
+                <p className='text-base text-warm-gray dark:text-gray-300 leading-relaxed'>
+                  Beroperasi resmi dengan NIB dan sertifikat AHU yang valid. Setiap kerja sama
+                  dilindungi oleh kontrak transparan dan jaminan purna jual profesional.
                 </p>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
+
+        {/* Values as a quiet strip: the name and the one phrase behind it */}
+        <h3 className='sr-only'>Nilai-nilai kami</h3>
+        <ul className='mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-8'>
+          {values.map((value) => (
+            <li key={value.name} className={`border-t-2 pt-4 ${value.rule}`}>
+              <p className='text-lg font-bold text-deep-navy dark:text-white'>{value.name}</p>
+              <p className='mt-1 text-sm text-warm-gray dark:text-gray-300 leading-relaxed'>
+                {value.gloss}
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

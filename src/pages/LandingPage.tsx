@@ -7,23 +7,25 @@ import { Hero } from '../components/Hero'
 import { MissionStatement } from '../components/MissionStatement'
 import { Navbar } from '../components/Navbar'
 import { ProductSection } from '../components/ProductSection'
-import { ValuesSection } from '../components/ValuesSection'
+import { SkipLink } from '../components/SkipLink'
+import { findPageMeta } from '../lib/seo'
 
 export function LandingPage() {
   useEffect(() => {
-    document.title = 'Nuraya Digital Nusantara'
+    const meta = findPageMeta('/')
+    if (meta) document.title = meta.title
   }, [])
 
   return (
     <div className='min-h-screen bg-soft-white dark:bg-dark-bg transition-colors duration-300'>
+      <SkipLink />
       <Navbar />
 
-      <main>
+      <main id='main-content' tabIndex={-1} className='outline-none'>
         <Hero />
+        <ProductSection />
         <MissionStatement />
         <AboutSection />
-        <ValuesSection />
-        <ProductSection />
         <CollaborationSection />
       </main>
 

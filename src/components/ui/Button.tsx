@@ -15,9 +15,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'
     const variants = {
       primary:
-        'bg-nuraya-gold-400 text-deep-navy hover:bg-nuraya-gold-500 shadow-lg shadow-nuraya-gold-400/20 dark:bg-nuraya-gold-200 dark:hover:bg-nuraya-gold-300 dark:shadow-nuraya-gold-200/20',
+        'bg-nuraya-gold-400 text-deep-navy hover:bg-nuraya-gold-300 shadow-lg shadow-nuraya-gold-400/20 dark:bg-nuraya-gold-400 dark:hover:bg-nuraya-gold-300 dark:shadow-nuraya-gold-400/15',
       secondary:
-        'bg-nuraya-blue-400 text-white hover:bg-nuraya-blue-500 shadow-lg shadow-nuraya-blue-400/20 dark:bg-nuraya-blue-300 dark:hover:bg-nuraya-blue-400 dark:text-deep-navy',
+        'bg-deep-navy text-white hover:bg-accent-400 shadow-lg shadow-deep-navy/20 dark:bg-nuraya-blue-400 dark:hover:bg-nuraya-blue-300 dark:text-deep-navy',
       outline:
         'border border-input bg-background hover:bg-accent-50 hover:text-accent-500 dark:border-white/10 dark:hover:bg-white/5 dark:hover:text-white',
       ghost: 'hover:bg-accent-50 hover:text-accent-500 dark:hover:bg-white/5 dark:hover:text-white',

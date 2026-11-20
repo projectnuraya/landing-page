@@ -12,7 +12,7 @@ export function DarkModeToggle() {
       variant='ghost'
       size='icon'
       onClick={toggleTheme}
-      className='rounded-full w-10 h-10 transition-transform duration-500 hover:rotate-12'
+      className='rounded-full w-11 h-11 transition-transform duration-500 hover:rotate-12'
       aria-label='Toggle dark mode'>
       {/* CSS decides which icon shows, so the static HTML is right in both
           themes and does not fight hydration. */}

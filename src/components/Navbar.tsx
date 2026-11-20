@@ -1,5 +1,5 @@
 import { Menu, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 import nurayaLogoDark from '../assets/nuraya_logo_dark.svg'
@@ -16,7 +16,7 @@ export function Navbar() {
 
   // Intersection Observer for active section detection
   useEffect(() => {
-    const sections = ['hero', 'mission', 'about', 'values', 'products', 'collaboration']
+    const sections = ['layanan', 'produk-berjalan', 'about', 'collaboration']
     const observers: IntersectionObserver[] = []
 
     sections.forEach((sectionId) => {
@@ -32,7 +32,9 @@ export function Navbar() {
           },
           {
             rootMargin: '-20% 0px -60% 0px',
-            threshold: 0.1,
+            // Any overlap with the band counts: a ratio threshold never fires for tall sections,
+            // because a 20%-viewport band covers only a sliver of a 2000px+ target.
+            threshold: 0,
           },
         )
         observer.observe(element)
@@ -57,6 +59,26 @@ export function Navbar() {
     }
   }, [isMobileMenuOpen])
 
+  // Keyboard access for the drawer: Escape closes it, focus moves in on open and back to the
+  // menu button on close, so keyboard users never land in the page behind the backdrop.
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const wasMenuOpen = useRef(false)
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      closeButtonRef.current?.focus()
+    } else if (wasMenuOpen.current) {
+      menuButtonRef.current?.focus()
+    }
+    wasMenuOpen.current = isMobileMenuOpen
+    if (!isMobileMenuOpen) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsMobileMenuOpen(false)
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [isMobileMenuOpen])
+
   const handleSectionClick = (sectionId: string) => (e: React.MouseEvent) => {
     e.preventDefault()
     setIsMobileMenuOpen(false) // Close mobile menu on click
@@ -72,12 +94,10 @@ export function Navbar() {
   }
 
   const navLinks = [
-    { id: 'hero', label: 'Beranda' },
-    { id: 'mission', label: 'Misi' },
+    { id: 'layanan', label: 'Layanan' },
+    { id: 'produk-berjalan', label: 'Produk' },
     { id: 'about', label: 'Tentang' },
-    { id: 'values', label: 'Nilai-nilai' },
-    { id: 'products', label: 'Produk' },
-    { id: 'collaboration', label: 'Kolaborasi', isButton: true },
+    { id: 'collaboration', label: 'Konsultasi', isButton: true },
   ]
 
   return (
@@ -112,11 +132,11 @@ export function Navbar() {
               onClick={handleSectionClick(link.id)}
               className={
                 link.isButton
-                  ? 'px-3 py-1.5 border-2 border-nuraya-gold-400 text-nuraya-gold-400 hover:bg-nuraya-gold-400 hover:text-white dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-md transition-all'
+                  ? 'px-3 py-1.5 border-2 border-nuraya-gold-500 text-nuraya-gold-800 hover:bg-nuraya-gold-400 hover:border-nuraya-gold-400 hover:text-deep-navy dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-md transition-all'
                   : `text-sm lg:text-base transition-colors ${
                       activeSection === link.id
-                        ? 'text-nuraya-gold-500 dark:text-nuraya-gold-300 font-semibold'
-                        : 'text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-400 dark:hover:text-nuraya-gold-300'
+                        ? 'text-nuraya-gold-800 dark:text-nuraya-gold-300 font-semibold'
+                        : 'text-warm-gray dark:text-gray-400 hover:text-nuraya-gold-800 dark:hover:text-nuraya-gold-300'
                     }`
               }>
               {link.label}
@@ -128,8 +148,10 @@ export function Navbar() {
         <div className='flex items-center gap-3'>
           <DarkModeToggle />
           <button
+            ref={menuButtonRef}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className='md:hidden p-2 text-deep-navy dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
+            aria-expanded={isMobileMenuOpen}
+            className='md:hidden p-2.5 text-deep-navy dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
             aria-label='Toggle mobile menu'>
             {isMobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
@@ -151,14 +173,16 @@ export function Navbar() {
         className={`fixed top-0 right-0 h-full w-[280px] bg-white dark:bg-dark-bg shadow-2xl z-50 md:hidden transition-transform duration-300 ease-in-out transform ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        aria-hidden={!isMobileMenuOpen}>
+        aria-hidden={!isMobileMenuOpen}
+        inert={!isMobileMenuOpen}>
         <div className='flex flex-col h-full'>
           {/* Drawer Header */}
           <div className='flex items-center justify-between p-6 border-b border-gray-100 dark:border-white/5'>
             <span className='font-bold text-xl text-deep-navy dark:text-white'>Menu</span>
             <button
+              ref={closeButtonRef}
               onClick={() => setIsMobileMenuOpen(false)}
-              className='p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
+              className='p-3 hover:bg-gray-100 dark:hover:bg-white/10 rounded-md transition-colors'
               aria-label='Close menu'>
               <X className='w-5 h-5 text-deep-navy dark:text-white' />
             </button>
@@ -174,10 +198,10 @@ export function Navbar() {
                     onClick={handleSectionClick(link.id)}
                     className={
                       link.isButton
-                        ? 'block w-full px-4 py-3 text-center border-2 border-nuraya-gold-400 text-nuraya-gold-400 hover:bg-nuraya-gold-400 hover:text-white dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-lg transition-all font-medium'
+                        ? 'block w-full px-4 py-3 text-center border-2 border-nuraya-gold-500 text-nuraya-gold-800 hover:bg-nuraya-gold-400 hover:border-nuraya-gold-400 hover:text-deep-navy dark:border-nuraya-gold-300 dark:text-nuraya-gold-300 dark:hover:bg-nuraya-gold-300 dark:hover:text-deep-navy rounded-lg transition-all font-medium'
                         : `block px-4 py-3 rounded-lg transition-all ${
                             activeSection === link.id
-                              ? 'bg-nuraya-gold-50 text-nuraya-gold-500 dark:bg-nuraya-gold-400/10 dark:text-nuraya-gold-300 font-semibold'
+                              ? 'bg-nuraya-gold-50 text-nuraya-gold-800 dark:bg-nuraya-gold-400/10 dark:text-nuraya-gold-300 font-semibold'
                               : 'text-warm-gray dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-deep-navy dark:hover:text-white'
                           }`
                     }>

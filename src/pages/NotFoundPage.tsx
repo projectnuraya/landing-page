@@ -8,7 +8,7 @@ export function NotFoundPage() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    document.title = 'Halaman Tidak Ditemukan — Nuraya Digital Nusantara'
+    document.title = 'Halaman Tidak Ditemukan — Project Nuraya'
   }, [])
 
   return (
@@ -16,12 +16,12 @@ export function NotFoundPage() {
       <div className='text-center max-w-lg'>
         {/* Big 404 with gradient */}
         <h1 className='text-8xl md:text-9xl font-extrabold tracking-tighter'>
-          <span className='text-transparent bg-clip-text bg-gradient-to-r from-nuraya-gold-400 to-nuraya-blue-400'>
+          <span className='text-brand-gradient'>
             404
           </span>
         </h1>
 
-        <h2 className='text-2xl md:text-3xl font-bold text-deep-navy dark:text-white mt-4 mb-3'>
+        <h2 className='tracking-tight text-2xl md:text-3xl font-extrabold text-deep-navy dark:text-white mt-4 mb-3'>
           Halaman Tidak Ditemukan
         </h2>
         <p className='text-warm-gray dark:text-gray-400 mb-10 leading-relaxed'>
