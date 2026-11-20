@@ -1,36 +1,20 @@
 import { ArrowDown, MessageCircle } from 'lucide-react'
 
-import nurayaPattern from '../assets/nuraya_pattern.svg'
 import { company } from '../config/company'
 import { scrollToSection } from '../lib/scroll'
 
+import { PatternBand } from './PatternBand'
 import { Button } from './ui/Button'
 
 export function Hero() {
-  // Generate pattern mosaic tiles
-  const COLS = 7
-  const ROWS = 4
-  const patternTiles = Array.from({ length: COLS * ROWS }, (_, i) => {
-    const row = Math.floor(i / COLS)
-    const col = i % COLS
-    // Alternate rotation for interlocking weave effect
-    const rotation = (row + col) % 2 === 0 ? 0 : 180
-    // Staggered shimmer animation delay for subtle breathing wave
-    const animDelay = `${((row + col) * 0.35).toFixed(2)}s`
-    return { rotation, animDelay, key: `pattern-${row}-${col}` }
-  })
-
   return (
     <section
       id='hero'
       className='relative min-h-screen flex items-center overflow-hidden pt-20 bg-white dark:bg-dark-bg'>
       {/* Background Glow Elements - positioned behind text for warmth */}
       <div className='absolute inset-0 z-0 pointer-events-none'>
-        <div className='absolute top-[10%] left-[0%] w-[600px] h-[600px] bg-nuraya-gold-400/25 dark:bg-nuraya-gold-400/18 rounded-full blur-[100px] animate-pulse-slow' />
-        <div
-          className='absolute bottom-[15%] left-[10%] w-[550px] h-[550px] bg-nuraya-blue-400/20 dark:bg-nuraya-blue-400/15 rounded-full blur-[110px] animate-pulse-slow'
-          style={{ animationDelay: '2.5s' }}
-        />
+        <div className='absolute top-[10%] left-[0%] w-[600px] h-[600px] bg-nuraya-gold-400/25 dark:bg-nuraya-gold-400/18 rounded-full blur-[100px]' />
+        <div className='absolute bottom-[15%] left-[10%] w-[550px] h-[550px] bg-nuraya-blue-400/20 dark:bg-nuraya-blue-400/15 rounded-full blur-[110px]' />
       </div>
 
       <div className='container mx-auto px-6 md:px-12 lg:px-20 pt-8 pb-8 md:pt-12 md:pb-28 relative z-10'>
@@ -41,7 +25,7 @@ export function Hero() {
             <div className='motion-safe:animate-hero-rise flex flex-col items-start w-full'>
               {/* Required brand badge for OAuth and brand verification */}
               <div className='inline-flex items-center gap-2 px-3.5 py-1 mb-4 md:mb-6 rounded-full bg-deep-navy/10 dark:bg-nuraya-gold-400/10 border border-deep-navy/20 dark:border-nuraya-gold-400/20 text-deep-navy dark:text-nuraya-gold-200 text-xs sm:text-sm font-medium tracking-wide'>
-                <span className='w-2 h-2 rounded-full bg-nuraya-gold-400 animate-pulse' />
+                <span className='w-2 h-2 rounded-full bg-nuraya-gold-400 motion-safe:animate-pulse' />
                 <span>Project Nuraya</span>
                 <span aria-hidden='true' className='text-gray-500 dark:text-gray-400'>|</span>
                 <span className='text-gray-600 dark:text-gray-300 font-normal'>
@@ -91,45 +75,12 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Visual Element - Pattern Mosaic Grid with Subtle Breathing Shimmer */}
-          <div className='lg:col-span-4 relative hidden lg:block min-h-[500px]'>
-            {/* Horizontal mask: fade from left (transparent) to right (visible) */}
-            <div
-              className='absolute inset-y-[-15%] left-[-15%] right-[-25%] opacity-90 dark:opacity-60'
-              style={{
-                maskImage: 'linear-gradient(to right, transparent 5%, black 30%)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent 5%, black 30%)',
-              }}>
-              {/* Vertical mask: fade top and bottom edges */}
-              <div
-                style={{
-                  maskImage:
-                    'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
-                  WebkitMaskImage:
-                    'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
-                }}>
-                <div className='grid grid-cols-7 gap-3'>
-                  {patternTiles.map((tile) => (
-                    <div
-                      key={tile.key}
-                      className='flex items-center justify-center p-1 motion-safe:animate-shimmer-subtle'
-                      style={{
-                        transform: `rotate(${tile.rotation}deg)`,
-                        animationDelay: tile.animDelay,
-                      }}>
-                      <img
-                        src={nurayaPattern}
-                        alt=''
-                        className='w-full h-auto select-none pointer-events-none'
-                        draggable={false}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* The brandbook pattern at full strength: whole tiles, one orientation, no fade */}
+          <PatternBand tile={64} className='hidden lg:block lg:col-span-4 h-[420px] dark:opacity-90' />
         </div>
+
+        {/* Mobile has no side column, so the pattern closes the hero as a full-bleed band */}
+        <PatternBand tile={46} className='lg:hidden mt-10 -mx-6 md:-mx-12 h-[151px] dark:opacity-90' />
       </div>
 
       {/* Professional Gentle Glide Scroll Indicator */}
