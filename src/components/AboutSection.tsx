@@ -1,4 +1,4 @@
-import { ShieldCheck, Server } from 'lucide-react'
+import { Server, ShieldCheck } from 'lucide-react'
 
 import { company, foundedLabel } from '../config/company'
 
@@ -20,7 +20,7 @@ export function AboutSection() {
               Membangun Fondasi Digital dengan Transparansi & Integritas
             </h2>
             <div className='space-y-5 text-base md:text-lg text-warm-gray dark:text-gray-300 leading-relaxed'>
-              <p>
+              <p className='lg:text-justify'>
                 Nama "Nuraya" berakar dari perpaduan dua kata:{' '}
                 <span className='text-nuraya-gold-800 dark:text-nuraya-gold-300 font-semibold'>
                   Nur
@@ -31,14 +31,15 @@ export function AboutSection() {
                 </span>{' '}
                 (keluasan pandangan dan visi jangka panjang).
               </p>
-              <p>
-                Di tengah ekosistem teknologi yang kerap terjebak jargon berlebihan dan kompleksitas tak perlu,{' '}
-                <strong>PT Nuraya Digital Nusantara</strong> hadir memberikan pendekatan yang pragmatis:
-                membangun solusi digital yang memecahkan hambatan operasional nyata secara terukur.
+              <p className='lg:text-justify'>
+                Di tengah ekosistem teknologi yang kerap terjebak jargon berlebihan dan kompleksitas
+                tak perlu, <strong>PT Nuraya Digital Nusantara</strong> hadir memberikan pendekatan
+                yang pragmatis: membangun solusi digital yang memecahkan hambatan operasional nyata
+                secara terukur.
               </p>
               <p>
-                Kami tidak sekadar menulis kode. Kami mendesain aset digital yang dapat diandalkan untuk
-                jangka panjang.
+                Kami tidak sekadar menulis kode. Kami mendesain aset digital yang dapat diandalkan
+                untuk jangka panjang.
               </p>
             </div>
 
@@ -56,29 +57,40 @@ export function AboutSection() {
           {/* Right Column: the two trust pillars, plainly stated */}
           <div className='space-y-10 lg:pt-14'>
             <div className='flex gap-4'>
-              <Server className='w-6 h-6 mt-1 shrink-0 text-nuraya-gold-700 dark:text-nuraya-gold-300' aria-hidden='true' />
+              <Server
+                className='w-6 h-6 mt-1 shrink-0 text-nuraya-gold-700 dark:text-nuraya-gold-300'
+                aria-hidden='true'
+              />
               <div>
-                <h3 className='text-xl font-bold text-deep-navy dark:text-white'>Kedaulatan Data</h3>
+                <h3 className='text-xl font-bold text-deep-navy dark:text-white'>
+                  Kedaulatan Data
+                </h3>
                 <p className='text-sm font-semibold text-nuraya-gold-800 dark:text-nuraya-gold-300 mt-1 mb-3'>
                   Infrastruktur di Indonesia
                 </p>
                 <p className='text-base text-warm-gray dark:text-gray-300 leading-relaxed'>
-                  Seluruh aplikasi dan basis data klien berjalan pada infrastruktur server mandiri (Proxmox)
-                  yang berlokasi di Indonesia untuk privasi maksimal dan kepatuhan regulasi lokal.
+                  Seluruh aplikasi dan basis data klien berjalan pada infrastruktur server mandiri
+                  (Proxmox) yang berlokasi di Indonesia untuk privasi maksimal dan kepatuhan
+                  regulasi lokal.
                 </p>
               </div>
             </div>
 
             <div className='flex gap-4 border-t border-black/10 dark:border-white/10 pt-10'>
-              <ShieldCheck className='w-6 h-6 mt-1 shrink-0 text-nuraya-blue-600 dark:text-nuraya-blue-300' aria-hidden='true' />
+              <ShieldCheck
+                className='w-6 h-6 mt-1 shrink-0 text-nuraya-blue-600 dark:text-nuraya-blue-300'
+                aria-hidden='true'
+              />
               <div>
-                <h3 className='text-xl font-bold text-deep-navy dark:text-white'>Entitas Resmi & Legal</h3>
+                <h3 className='text-xl font-bold text-deep-navy dark:text-white'>
+                  Entitas Resmi & Legal
+                </h3>
                 <p className='text-sm font-semibold text-nuraya-blue-700 dark:text-nuraya-blue-300 mt-1 mb-3'>
                   Terdaftar Kemenkumham
                 </p>
                 <p className='text-base text-warm-gray dark:text-gray-300 leading-relaxed'>
-                  Beroperasi resmi dengan NIB dan sertifikat AHU yang valid. Setiap kerja sama dilindungi oleh
-                  kontrak transparan dan jaminan purna jual profesional.
+                  Beroperasi resmi dengan NIB dan sertifikat AHU yang valid. Setiap kerja sama
+                  dilindungi oleh kontrak transparan dan jaminan purna jual profesional.
                 </p>
               </div>
             </div>

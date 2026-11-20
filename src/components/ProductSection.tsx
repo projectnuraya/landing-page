@@ -106,7 +106,9 @@ const groupLeadClass = 'mt-2 text-base text-slate-600 dark:text-gray-300 leading
 
 export function ProductSection() {
   return (
-    <section id='products' className='pt-20 md:pt-32 pb-14 md:pb-16 bg-light-sand/90 dark:bg-dark-surface/90'>
+    <section
+      id='products'
+      className='pt-20 md:pt-32 pb-14 md:pb-16 bg-light-sand/90 dark:bg-dark-surface/90'>
       <div className='container mx-auto px-6 md:px-12'>
         {/* Section Header */}
         <div className='mb-14 md:mb-16 max-w-3xl'>
@@ -115,7 +117,8 @@ export function ProductSection() {
           </h2>
           <p className='text-base md:text-lg text-slate-600 dark:text-gray-300 leading-relaxed max-w-prose'>
             Kami menggabungkan kapabilitas rekayasa perangkat lunak kustom untuk klien bisnis dengan
-            pengembangan produk digital mandiri yang dirancang untuk memecahkan persoalan operasional nyata.
+            pengembangan produk digital mandiri yang dirancang untuk memecahkan persoalan
+            operasional nyata.
           </p>
         </div>
 
@@ -141,7 +144,9 @@ export function ProductSection() {
                         className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${service.bg} border ${service.color} transition-transform group-hover:scale-105 duration-300`}>
                         <service.icon className={`w-6 h-6 ${service.color}`} />
                       </div>
-                      <h4 className='text-xl font-semibold leading-snug tracking-tight'>{service.title}</h4>
+                      <h4 className='text-xl font-semibold leading-snug tracking-tight'>
+                        {service.title}
+                      </h4>
                       <p className='text-xs uppercase tracking-wider mt-1 text-slate-600 dark:text-gray-400'>
                         Target: {service.target}
                       </p>
@@ -201,7 +206,8 @@ export function ProductSection() {
                   Punya spesifikasi sistem atau kebutuhan arsitektur khusus?
                 </h4>
                 <p className='text-sm text-slate-600 dark:text-gray-300 max-w-xl'>
-                  Diskusikan langsung dengan engineer yang akan mengerjakannya, tanpa perantara sales, untuk estimasi waktu dan biaya yang transparan.
+                  Diskusikan langsung dengan engineer yang akan mengerjakannya, tanpa perantara
+                  sales, untuk estimasi waktu dan biaya yang transparan.
                 </p>
               </div>
               <Button
@@ -219,7 +225,9 @@ export function ProductSection() {
           <div id='produk-berjalan'>
             <div className='mb-6 max-w-2xl'>
               <h3 className={groupHeadingClass}>Produk yang sudah berjalan</h3>
-              <p className={groupLeadClass}>Contoh hasil kerja kami: aplikasi yang sudah live dan bisa Anda buka sekarang.</p>
+              <p className={groupLeadClass}>
+                Contoh hasil kerja kami: aplikasi yang sudah live dan bisa Anda buka sekarang.
+              </p>
             </div>
 
             <article className='grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-14 rounded-2xl border border-nuraya-gold-400/40 dark:border-nuraya-gold-400/25 bg-white dark:bg-dark-bg/60 p-6 sm:p-8 md:p-10'>
@@ -234,11 +242,13 @@ export function ProductSection() {
                 <h4 className='mt-5 text-2xl md:text-3xl font-bold tracking-tight text-deep-navy dark:text-white'>
                   {liveProduct.title}
                 </h4>
-                <p className='mt-3 text-base text-slate-700 dark:text-gray-300 leading-relaxed max-w-xl'>
+                <p className='mt-3 text-base text-slate-700 dark:text-gray-300 leading-relaxed max-w-xl lg:text-justify'>
                   {liveProduct.description}
                 </p>
                 <div className='mt-7 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 w-full'>
-                  <Button asChild className='h-11 gap-2 px-6 hover:-translate-y-0.5 transition-transform'>
+                  <Button
+                    asChild
+                    className='h-11 gap-2 px-6 hover:-translate-y-0.5 transition-transform'>
                     <a
                       href={liveProduct.url}
                       target='_blank'
@@ -248,15 +258,21 @@ export function ProductSection() {
                       <ExternalLink className='w-4 h-4' />
                     </a>
                   </Button>
-                  <span className='text-sm text-slate-600 dark:text-gray-300 break-all'>{liveProduct.host}</span>
+                  <span className='text-sm text-slate-600 dark:text-gray-300 break-all'>
+                    {liveProduct.host}
+                  </span>
                 </div>
               </div>
 
               <div className='lg:col-span-2'>
-                <p className='text-sm font-semibold text-deep-navy dark:text-gray-100 mb-1'>Fitur unggulan</p>
+                <p className='text-sm font-semibold text-deep-navy dark:text-gray-100 mb-1'>
+                  Fitur unggulan
+                </p>
                 <ul className='divide-y divide-black/10 dark:divide-white/10'>
                   {liveProduct.highlights.map((item) => (
-                    <li key={item} className='flex items-start gap-3 py-3.5 text-base text-slate-700 dark:text-gray-300'>
+                    <li
+                      key={item}
+                      className='flex items-start gap-3 py-3.5 text-base text-slate-700 dark:text-gray-300'>
                       <Check className='w-4 h-4 text-nuraya-blue-600 dark:text-nuraya-blue-300 mt-1 shrink-0' />
                       <span>{item}</span>
                     </li>
@@ -270,15 +286,23 @@ export function ProductSection() {
           <div id='roadmap'>
             <div className='mb-6 max-w-2xl'>
               <h3 className={groupHeadingClass}>Sedang dikembangkan</h3>
-              <p className={groupLeadClass}>Produk berikutnya yang masih dalam fase pengembangan.</p>
+              <p className={groupLeadClass}>
+                Produk berikutnya yang masih dalam fase pengembangan.
+              </p>
             </div>
 
             <ul className='grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8 border-t border-black/10 dark:border-white/10 pt-8'>
               {roadmapProducts.map((item) => (
                 <li key={item.title}>
-                  <h4 className='text-lg font-semibold text-deep-navy dark:text-white'>{item.title}</h4>
-                  <p className='mt-1 text-sm font-medium text-slate-700 dark:text-gray-200'>Untuk: {item.target}</p>
-                  <p className='mt-3 text-sm text-slate-600 dark:text-gray-300 leading-relaxed'>{item.description}</p>
+                  <h4 className='text-lg font-semibold text-deep-navy dark:text-white'>
+                    {item.title}
+                  </h4>
+                  <p className='mt-1 text-sm font-medium text-slate-700 dark:text-gray-200'>
+                    Untuk: {item.target}
+                  </p>
+                  <p className='mt-3 text-sm text-slate-600 dark:text-gray-300 leading-relaxed'>
+                    {item.description}
+                  </p>
                 </li>
               ))}
             </ul>
