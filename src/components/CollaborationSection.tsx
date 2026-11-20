@@ -146,11 +146,11 @@ export function CollaborationSection() {
 
             {/* High-Intent WhatsApp Card */}
             <div className='p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/60 shadow-sm'>
-              <div className='flex items-start gap-4'>
+              <div className='flex flex-col sm:flex-row items-start gap-4'>
                 <div className='w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-600/20'>
                   <MessageCircle className='w-6 h-6' />
                 </div>
-                <div className='space-y-2'>
+                <div className='space-y-2 min-w-0 w-full'>
                   <span className='inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-200 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300'>
                     Saluran Komunikasi Tercepat
                   </span>
@@ -170,7 +170,7 @@ export function CollaborationSection() {
                   <div className='pt-2'>
                     <Button
                       asChild
-                      className='bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 dark:text-white gap-2 text-sm h-10 px-5 active:scale-[0.98] transition-transform shadow-md shadow-emerald-600/20'>
+                      className='bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 dark:text-white gap-2 text-sm h-11 px-5 w-full sm:w-auto active:scale-[0.98] transition-transform shadow-md shadow-emerald-600/20'>
                       <a href={company.whatsappUrl} target='_blank' rel='noopener noreferrer'>
                         <MessageCircle className='w-4 h-4' />
                         Buka Obrolan WhatsApp &rarr;
