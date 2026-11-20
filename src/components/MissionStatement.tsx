@@ -1,16 +1,8 @@
-import { Sparkles } from 'lucide-react'
-
 export function MissionStatement() {
   return (
-    <section
-      id='mission'
-      className='py-20 md:py-32 relative overflow-hidden bg-deep-navy text-white'>
+    <section id='mission' className='py-20 md:py-28 bg-deep-navy text-white'>
       <div className='container mx-auto px-6 md:px-12'>
         <div className='max-w-4xl mx-auto text-center'>
-          <div className='inline-flex items-center justify-center w-12 h-12 rounded-full bg-nuraya-gold-400/15 text-nuraya-gold-400 mb-8'>
-            <Sparkles className='w-6 h-6' />
-          </div>
-
           <h2 className='tracking-tight text-3xl md:text-4xl font-extrabold leading-tight text-white mb-12'>
             Teknologi bukan sekadar kode dan piksel. Ia adalah{' '}
             <span className='text-nuraya-gold-300'>cahaya</span> — yang
@@ -27,12 +19,6 @@ export function MissionStatement() {
           </p>
         </div>
       </div>
-
-      {/* Decorative light rays */}
-      {/* <div className='absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden opacity-30'>
-        <div className='absolute top-[-50%] left-1/2 w-[1px] h-[200%] bg-gradient-to-b from-transparent via-nuraya-gold to-transparent transform rotate-45' />
-        <div className='absolute top-[-50%] left-1/2 w-[1px] h-[200%] bg-gradient-to-b from-transparent via-sky-blue to-transparent transform -rotate-45' />
-      </div> */}
     </section>
   )
 }
